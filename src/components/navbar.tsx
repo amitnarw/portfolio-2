@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,6 +17,8 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +27,55 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Check for saved theme preference - if saved, use that; otherwise default to light
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    } else {
+      // Default to light theme
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  // Track active section using Intersection Observer
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0,
+    };
+
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+    const sections = ["home", "works", "about", "services", "testimonials"];
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
 
   return (
     <header
@@ -52,7 +104,10 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="relative text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+                className={cn(
+                    "relative text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full",
+                    activeSection === link.href ? "after:w-full text-foreground" : ""
+                  )}
               >
                 {link.label}
               </a>
@@ -60,13 +115,34 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-all duration-300 hover:scale-105 hover:shadow-lg md:inline-flex"
-        >
-          Contact
-        </a>
+        {/* CTA Buttons & Theme Toggle */}
+        <div className="hidden items-center gap-3 md:inline-flex">
+          <a
+            href="#contact"
+            className="rounded-full border border-border bg-foreground text-background px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            Contact
+          </a>
+          {/* Theme Toggle Button */}
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleTheme}
+            className="rounded-full border-border"
+            aria-label="Toggle theme"
+          >
+            <Sun
+              className={cn(
+                "h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0",
+              )}
+            />
+            <Moon
+              className={cn(
+                "absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100",
+              )}
+            />
+          </Button>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
@@ -93,7 +169,12 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className="block text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className={cn(
+                    "block text-base font-medium transition-colors",
+                    activeSection === link.href
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   {link.label}
                 </a>
@@ -107,6 +188,16 @@ export default function Navbar() {
               >
                 Contact
               </a>
+            </li>
+            <li>
+              <Button
+                variant="outline"
+                onClick={toggleTheme}
+                className="w-full justify-center gap-2"
+              >
+                {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+                {theme === "light" ? "Dark" : "Light"} Mode
+              </Button>
             </li>
           </ul>
         </div>
