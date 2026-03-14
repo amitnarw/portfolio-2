@@ -5,12 +5,87 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-dvh w-full overflow-hidden"
+      className="relative h-[calc(100dvh+50px)] w-full overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 -top-150 bg-[radial-gradient(ellipse_100%_60%_at_50%_50%,var(--color-glow-base)_0%,color-mix(in_srgb,var(--color-primary)_50%,transparent)_40%,transparent_80%)]" />
+      {/* Background curve gradient */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-white" />
+
+        <svg
+          className="absolute inset-x-0 top-0 h-dvh w-full"
+          viewBox="0 0 1440 720"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <filter
+              id="hero-curve-glow"
+              x="-20%"
+              y="-80%"
+              width="140%"
+              height="260%"
+            >
+              <feGaussianBlur stdDeviation="42" />
+            </filter>
+            <filter
+              id="hero-curve-soft"
+              x="-20%"
+              y="-80%"
+              width="140%"
+              height="260%"
+            >
+              <feGaussianBlur stdDeviation="18" />
+            </filter>
+            <linearGradient id="hero-curve-line" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="rgba(255,214,116,0.95)" />
+              <stop offset="100%" stopColor="rgba(255,236,191,0.85)" />
+            </linearGradient>
+          </defs>
+
+          <path
+            d="M 0 220 A 800 500 0 0 0 1440 220"
+            fill="none"
+            stroke="rgba(255,209,97,0.02)"
+            strokeWidth="550"
+            strokeLinecap="round"
+            filter="url(#hero-curve-glow)"
+          />
+          <path
+            d="M 0 220 A 800 500 0 0 0 1440 220"
+            fill="none"
+            stroke="rgba(255,209,97,0.10)"
+            strokeWidth="450"
+            strokeLinecap="round"
+            filter="url(#hero-curve-glow)"
+          />
+          <path
+            d="M 0 220 A 800 500 0 0 0 1440 220"
+            fill="none"
+            stroke="rgba(255,209,97,0.20)"
+            strokeWidth="350"
+            strokeLinecap="round"
+            filter="url(#hero-curve-glow)"
+          />
+          <path
+            d="M 0 220 A 800 500 0 0 0 1440 220"
+            fill="none"
+            stroke="rgba(255,229,168,0.30)"
+            strokeWidth="150"
+            strokeLinecap="round"
+            filter="url(#hero-curve-soft)"
+          />
+          {/* <path
+            d="M 0 220 A 800 500 0 0 0 1440 220"
+            fill="none"
+            stroke="rgba(255,229,168,0.5)"
+            strokeWidth="80"
+            strokeLinecap="round"
+            filter="url(#hero-curve-soft)"
+          /> */}
+        </svg>
+
+        {/* <div className="absolute left-1/2 top-[52%] h-240 w-880 max-w-none -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(255,225,150,0.22)_0%,rgba(255,238,203,0.1)_44%,transparent_78%)] blur-[110px]" /> */}
       </div>
 
       {/* Content */}
@@ -19,28 +94,35 @@ export default function Hero() {
         <div className="flex justify-center animate-fade-in-up">
           <h2 className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-40 items-center pl-10">
             <span>Hey,</span>
-            <div className="flex flex-row items-start"><span></span><span className="ml-4">there</span></div>
+            <div className="flex flex-row items-start">
+              <span></span>
+              <span className="ml-4">there</span>
+            </div>
           </h2>
         </div>
 
         {/* Person image goes here later */}
         <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full -z-10 left-1/2 -translate-x-1/2">
-          <div className="h-[85dvh] w-auto z-10">
+          <div className="h-[88dvh] w-auto z-10">
             <Image
               src="/my-img.png"
               alt="my-img"
               height={600}
               width={600}
               className="h-full w-auto object-contain"
-              style={{ maskImage: 'linear-gradient(to top, transparent 0%, black 20%)', WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%)' }}
+              style={{
+                maskImage: "linear-gradient(to top, transparent 0%, black 20%)",
+                WebkitMaskImage:
+                  "linear-gradient(to top, transparent 0%, black 20%)",
+              }}
             />
           </div>
         </div>
 
-        <div className="mb-5 flex flex-col items-center justify-between gap-2 sm:flex-row sm:items-center">
+        <div className="mb-10 flex flex-col items-center justify-between gap-2 sm:flex-row sm:items-center">
           <PremiumButton text="Hire Me" />
           <p
-            className="animate-slide-in-right max-w-[240px] text-right text-xs sm:text-sm leading-relaxed text-foreground/60"
+            className="animate-slide-in-right max-w-60 text-right text-xs sm:text-sm leading-relaxed text-foreground/60"
             style={{ animationDelay: "0.5s", animationFillMode: "both" }}
           >
             Specialized in React, Node.js,
@@ -52,8 +134,7 @@ export default function Hero() {
         </div>
 
         {/* ─ Bottom section ─ */}
-        <div className="shrink-0">
-          {/* Badge + specialization row */}
+        <div className="shrink-0 mb-10">
 
           {/* Name + Title row */}
           <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end">

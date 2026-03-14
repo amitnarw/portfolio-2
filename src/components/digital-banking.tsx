@@ -12,8 +12,9 @@ import { PremiumButton } from "./premium-button";
 
 export default function DigitalBanking() {
   return (
-    <section className="mx-auto w-full max-w-[1400px] px-6 py-20 lg:px-12 bg-white">
+    <section className="mx-auto w-full max-w-350 px-6 py-20 lg:px-12 bg-white">
       {/* Top Header Section */}
+      
       <div className="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
         <div className="max-w-2xl">
           <Badge
