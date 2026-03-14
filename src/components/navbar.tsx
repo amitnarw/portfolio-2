@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
+import { CtaPillLink } from "@/components/cta-pill-link";
 
 type StartViewTransition = (callback: () => void | Promise<void>) => {
   ready: Promise<void>;
@@ -133,12 +134,20 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-2 left-0 right-0 z-50 transition-all duration-500",
+        "fixed py-2 top-0 left-0 right-0 z-50 isolate transition-all duration-500",
       )}
     >
+      <div
+        aria-hidden="true"
+        className={cn(
+          "pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 backdrop-blur-xl mask-[linear-gradient(to_top,transparent_0%,black_70%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_70%,black_100%)]",
+          isScrolled ? "opacity-100" : "opacity-0",
+        )}
+      />
+
       <nav
         className={cn(
-          "mx-auto flex items-center justify-between rounded-full px-6 py-3 lg:px-10 transition-all duration-500 ease-out",
+          "relative z-10 mx-auto flex items-center justify-between rounded-full px-6 py-3 lg:px-10 transition-all duration-500 ease-out",
           isScrolled
             ? "bg-foreground/80 backdrop-blur-2xl text-background shadow-2xl max-w-[70dvw] sm:max-w-250"
             : "bg-transparent text-foreground max-w-full sm:max-w-350",
@@ -182,17 +191,17 @@ export default function Navbar() {
 
         {/* CTA Buttons & Theme Toggle */}
         <div className="hidden items-center gap-3 md:inline-flex">
-          <a
+          <CtaPillLink
             href="#contact"
             className={cn(
-              "rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105",
+              "px-6 py-2.5",
               isScrolled
                 ? "border border-background/25 bg-background text-foreground hover:shadow-md"
                 : "border border-border bg-foreground text-background hover:shadow-lg",
             )}
           >
             Contact
-          </a>
+          </CtaPillLink>
           <ThemeToggleButton
             theme={theme}
             size="lg"
@@ -220,7 +229,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-500 ease-in-out",
+          "relative z-10 md:hidden overflow-hidden transition-all duration-500 ease-in-out",
           isMobileOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0",
         )}
       >
@@ -254,18 +263,18 @@ export default function Navbar() {
               </li>
             ))}
             <li className="pt-2">
-              <a
+              <CtaPillLink
                 href="#contact"
-                onClick={() => setIsMobileOpen(false)}
                 className={cn(
-                  "inline-flex rounded-full px-6 py-2.5 text-sm font-medium transition-all hover:scale-105",
+                  "px-6 py-2.5",
                   isScrolled
                     ? "bg-background text-foreground"
                     : "bg-foreground text-background",
                 )}
+                onClick={() => setIsMobileOpen(false)}
               >
                 Contact
-              </a>
+              </CtaPillLink>
             </li>
             <li>
               <ThemeToggleButton

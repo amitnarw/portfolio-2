@@ -208,3 +208,38 @@
     0 at var(--theme-transition-x, 50%) var(--theme-transition-y, 50%)
   );
 }
+
+@keyframes footer-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-footer-marquee {
+  animation: footer-marquee 120s linear infinite;
+}
+
+@keyframes footer-marquee-alt {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-footer-marquee-alt {
+  animation: footer-marquee-alt 120s linear infinite;
+}
+
+@keyframes tech-stack-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
