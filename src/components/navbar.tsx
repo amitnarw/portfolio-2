@@ -1,10 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import type { MouseEvent } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { ThemeToggleButton } from "@/components/theme-toggle-button";
+
+type StartViewTransition = (callback: () => void | Promise<void>) => {
+  ready: Promise<void>;
+};
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -22,7 +27,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -70,30 +75,83 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = (event: MouseEvent<HTMLButtonElement>) => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+
+    const applyTheme = () => {
+      setTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+      document.documentElement.classList.toggle("dark", newTheme === "dark");
+    };
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    const startViewTransition = (
+      document as Document & { startViewTransition?: StartViewTransition }
+    ).startViewTransition;
+
+    if (!startViewTransition || prefersReducedMotion) {
+      applyTheme();
+      return;
+    }
+
+    const buttonRect = event.currentTarget.getBoundingClientRect();
+    const x = buttonRect.left + buttonRect.width / 2;
+    const y = buttonRect.top + buttonRect.height / 2;
+
+    document.documentElement.style.setProperty("--theme-transition-x", `${x}px`);
+    document.documentElement.style.setProperty("--theme-transition-y", `${y}px`);
+
+    const maxX = Math.max(x, window.innerWidth - x);
+    const maxY = Math.max(y, window.innerHeight - y);
+    const endRadius = Math.hypot(maxX, maxY);
+
+    const transition = startViewTransition.call(document, () => {
+      applyTheme();
+    });
+
+    transition.ready.then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 650,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+          fill: "both",
+          pseudoElement: "::view-transition-new(root)",
+        },
+      );
+    });
   };
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-xl shadow-sm border-b border-border/50"
-          : "bg-transparent",
+        "fixed top-2 left-0 right-0 z-50 transition-all duration-500",
       )}
     >
       <nav
-        className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 lg:px-12"
+        className={cn(
+          "mx-auto flex items-center justify-between rounded-full px-6 py-3 lg:px-10 transition-all duration-500 ease-out",
+          isScrolled
+            ? "bg-foreground/80 backdrop-blur-2xl text-background shadow-2xl max-w-[70dvw] sm:max-w-250"
+            : "bg-transparent text-foreground max-w-full sm:max-w-350",
+        )}
         aria-label="Main navigation"
       >
         {/* Logo */}
         <Link
           href="/"
-          className="font-serif italic text-2xl tracking-wide text-foreground transition-opacity hover:opacity-70"
+          className={cn(
+            "font-serif italic text-2xl tracking-wide transition-opacity hover:opacity-70",
+            isScrolled ? "text-background" : "text-foreground",
+          )}
         >
           Amit Narwal.
         </Link>
@@ -105,9 +163,16 @@ export default function Navbar() {
               <a
                 href={link.href}
                 className={cn(
-                    "relative text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full",
-                    activeSection === link.href ? "after:w-full text-foreground" : ""
-                  )}
+                  "relative text-sm transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:transition-all after:duration-300 hover:after:w-full",
+                  isScrolled
+                    ? "text-background/70 hover:text-background after:bg-background"
+                    : "text-muted-foreground hover:text-foreground after:bg-foreground",
+                  activeSection === link.href
+                    ? isScrolled
+                      ? "after:w-full text-background"
+                      : "after:w-full text-foreground"
+                    : "",
+                )}
               >
                 {link.label}
               </a>
@@ -119,35 +184,32 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 md:inline-flex">
           <a
             href="#contact"
-            className="rounded-full border border-border bg-foreground text-background px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className={cn(
+              "rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105",
+              isScrolled
+                ? "border border-background/25 bg-background text-foreground hover:shadow-md"
+                : "border border-border bg-foreground text-background hover:shadow-lg",
+            )}
           >
             Contact
           </a>
-          {/* Theme Toggle Button */}
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full border-border"
-            aria-label="Toggle theme"
-          >
-            <Sun
-              className={cn(
-                "h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0",
-              )}
-            />
-            <Moon
-              className={cn(
-                "absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100",
-              )}
-            />
-          </Button>
+          <ThemeToggleButton
+            theme={theme}
+            size="lg"
+            isScrolled={isScrolled}
+            onToggle={toggleTheme}
+          />
         </div>
 
         {/* Mobile Hamburger */}
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="inline-flex items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-muted md:hidden"
+          className={cn(
+            "inline-flex items-center justify-center rounded-lg p-2 transition-colors md:hidden",
+            isScrolled
+              ? "text-background hover:bg-background/10"
+              : "text-foreground hover:bg-muted",
+          )}
           aria-label="Toggle menu"
           aria-expanded={isMobileOpen}
         >
@@ -159,10 +221,17 @@ export default function Navbar() {
       <div
         className={cn(
           "md:hidden overflow-hidden transition-all duration-500 ease-in-out",
-          isMobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0",
+          isMobileOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl px-6 py-6">
+        <div
+          className={cn(
+            "px-6 py-6 backdrop-blur-xl",
+            isScrolled
+              ? "border-t border-background/20 bg-foreground/95"
+              : "border-t border-border/50 bg-background/95",
+          )}
+        >
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.label}>
@@ -171,9 +240,13 @@ export default function Navbar() {
                   onClick={() => setIsMobileOpen(false)}
                   className={cn(
                     "block text-base font-medium transition-colors",
-                    activeSection === link.href
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                    isScrolled
+                      ? activeSection === link.href
+                        ? "text-background"
+                        : "text-background/70 hover:text-background"
+                      : activeSection === link.href
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {link.label}
@@ -184,20 +257,23 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setIsMobileOpen(false)}
-                className="inline-flex rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-all hover:scale-105"
+                className={cn(
+                  "inline-flex rounded-full px-6 py-2.5 text-sm font-medium transition-all hover:scale-105",
+                  isScrolled
+                    ? "bg-background text-foreground"
+                    : "bg-foreground text-background",
+                )}
               >
                 Contact
               </a>
             </li>
             <li>
-              <Button
-                variant="outline"
-                onClick={toggleTheme}
-                className="w-full justify-center gap-2"
-              >
-                {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-                {theme === "light" ? "Dark" : "Light"} Mode
-              </Button>
+              <ThemeToggleButton
+                theme={theme}
+                isScrolled={isScrolled}
+                onToggle={toggleTheme}
+                fullWidth
+              />
             </li>
           </ul>
         </div>

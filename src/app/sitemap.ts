@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://yourname.dev"; // TODO: Replace with your actual domain
-
+  const siteUrl = "https://amitnarwal.com";
   return [
     {
       url: siteUrl,

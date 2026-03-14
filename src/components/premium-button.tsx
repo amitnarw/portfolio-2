@@ -16,15 +16,16 @@ export function PremiumButton({
     <Button
       onClick={onClick}
       className={cn(
-        "group relative flex h-auto items-center rounded-2xl bg-foreground p-1 text-background shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all hover:scale-[1.02] active:scale-[0.98] hover:bg-foreground/90 cursor-pointer",
+        "group relative flex items-center justify-center overflow-hidden rounded-2xl bg-foreground p-1 h-14 text-background shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
         className,
       )}
     >
-      {/* Inner Neon Square */}
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-foreground transition-transform group-hover:scale-105">
+      {/* Inner Square */}
+      <div className="pointer-events-none absolute left-1 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-xl bg-primary text-foreground transition-all duration-500 ease-out group-hover:left-[calc(100%-3.25rem)] z-1">
         <svg
-          width="24"
-          height="24"
+          className="size-10"
+          width="40"
+          height="40"
           viewBox="0 0 24 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +45,9 @@ export function PremiumButton({
       </div>
 
       {/* Button Text */}
-      <span className="tracking-wide text-sm px-4">{text}</span>
+      <span className="relative pl-15 pr-5 text-sm tracking-wide transition-transform duration-500 ease-out group-hover:-translate-x-10">
+        {text}
+      </span>
     </Button>
   );
 }

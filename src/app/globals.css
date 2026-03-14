@@ -196,3 +196,15 @@
 .animate-slide-in-right {
   animation: slide-in-right 0.8s ease-out forwards;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  clip-path: circle(
+    0 at var(--theme-transition-x, 50%) var(--theme-transition-y, 50%)
+  );
+}

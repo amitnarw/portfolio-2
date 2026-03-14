@@ -9,8 +9,8 @@ export default function Hero() {
       aria-label="Hero section"
     >
       {/* Background curve gradient */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-white dark:bg-background" />
 
         <svg
           className="absolute inset-x-0 top-0 h-dvh w-full"
@@ -35,7 +35,7 @@ export default function Hero() {
               width="140%"
               height="260%"
             >
-              <feGaussianBlur stdDeviation="18" />
+              <feGaussianBlur stdDeviation="20" />
             </filter>
             <linearGradient id="hero-curve-line" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="rgba(255,214,116,0.95)" />
@@ -89,9 +89,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative mx-auto flex h-full max-w-350 flex-col justify-between px-6 pt-20 pb-5 lg:px-12 lg:pt-24 lg:pb-8">
+      <div className="relative mx-auto flex h-full max-w-350 flex-col justify-between px-6 pt-20 pb-5 lg:px-12 lg:pt-28 lg:pb-8">
         {/* ─ "Hey, there" text ─ */}
-        <div className="flex justify-center animate-fade-in-up">
+        <div className="flex justify-center animate-fade-in-up z-2">
           <h2 className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-40 items-center pl-10">
             <span>Hey,</span>
             <div className="flex flex-row items-start">
@@ -102,7 +102,7 @@ export default function Hero() {
         </div>
 
         {/* Person image goes here later */}
-        <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full -z-10 left-1/2 -translate-x-1/2">
+        <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full z-1 left-1/2 -translate-x-1/2">
           <div className="h-[88dvh] w-auto z-10">
             <Image
               src="/my-img.png"
@@ -119,7 +119,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mb-10 flex flex-col items-center justify-between gap-2 sm:flex-row sm:items-center">
+        <div className="mb-10 flex flex-col items-center justify-between gap-2 sm:flex-row sm:items-center z-2">
           <PremiumButton text="Hire Me" />
           <p
             className="animate-slide-in-right max-w-60 text-right text-xs sm:text-sm leading-relaxed text-foreground/60"
@@ -134,8 +134,7 @@ export default function Hero() {
         </div>
 
         {/* ─ Bottom section ─ */}
-        <div className="shrink-0 mb-10">
-
+        <div className="shrink-0 mb-10 z-2">
           {/* Name + Title row */}
           <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end">
             <div
