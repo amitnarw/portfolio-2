@@ -1,10 +1,12 @@
-import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
-import DigitalBanking from "@/components/digital-banking";
-import Footer from "@/components/footer";
-import MarqueeText from "@/components/marquee-text";
-import MarqueeStar from "@/components/marquee-star";
-import SkillsMarquee from "@/components/skills-marquee";
+import Navbar from "@/components/layout/navbar";
+import Hero from "@/components/homepage/hero";
+import Footer from "@/components/layout/footer";
+import MarqueeText from "@/components/homepage/marquee-text";
+import MarqueeStar from "@/components/homepage/marquee-star";
+import SkillsMarquee from "@/components/homepage/skills-marquee";
+import Experience from "@/components/homepage/experience";
+import BlogArticles from "@/components/homepage/blog-articles";
+import SelectedWork from "@/components/homepage/selected-work";
 
 export default function Home() {
   const marqueeItems = Array.from({ length: 14 }, (_, i) => (
@@ -23,10 +25,13 @@ export default function Home() {
       <main>
         <Hero />
         <SkillsMarquee />
-        <DigitalBanking />
+        <Experience />
+        <SelectedWork />
+        <BlogArticles />
         <MarqueeText marqueeItems={marqueeItems} />
         <Footer />
       </main>
     </>
   );
 }
+

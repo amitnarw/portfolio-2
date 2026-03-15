@@ -1,4 +1,4 @@
-import { PremiumButton } from "./premium-button";
+import { PremiumButton } from "@/components/shared/premium-button";
 import Image from "next/image";
 
 export default function Hero() {
@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-white dark:bg-background" />
 
         <svg
-          className="absolute inset-x-0 top-0 h-dvh w-full"
+          className="absolute inset-x-0 top-0 h-[calc(100dvh+50px)] w-full"
           viewBox="0 0 1440 720"
           preserveAspectRatio="none"
           aria-hidden="true"
@@ -35,7 +35,7 @@ export default function Hero() {
               width="140%"
               height="260%"
             >
-              <feGaussianBlur stdDeviation="20" />
+              <feGaussianBlur stdDeviation="42" />
             </filter>
             <linearGradient id="hero-curve-line" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="rgba(255,214,116,0.95)" />
@@ -65,7 +65,7 @@ export default function Hero() {
             stroke="rgba(255,209,97,0.20)"
             strokeWidth="350"
             strokeLinecap="round"
-            filter="url(#hero-curve-glow)"
+            filter="url(#hero-curve-soft)"
           />
           <path
             d="M 0 220 A 800 500 0 0 0 1440 220"
@@ -75,17 +75,9 @@ export default function Hero() {
             strokeLinecap="round"
             filter="url(#hero-curve-soft)"
           />
-          {/* <path
-            d="M 0 220 A 800 500 0 0 0 1440 220"
-            fill="none"
-            stroke="rgba(255,229,168,0.5)"
-            strokeWidth="80"
-            strokeLinecap="round"
-            filter="url(#hero-curve-soft)"
-          /> */}
         </svg>
 
-        {/* <div className="absolute left-1/2 top-[52%] h-240 w-880 max-w-none -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(255,225,150,0.22)_0%,rgba(255,238,203,0.1)_44%,transparent_78%)] blur-[110px]" /> */}
+        <div className="absolute left-1/2 top-[52%] h-240 w-880 max-w-none -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(255,225,150,0.22)_0%,rgba(255,238,203,0.1)_44%,transparent_78%)] blur-[110px]" />
       </div>
 
       {/* Content */}

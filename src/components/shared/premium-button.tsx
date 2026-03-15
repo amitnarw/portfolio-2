@@ -16,7 +16,7 @@ export function PremiumButton({
     <Button
       onClick={onClick}
       className={cn(
-        "group relative flex items-center justify-center overflow-hidden rounded-2xl bg-foreground p-1 h-14 text-background shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
+        "group relative flex items-center justify-center overflow-hidden rounded-2xl bg-foreground dark:bg-background p-1 h-14 text-background dark:text-foreground shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
         className,
       )}
     >

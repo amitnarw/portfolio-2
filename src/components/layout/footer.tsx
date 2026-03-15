@@ -1,42 +1,51 @@
 import Link from "next/link";
-import { Linkedin } from "lucide-react";
-import { CtaPillLink } from "@/components/cta-pill-link";
+import { ArrowUpRight, Linkedin } from "lucide-react";
+import { CtaPillLink } from "@/components/layout/cta-pill-link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white" id="contact">
-      <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-6 py-12 lg:px-12">
-        <div className="space-y-4">
-          <p className="max-w-xl text-sm tracking-[0.2em] text-white/70">
-            Scaling Start-ups for <span className="font-serif italic">Growth</span>
+    <footer className="relative overflow-hidden bg-black text-white" id="contact">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex justify-center">
+        <div className="absolute -bottom-64 h-150 w-xl rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute -bottom-64 h-128 w-lg rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-54 h-96 w-md rounded-full bg-secondary/15 blur-2xl" />
+        <div className="absolute -bottom-54 h-70 w-40 rounded-full bg-secondary/40 blur-3xl" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full max-w-350 flex-col gap-10 px-6 py-12 lg:px-12">
+        <div className="flex flex-row items-end justify-between">
+          <div className="space-y-10">
+          <p className="max-w-xs text-4xl font-heading tracking-[0.15em] text-white">
+            Scaling <span className="font-serif italic text-orange-400 text-5xl tracking-normal">Start-ups</span> for <span className="font-serif italic text-primary text-5xl tracking-normal">Growth</span>
           </p>
-          <a
+          <Link
             href="mailto:amitnarwal115@gmail.com"
-            className="block text-lg font-medium tracking-wide text-white/85 transition-opacity hover:opacity-70"
+            className="text-lg font-medium tracking-wide text-white/50 transition-opacity hover:opacity-70 flex flex-row items-end"
           >
-            amitnarwal115@gmail.com
-          </a>
+            amitnarwal115@gmail.com <ArrowUpRight />
+          </Link>
         </div>
 
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm uppercase tracking-[0.18em] text-white/65">
-          <a href="#home" className="transition-colors hover:text-white">
+          <Link href="#home" className="transition-colors hover:text-white duration-500">
             Home
-          </a>
-          <a href="#about" className="transition-colors hover:text-white">
+          </Link>
+          <Link href="#about" className="transition-colors hover:text-white duration-500">
             About
-          </a>
-          <a href="#blog" className="transition-colors hover:text-white">
+          </Link>
+          <Link href="#blog" className="transition-colors hover:text-white duration-500">
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="#services"
-            className="transition-colors hover:text-white"
+            className="transition-colors hover:text-white duration-500"
           >
             Services
-          </a>
-          <a href="#works" className="transition-colors hover:text-white">
+          </Link>
+          <Link href="#works" className="transition-colors hover:text-white duration-500">
             Work
-          </a>
+          </Link>
+        </div>
         </div>
 
         <div className="h-px w-full bg-white/20" />
@@ -53,7 +62,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               ariaLabel="LinkedIn"
-              className="h-10 w-10 bg-white text-black"
+              className="h-10 w-10 bg-white text-black border-0"
             >
               <Linkedin size={18} />
             </CtaPillLink>
@@ -62,7 +71,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               ariaLabel="X"
-              className="h-10 w-10 bg-white text-black"
+              className="h-10 w-10 bg-white text-black border-0"
             >
               <svg
                 width="16"

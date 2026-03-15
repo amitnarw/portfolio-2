@@ -243,3 +243,138 @@
     transform: translateX(-50%);
   }
 }
+
+.animate-tech-stack-marquee {
+  animation: tech-stack-marquee 120s linear infinite;
+}
+
+@keyframes ufo-hover {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(0.4px, -0.8px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate(0, -1.4px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-0.4px, -0.8px) rotate(1.5deg);
+  }
+}
+
+@keyframes ufo-beam {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(0.9);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@keyframes ufo-scan {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: translateX(-50%) translateY(0) scaleY(0.75);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateX(-50%) translateY(0.5px) scaleY(1.15);
+  }
+}
+
+@keyframes ufo-thruster {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scaleX(0.7);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scaleX(1.2);
+  }
+}
+
+@keyframes selected-work-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-selected-work-marquee {
+  animation: selected-work-marquee 48s linear infinite;
+}
+
+@keyframes fadeRise {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orbFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10px, -18px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes digitDrift {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes ufoIdle {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(2deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(2deg);
+  }
+}
+
+@keyframes cloudTraverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(210vw);
+  }
+}
+
+@keyframes cloudBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

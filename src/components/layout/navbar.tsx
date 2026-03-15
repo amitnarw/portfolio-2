@@ -5,8 +5,8 @@ import type { MouseEvent } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { ThemeToggleButton } from "@/components/theme-toggle-button";
-import { CtaPillLink } from "@/components/cta-pill-link";
+import { ThemeToggleButton } from "@/components/layout/theme-toggle-button";
+import { CtaPillLink } from "@/components/layout/cta-pill-link";
 
 type StartViewTransition = (callback: () => void | Promise<void>) => {
   ready: Promise<void>;
