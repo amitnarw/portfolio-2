@@ -6,25 +6,26 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { ThemeToggleButton } from "@/components/layout/theme-toggle-button";
-import { CtaPillLink } from "@/components/layout/cta-pill-link";
+import { PremiumButton1 } from "@/components/shared/premium-button-1";
+import NavLinkNew from "../shared/nav-link";
 
 type StartViewTransition = (callback: () => void | Promise<void>) => {
   ready: Promise<void>;
 };
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Works", href: "#works" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Home", href: "/" },
+  { label: "Works", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
-    const [activeSection, setActiveSection] = useState("#home");
+  const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,8 +103,14 @@ export default function Navbar() {
     const x = buttonRect.left + buttonRect.width / 2;
     const y = buttonRect.top + buttonRect.height / 2;
 
-    document.documentElement.style.setProperty("--theme-transition-x", `${x}px`);
-    document.documentElement.style.setProperty("--theme-transition-y", `${y}px`);
+    document.documentElement.style.setProperty(
+      "--theme-transition-x",
+      `${x}px`,
+    );
+    document.documentElement.style.setProperty(
+      "--theme-transition-y",
+      `${y}px`,
+    );
 
     const maxX = Math.max(x, window.innerWidth - x);
     const maxY = Math.max(y, window.innerHeight - y);
@@ -169,30 +176,15 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className={cn(
-                  "relative text-sm transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:transition-all after:duration-300 hover:after:w-full",
-                  isScrolled
-                    ? "text-background/70 hover:text-background after:bg-background"
-                    : "text-muted-foreground hover:text-foreground after:bg-foreground",
-                  activeSection === link.href
-                    ? isScrolled
-                      ? "after:w-full text-background"
-                      : "after:w-full text-foreground"
-                    : "",
-                )}
-              >
-                {link.label}
-              </a>
+              <NavLinkNew href={link.href} label={link.label} isScrolled={isScrolled} />
             </li>
           ))}
         </ul>
 
         {/* CTA Buttons & Theme Toggle */}
         <div className="hidden items-center gap-3 md:inline-flex">
-          <CtaPillLink
-            href="#contact"
+          <PremiumButton1
+            href="mailto:amitnarwal115@gmail.com"
             className={cn(
               "px-6 py-2.5",
               isScrolled
@@ -201,7 +193,7 @@ export default function Navbar() {
             )}
           >
             Contact
-          </CtaPillLink>
+          </PremiumButton1>
           <ThemeToggleButton
             theme={theme}
             size="lg"
@@ -263,8 +255,8 @@ export default function Navbar() {
               </li>
             ))}
             <li className="pt-2">
-              <CtaPillLink
-                href="#contact"
+              <PremiumButton1
+                href="mailto:amitnarwal115@gmail.com"
                 className={cn(
                   "px-6 py-2.5",
                   isScrolled
@@ -274,7 +266,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 Contact
-              </CtaPillLink>
+              </PremiumButton1>
             </li>
             <li>
               <ThemeToggleButton

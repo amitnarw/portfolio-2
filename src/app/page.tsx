@@ -4,9 +4,12 @@ import Footer from "@/components/layout/footer";
 import MarqueeText from "@/components/homepage/marquee-text";
 import MarqueeStar from "@/components/homepage/marquee-star";
 import SkillsMarquee from "@/components/homepage/skills-marquee";
-import Experience from "@/components/homepage/experience";
-import BlogArticles from "@/components/homepage/blog-articles";
+import About from "@/components/homepage/about";
+import Services from "@/components/homepage/services";
 import SelectedWork from "@/components/homepage/selected-work";
+import Experience from "@/components/homepage/experience";
+import Testimonials from "@/components/homepage/testimonials";
+import BlogArticles from "@/components/homepage/blog-articles";
 
 export default function Home() {
   const marqueeItems = Array.from({ length: 14 }, (_, i) => (
@@ -25,13 +28,15 @@ export default function Home() {
       <main>
         <Hero />
         <SkillsMarquee />
-        <Experience />
+        <About />
+        <Services />
         <SelectedWork />
+        <Experience />
+        <Testimonials />
         <BlogArticles />
-        <MarqueeText marqueeItems={marqueeItems} />
+        <MarqueeText marqueeItems={marqueeItems} className="py-0" />
         <Footer />
       </main>
     </>
   );
 }
-

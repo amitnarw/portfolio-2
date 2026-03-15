@@ -1,24 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CtaPillLink } from "@/components/layout/cta-pill-link";
+import { PremiumButton1 } from "@/components/shared/premium-button-1";
 import { ThemeToggleButton } from "@/components/layout/theme-toggle-button";
 import UFO from "@/components/shared/ufo";
 
 type HoverPart = "left" | "center" | "right" | null;
 
 export default function NotFound() {
-  const backgroundClouds = [
-    { top: "8%", width: 360, height: 128, duration: 92, delay: -36, opacity: 0.14 },
-    { top: "18%", width: 300, height: 112, duration: 78, delay: -54, opacity: 0.12 },
-    { top: "31%", width: 420, height: 140, duration: 108, delay: -12, opacity: 0.1 },
-  ];
-  const foregroundClouds = [
-    { top: "13%", width: 430, height: 142, duration: 56, delay: -20, opacity: 0.24 },
-    { top: "24%", width: 380, height: 126, duration: 62, delay: -42, opacity: 0.22 },
-    { top: "34%", width: 340, height: 114, duration: 52, delay: -8, opacity: 0.2 },
-  ];
-
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof window === "undefined") {
       return "light";
@@ -83,41 +72,90 @@ export default function NotFound() {
         setHoverPart(null);
       }}
     >
-      <div className="absolute right-4 top-4 z-30 md:right-6 md:top-6">
-        <ThemeToggleButton theme={theme} onToggle={toggleTheme} size="lg" />
+      {/* Premium animated gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Base gradient mesh */}
+        <div 
+          className="absolute inset-0 opacity-60"
+          style={{
+            background: theme === 'dark' 
+              ? `radial-gradient(ellipse 80% 50% at 20% 40%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                 radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+                 radial-gradient(ellipse 100% 80% at 50% 100%, rgba(236, 72, 153, 0.08) 0%, transparent 40%)`
+              : `radial-gradient(ellipse 80% 50% at 20% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                 radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168, 85, 247, 0.06) 0%, transparent 50%),
+                 radial-gradient(ellipse 100% 80% at 50% 100%, rgba(236, 72, 153, 0.04) 0%, transparent 40%)`
+          }}
+        />
+        
+        {/* Animated gradient orbs */}
+        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full animate-[orbFloat_20s_ease-in-out_infinite] pointer-events-none"
+          style={{
+            background: theme === 'dark'
+              ? 'radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%)'
+              : 'radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0.03) 40%, transparent 70%)',
+            filter: 'blur(40px)'
+          }}
+        />
+        <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] rounded-full animate-[orbFloat_25s_ease-in-out_infinite_reverse] pointer-events-none"
+          style={{
+            background: theme === 'dark'
+              ? 'radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%)'
+              : 'radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(168, 85, 247, 0.03) 40%, transparent 70%)',
+            filter: 'blur(50px)'
+          }}
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full animate-[orbFloat_30s_ease-in-out_infinite] pointer-events-none"
+          style={{
+            background: theme === 'dark'
+              ? 'radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, rgba(236, 72, 153, 0.02) 50%, transparent 70%)'
+              : 'radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, rgba(236, 72, 153, 0.01) 50%, transparent 70%)',
+            filter: 'blur(60px)'
+          }}
+        />
+
+        {/* Floating particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Row 1 - Small dots */}
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_8s_ease-in-out_infinite]" style={{ top: '15%', left: '10%', animationDelay: '0s', background: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)' }} />
+          <div className="absolute w-1.5 h-1.5 rounded-full animate-[floatParticle_12s_ease-in-out_infinite]" style={{ top: '25%', left: '25%', animationDelay: '1s', background: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.15)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_10s_ease-in-out_infinite]" style={{ top: '18%', left: '45%', animationDelay: '2s', background: theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.12)' }} />
+          <div className="absolute w-2 h-2 rounded-full animate-[floatParticle_14s_ease-in-out_infinite]" style={{ top: '30%', left: '70%', animationDelay: '3s', background: theme === 'dark' ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.2)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_9s_ease-in-out_infinite]" style={{ top: '20%', left: '90%', animationDelay: '4s', background: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.15)' }} />
+          
+          {/* Row 2 - Medium dots */}
+          <div className="absolute w-1.5 h-1.5 rounded-full animate-[floatParticle_11s_ease-in-out_infinite]" style={{ top: '45%', left: '5%', animationDelay: '5s', background: theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_7s_ease-in-out_infinite]" style={{ top: '55%', left: '15%', animationDelay: '6s', background: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.18)' }} />
+          <div className="absolute w-2.5 h-2.5 rounded-full animate-[floatParticle_15s_ease-in-out_infinite]" style={{ top: '50%', left: '35%', animationDelay: '0.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.08)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_9s_ease-in-out_infinite]" style={{ top: '60%', left: '55%', animationDelay: '1.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.15)' }} />
+          <div className="absolute w-1.5 h-1.5 rounded-full animate-[floatParticle_13s_ease-in-out_infinite]" style={{ top: '48%', left: '80%', animationDelay: '2.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.12)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_8s_ease-in-out_infinite]" style={{ top: '58%', left: '95%', animationDelay: '3.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.18)' }} />
+          
+          {/* Row 3 - Small dots */}
+          <div className="absolute w-2 h-2 rounded-full animate-[floatParticle_10s_ease-in-out_infinite]" style={{ top: '75%', left: '8%', animationDelay: '4.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.15)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_12s_ease-in-out_infinite]" style={{ top: '82%', left: '20%', animationDelay: '5.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)' }} />
+          <div className="absolute w-1.5 h-1.5 rounded-full animate-[floatParticle_8s_ease-in_out_infinite]" style={{ top: '78%', left: '38%', animationDelay: '6.5s', background: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.18)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_14s_ease-in-out_infinite]" style={{ top: '88%', left: '52%', animationDelay: '7s', background: theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.08)' }} />
+          <div className="absolute w-2 h-2 rounded-full animate-[floatParticle_11s_ease-in-out_infinite]" style={{ top: '72%', left: '72%', animationDelay: '1.2s', background: theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.12)' }} />
+          <div className="absolute w-1 h-1 rounded-full animate-[floatParticle_9s_ease-in-out_infinite]" style={{ top: '85%', left: '88%', animationDelay: '2.2s', background: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.15)' }} />
+        </div>
+
+        {/* Subtle grid pattern for depth */}
+        <div 
+          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.02]"
+          style={{
+            backgroundImage: theme === 'dark'
+              ? `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`
+              : `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}
+        />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-20 -top-28 h-136 w-136 rounded-full bg-foreground/10 blur-2xl animate-[orbFloat_12s_ease-in-out_infinite]" />
-        <div className="absolute -bottom-32 -right-20 h-120 w-120 rounded-full bg-foreground/10 blur-2xl animate-[orbFloat_14s_ease-in-out_infinite_reverse]" />
-
-        <div className="absolute inset-0 z-0">
-          {backgroundClouds.map((cloud, index) => (
-            <div
-              key={`back-cloud-${index}`}
-              className="absolute -left-[38%]"
-              style={{
-                top: cloud.top,
-                animation: `cloudTraverse ${cloud.duration}s linear ${cloud.delay}s infinite`,
-              }}
-            >
-              <div
-                className="relative"
-                style={{
-                  width: `${cloud.width}px`,
-                  height: `${cloud.height}px`,
-                  opacity: cloud.opacity,
-                  animation: `cloudBob ${7 + index * 1.2}s ease-in-out ${index * -0.8}s infinite`,
-                }}
-              >
-                <span className="absolute inset-x-[9%] bottom-[8%] h-[58%] rounded-full bg-foreground blur-sm" />
-                <span className="absolute left-[6%] top-[24%] h-[44%] w-[31%] rounded-full bg-foreground blur-sm" />
-                <span className="absolute left-[31%] top-[5%] h-[58%] w-[39%] rounded-full bg-foreground blur-sm" />
-                <span className="absolute right-[8%] top-[21%] h-[42%] w-[30%] rounded-full bg-foreground blur-sm" />
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="absolute right-4 top-4 z-30 md:right-6 md:top-6">
+        <ThemeToggleButton theme={theme} onToggle={toggleTheme} size="lg" />
       </div>
 
       <div
@@ -132,42 +170,14 @@ export default function NotFound() {
         </span>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden">
-        {foregroundClouds.map((cloud, index) => (
-          <div
-            key={`front-cloud-${index}`}
-            className="absolute -left-[44%]"
-            style={{
-              top: cloud.top,
-              animation: `cloudTraverse ${cloud.duration}s linear ${cloud.delay}s infinite`,
-            }}
-          >
-            <div
-              className="relative"
-              style={{
-                width: `${cloud.width}px`,
-                height: `${cloud.height}px`,
-                opacity: cloud.opacity,
-                animation: `cloudBob ${5.8 + index * 0.9}s ease-in-out ${index * -0.6}s infinite`,
-              }}
-            >
-              <span className="absolute inset-x-[7%] bottom-[8%] h-[60%] rounded-full bg-foreground/95 blur-[1px]" />
-              <span className="absolute left-[5%] top-[26%] h-[44%] w-[30%] rounded-full bg-foreground/95 blur-[1px]" />
-              <span className="absolute left-[29%] top-[4%] h-[60%] w-[40%] rounded-full bg-foreground/95 blur-[1px]" />
-              <span className="absolute right-[7%] top-[22%] h-[43%] w-[30%] rounded-full bg-foreground/95 blur-[1px]" />
-            </div>
-          </div>
-        ))}
-      </div>
-
       <div className="z-10 mt-6 flex flex-col items-center">
         <h1 className="text-center text-2xl md:text-4xl text-foreground/70 font-serif">Page not found</h1>
-        <CtaPillLink
+        <PremiumButton1
           href="/"
           className="px-6 py-2.5 bg-foreground text-background mt-5"
         >
           Go home
-        </CtaPillLink>
+        </PremiumButton1>
       </div>
 
       {showCursor ? (

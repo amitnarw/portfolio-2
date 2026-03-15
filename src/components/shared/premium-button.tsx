@@ -7,16 +7,19 @@ export function PremiumButton({
   onClick,
   className,
   text,
+  reverse = false,
 }: {
   onClick?: () => void;
   className?: string;
   text?: string;
+  reverse?: boolean;
 }) {
   return (
     <Button
       onClick={onClick}
       className={cn(
-        "group relative flex items-center justify-center overflow-hidden rounded-2xl bg-foreground dark:bg-background p-1 h-14 text-background dark:text-foreground shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
+        "group relative flex items-center justify-center overflow-hidden rounded-2xl p-1 h-14 shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
+        reverse ? "bg-background dark:bg-foreground" : "bg-foreground dark:bg-background",
         className,
       )}
     >
@@ -45,7 +48,7 @@ export function PremiumButton({
       </div>
 
       {/* Button Text */}
-      <span className="relative pl-15 pr-5 text-sm tracking-wide transition-transform duration-500 ease-out group-hover:-translate-x-10">
+      <span className={cn("relative pl-15 pr-5 text-sm tracking-wide transition-transform duration-500 ease-out group-hover:-translate-x-10", reverse ? "text-foreground dark:text-background" : "text-background dark:text-foreground")}>
         {text}
       </span>
     </Button>

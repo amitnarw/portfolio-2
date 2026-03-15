@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import type { MouseEventHandler } from "react";
 
-type CtaPillLinkProps = {
+type PremiumButton1Props = {
   href: string;
   children: ReactNode;
   className?: string;
@@ -13,7 +13,7 @@ type CtaPillLinkProps = {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export function CtaPillLink({
+export function PremiumButton1({
   href,
   children,
   className,
@@ -21,7 +21,7 @@ export function CtaPillLink({
   rel,
   ariaLabel,
   onClick,
-}: CtaPillLinkProps) {
+}: PremiumButton1Props) {
   return (
     <Link
       href={href}

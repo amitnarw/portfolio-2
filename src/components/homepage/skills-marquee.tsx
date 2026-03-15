@@ -60,8 +60,16 @@ const techStack = [
     wordmark: `${DEVICON_BASE}/mongodb/mongodb-original-wordmark.svg`,
   },
   {
-    name: "Redux",
-    wordmark: `${DEVICON_BASE}/redux/redux-original-wordmark.svg`,
+    name: "Supabase",
+    wordmark: `${DEVICON_BASE}/supabase/supabase-original-wordmark.svg`,
+  },
+  {
+    name: "Google",
+    wordmark: `${DEVICON_BASE}/google/google-original-wordmark.svg`,
+  },
+  {
+    name: "Zustand",
+    wordmark: `${DEVICON_BASE}/zustand/zustand-original.svg`,
   },
   {
     name: "Docker",
@@ -69,7 +77,7 @@ const techStack = [
   },
   {
     name: "Nginx",
-    wordmark: `${DEVICON_BASE}/nginx/nginx-original-wordmark.svg`,
+    wordmark: `${DEVICON_BASE}/nginx/nginx-original.svg`,
   },
   {
     name: "AWS",
@@ -98,24 +106,30 @@ const techStack = [
 ];
 
 export default function SkillsMarquee() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
   const isDarkTheme = useIsDarkTheme();
   const loopedTechStack = [...techStack, ...techStack];
 
   const mutedFilter = isDarkTheme
-    ? "grayscale(1) brightness(0) invert(1)"
-    : "grayscale(1) brightness(0.22)";
+    ? "grayscale(1) brightness(1) invert(1)"
+    : "grayscale(1) brightness(1)";
 
   return (
     <TooltipProvider>
       <section
         aria-label="Tech stack marquee"
         className="relative overflow-hidden bg-linear-to-b from-white to-zinc-100 dark:from-white/10 dark:to-zinc-100/10 p-6 sm:px-12"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
+        {/* Left fade gradient */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-linear-to-r from-background to-transparent" />
+        {/* Right fade gradient */}
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-linear-to-l from-background to-transparent" />
         <div
-          className="flex min-w-max animate-tech-stack-marquee whitespace-nowrap items-center"
+          className="flex min-w-max whitespace-nowrap items-center animate-tech-stack-marquee"
           style={{
-            animationPlayState: hoveredIndex !== null ? "paused" : "running",
+            animationDuration: isPaused ? "3600000ms" : "120000ms",
           }}
         >
           {loopedTechStack.map((item, index) => (
@@ -125,21 +139,14 @@ export default function SkillsMarquee() {
                   <button
                     type="button"
                     className="mr-10 cursor-pointer inline-flex items-center"
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
                     aria-label={item.name}
                   >
                     <img
                       src={item.wordmark}
                       alt={item.name}
-                      className={`w-10 h-auto max-w-none transition-[transform,filter,opacity] duration-500 ease-out ${
-                        hoveredIndex === index
-                          ? "scale-110 opacity-100"
-                          : "scale-100 opacity-75"
-                      }`}
+                      className="w-10 h-auto max-w-none opacity-75 scale-100 transition-all duration-500 ease-out"
                       style={{
-                        filter:
-                          hoveredIndex === index ? "none" : mutedFilter,
+                        filter: mutedFilter,
                       }}
                     />
                   </button>
