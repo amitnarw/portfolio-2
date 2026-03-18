@@ -18,13 +18,13 @@ export function PremiumButton({
     <Button
       onClick={onClick}
       className={cn(
-        "group relative flex items-center justify-center overflow-hidden rounded-2xl p-1 h-14 shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] hover:bg-foreground/90 active:scale-[0.98]",
-        reverse ? "bg-background dark:bg-foreground" : "bg-foreground dark:bg-background",
+        "group relative flex items-center justify-center overflow-hidden rounded-2xl p-1 h-14 shadow-xl shadow-black/5 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
+        reverse ? "bg-foreground hover:bg-foreground" : "bg-foreground dark:bg-background hover:bg-foreground/90",
         className,
       )}
     >
       {/* Inner Square */}
-      <div className="pointer-events-none absolute left-1 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-xl bg-primary text-foreground transition-all duration-500 ease-out group-hover:left-[calc(100%-3.25rem)] z-1">
+      <div className="pointer-events-none absolute left-1 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-xl bg-primary text-black transition-all duration-500 ease-out group-hover:left-[calc(100%-3.25rem)] z-1">
         <svg
           className="size-10"
           width="40"
@@ -48,7 +48,7 @@ export function PremiumButton({
       </div>
 
       {/* Button Text */}
-      <span className={cn("relative pl-15 pr-5 text-sm tracking-wide transition-transform duration-500 ease-out group-hover:-translate-x-10", reverse ? "text-foreground dark:text-background" : "text-background dark:text-foreground")}>
+      <span className={cn("relative pl-15 pr-5 text-sm tracking-wide transition-transform duration-500 ease-out group-hover:-translate-x-10", reverse ? "text-background" : "text-background dark:text-foreground")}>
         {text}
       </span>
     </Button>

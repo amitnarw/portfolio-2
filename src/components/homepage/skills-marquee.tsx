@@ -107,6 +107,7 @@ const techStack = [
 
 export default function SkillsMarquee() {
   const [isPaused, setIsPaused] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const isDarkTheme = useIsDarkTheme();
   const loopedTechStack = [...techStack, ...techStack];
 
@@ -120,17 +121,17 @@ export default function SkillsMarquee() {
         aria-label="Tech stack marquee"
         className="relative overflow-hidden bg-linear-to-b from-white to-zinc-100 dark:from-white/10 dark:to-zinc-100/10 p-6 sm:px-12"
         onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        onMouseLeave={() => {
+          setIsPaused(false);
+          setHoveredItem(null);
+        }}
       >
         {/* Left fade gradient */}
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-linear-to-r from-background to-transparent" />
         {/* Right fade gradient */}
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-linear-to-l from-background to-transparent" />
         <div
-          className="flex min-w-max whitespace-nowrap items-center animate-tech-stack-marquee"
-          style={{
-            animationDuration: isPaused ? "3600000ms" : "120000ms",
-          }}
+          className={`flex min-w-max whitespace-nowrap items-center animate-tech-stack-marquee ${isPaused ? "paused" : ""}`}
         >
           {loopedTechStack.map((item, index) => (
             <div key={`${item.name}-${index}`} className="contents">
@@ -140,13 +141,19 @@ export default function SkillsMarquee() {
                     type="button"
                     className="mr-10 cursor-pointer inline-flex items-center"
                     aria-label={item.name}
+                    onMouseEnter={() => setHoveredItem(item.name)}
+                    onMouseLeave={() => setHoveredItem(null)}
                   >
                     <img
                       src={item.wordmark}
                       alt={item.name}
-                      className="w-10 h-auto max-w-none opacity-75 scale-100 transition-all duration-500 ease-out"
+                      className={`w-10 h-auto max-w-none transition-all duration-300 ease-out ${
+                        hoveredItem === item.name
+                          ? "opacity-100 scale-125"
+                          : "opacity-75 scale-100"
+                      }`}
                       style={{
-                        filter: mutedFilter,
+                        filter: hoveredItem === item.name ? "none" : mutedFilter,
                       }}
                     />
                   </button>
