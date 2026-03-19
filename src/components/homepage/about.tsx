@@ -1,16 +1,7 @@
 "use client";
 
 import SectionHeader from "@/components/shared/section-header";
-import { PremiumButton } from "@/components/shared/premium-button";
 import { useEffect, useRef, useState } from "react";
-import { Sparkles } from "lucide-react";
-
-const highlights = [
-  "4+ years of experience in full-stack development",
-  "Built 50+ projects for clients worldwide",
-  "Specialized in React, Next.js, and AI integration",
-  "Expert in performance optimization",
-];
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,72 +31,44 @@ export default function About() {
       aria-label="About section"
       ref={sectionRef}
     >
+      {/* Noise texture overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E")'
+        }}
+      />
+
       <div className="relative mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-16">
         <SectionHeader
           title="About Me"
-          subtitle="Get to know me"
+          subtitle=""
           backgroundText="ABOUT"
         />
 
         <div
-          className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "all 0.8s ease-out",
-          }}
+          className="space-y-12 flex flex-row justify-between"
         >
-          {/* Left - Main content */}
-          <div className="space-y-6">
-            <h3 className="text-[clamp(1.5rem,2.5vw,2.5rem)] font-medium leading-tight text-foreground">
-              I build digital experiences that{" "}
-              <span className="text-primary">convert</span> and{" "}
-              <span className="text-primary">impress</span>
-            </h3>
-
-            <p className="text-[clamp(1rem,1.3vw,1.15rem)] leading-relaxed text-muted-foreground/80">
-              I'm a passionate full-stack developer with expertise in modern web
-              technologies. I specialize in building fast, scalable, and
-              user-friendly applications that help businesses grow their digital
-              presence.
-            </p>
-
-            <p className="text-[clamp(1rem,1.3vw,1.15rem)] leading-relaxed text-muted-foreground/80">
-              My approach combines technical excellence with creative
-              problem-solving to deliver solutions that not only work perfectly
-              but also provide exceptional user experiences.
+          {/* Header */}
+          <div className="space-y-4">
+            <p className="text-[clamp(1.1rem,2vw,1.5rem)] leading-relaxed text-muted-foreground/80 max-w-2xl">
+              Hi, I'm a passionate full-stack developer with expertise in modern web technologies. I specialize in building fast, scalable, and user-friendly applications that help businesses grow their digital presence.
             </p>
           </div>
 
-          {/* Right - Highlights */}
-          <div
-            className="space-y-4"
-            style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "translateX(0)" : "translateX(30px)",
-              transition: "all 0.8s ease-out 0.2s",
-            }}
-          >
-            {highlights.map((highlight, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 rounded-xl border border-foreground/10 bg-card/50 p-4 transition-all duration-500 hover:border-primary/30 hover:bg-card/80"
-                style={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                  transitionDelay: `${0.3 + index * 0.1}s`,
-                }}
-              >
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
-                  <Sparkles size={14} strokeWidth={2} />
-                </div>
-                <p className="text-[clamp(0.95rem,1.2vw,1.1rem)] text-foreground/80">
-                  {highlight}
-                </p>
-              </div>
-            ))}
-            <div className="pt-4">
-              <PremiumButton text="Hire Me" reverse />
+          {/* Statistics */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="text-center">
+              <div className="text-[clamp(2.5rem,6vw,5rem)] font-black text-primary font-heading">4+</div>
+              <div className="text-[clamp(0.5rem,1vw,1rem)] font-medium text-foreground">Years of Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-[clamp(2.5rem,6vw,5rem)] font-black text-primary font-heading">20+</div>
+              <div className="text-[clamp(0.5rem,1vw,1rem)] font-medium text-foreground">Completed Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-[clamp(2.5rem,6vw,5rem)] font-black text-primary font-heading">9+</div>
+              <div className="text-[clamp(0.5rem,1vw,1rem)] font-medium text-foreground">Clients Worldwide</div>
             </div>
           </div>
         </div>

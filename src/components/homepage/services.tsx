@@ -6,34 +6,46 @@ import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
+    title: "Full Stack",
+    description: "End-to-end development combining frontend and backend expertise for complete web applications.",
+    icon: Layers,
+    gridArea: "1 / 1 / 3 / 3", // Large card - row 1-3, column 1-3
+    color: "bg-primary",
+  },
+  {
+    title: "AI Applications Developer",
+    description: "Implementing intelligent features and machine learning capabilities into your applications.",
+    icon: Bot,
+    gridArea: "1 / 3 / 3 / 4", // Vertical card - row 1-3, column 3-4
+    color: "bg-secondary",
+  },
+  {
     title: "Frontend Development",
-    description: "Building responsive, interactive interfaces with React and Next.js that deliver exceptional user experiences.",
+    description: "Building responsive, interactive interfaces with React and Next.js.",
     icon: Code2,
+    gridArea: "3 / 1 / 4 / 2", // Small card - row 3-4, column 1-2
+    color: "bg-card",
   },
   {
     title: "Backend Development",
-    description: "Creating robust APIs and server-side applications using Node.js and modern frameworks.",
+    description: "Creating robust APIs and server-side applications using Node.js.",
     icon: Cpu,
-  },
-  {
-    title: "Full-Stack Solutions",
-    description: "End-to-end development combining frontend and backend expertise for complete web applications.",
-    icon: Layers,
-  },
-  {
-    title: "AI Integration",
-    description: "Implementing intelligent features and machine learning capabilities into your applications.",
-    icon: Bot,
+    gridArea: "3 / 2 / 4 / 3", // Small card - row 3-4, column 2-3
+    color: "bg-card",
   },
   {
     title: "Chrome Extensions",
-    description: "Developing custom browser extensions to enhance productivity and functionality.",
+    description: "Developing custom browser extensions to enhance productivity.",
     icon: Globe,
+    gridArea: "3 / 3 / 4 / 4", // Small card - row 3-4, column 3-4
+    color: "bg-card",
   },
   {
     title: "Performance Tuning",
-    description: "Optimizing code and infrastructure for blazing-fast load times and smooth performance.",
+    description: "Optimizing code and infrastructure for blazing-fast load times.",
     icon: Zap,
+    gridArea: "4 / 1 / 5 / 4", // Horizontal card - row 4-5, column 1-4
+    color: "bg-card",
   },
 ];
 
@@ -67,39 +79,34 @@ function ServiceCard({
   return (
     <div
       ref={cardRef}
-      className="group relative overflow-hidden rounded-2xl border border-foreground/10 bg-card/50 p-6 sm:p-8 transition-all duration-700 ease-out"
+      className={`${service.color} group relative overflow-hidden rounded-xl border border-foreground/10 p-3 sm:p-4 transition-all duration-700 ease-out`}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        gridArea: service.gridArea,
       }}
     >
-      {/* Hover gradient effect */}
-      <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-        <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-secondary/10" />
-        <div className="absolute inset-0 bg-linear-to-t from-primary/5 to-transparent" />
-      </div>
-
-      {/* Corner accent */}
-      <div className="absolute -right-4 -top-4 h-24 w-24 opacity-0 transition-all duration-500 group-hover:opacity-100">
-        <div className="absolute right-0 top-0 h-px w-16 bg-primary/40" />
-        <div className="absolute right-0 top-0 h-16 w-px bg-primary/40" />
-      </div>
-      <div className="absolute -bottom-4 -left-4 h-24 w-24 opacity-0 transition-all duration-500 group-hover:opacity-100">
-        <div className="absolute bottom-0 left-0 h-px w-16 bg-primary/40" />
-        <div className="absolute bottom-0 left-0 h-16 w-px bg-primary/40" />
-      </div>
-
       {/* Content */}
       <div className="relative z-10">
-        <div className="mb-4 inline-flex rounded-xl bg-foreground/5 p-3 text-foreground/70 transition-all duration-500 group-hover:bg-primary/20 group-hover:text-primary">
-          <service.icon size={28} strokeWidth={1.5} />
+        <div className="mb-2 inline-flex rounded-lg bg-foreground/5 p-1.5 text-foreground/70 transition-all duration-500 group-hover:bg-foreground/10 group-hover:text-primary">
+          <service.icon size={20} strokeWidth={1.5} />
         </div>
 
-        <h3 className="mb-3 text-[clamp(1.3rem,2vw,1.8rem)] font-medium leading-tight text-foreground transition-all duration-300 group-hover:translate-x-1">
+        <h3 className={`mb-1 font-medium leading-tight text-foreground transition-all duration-300 group-hover:translate-x-1 ${
+          service.gridArea.includes("1 / 1 / 3 / 3") ? "text-[clamp(1.2rem,2vw,1.6rem)]" : // Large
+          service.gridArea.includes("1 / 3 / 3 / 4") ? "text-[clamp(1rem,1.5vw,1.2rem)]" : // Vertical
+          service.gridArea.includes("4 / 1 / 5 / 4") ? "text-[clamp(1.1rem,1.8vw,1.4rem)]" : // Horizontal
+          "text-[clamp(0.9rem,1.2vw,1rem)]" // Small
+        }`}>
           {service.title}
         </h3>
 
-        <p className="text-[clamp(0.9rem,1.2vw,1.1rem)] leading-relaxed text-muted-foreground/80 transition-all duration-300 group-hover:text-foreground/70">
+        <p className={`leading-relaxed text-muted-foreground/80 transition-all duration-300 group-hover:text-foreground/70 ${
+          service.gridArea.includes("1 / 1 / 3 / 3") ? "text-[clamp(0.85rem,1vw,1rem)]" : // Large
+          service.gridArea.includes("1 / 3 / 3 / 4") ? "text-[clamp(0.8rem,0.9vw,0.9rem)]" : // Vertical
+          service.gridArea.includes("4 / 1 / 5 / 4") ? "text-[clamp(0.85rem,1vw,1rem)]" : // Horizontal
+          "text-[clamp(0.75rem,0.8vw,0.85rem)]" // Small
+        }`}>
           {service.description}
         </p>
       </div>
@@ -114,7 +121,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-accent text-foreground dark:bg-card py-20"
+      className="relative overflow-hidden bg-accent text-foreground dark:bg-card py-12"
       aria-label="Services section"
     >
       {/* Background texture */}
@@ -122,14 +129,14 @@ export default function Services() {
 
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/2 via-transparent to-black/6 dark:from-white/2 dark:to-black/30" />
 
-      <div className="relative mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-16">
+      <div className="relative mx-auto w-full max-w-350 px-4 py-6 lg:px-6 lg:py-8">
         <SectionHeader
           title="Services"
           subtitle="What I offer"
           backgroundText="SERVICES"
         />
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
+        <div className="mt-6 grid grid-cols-3 grid-rows-4 gap-3 lg:gap-4">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}
