@@ -402,3 +402,34 @@
     transform: translateY(-12px) translateX(2px);
   }
 }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes border-spin {
+  100% {
+    --border-angle: 1turn;
+  }
+}
+
+.animated-border-gradient {
+  --border-size: 2px;
+  --border-angle: 0turn;
+  padding: var(--border-size);
+  background-image: 
+    linear-gradient(var(--card), var(--card)),
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      var(--primary) 80%,
+      transparent 100%
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: var(--border-size) solid transparent;
+  animation: border-spin 4s linear infinite;
+}
+
