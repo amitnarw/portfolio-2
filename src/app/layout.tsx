@@ -25,7 +25,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 // Site config
-const siteUrl = "https://amitnarwal.dev"; // Assuming standard format, adjust if needed
+const siteUrl = "https://amitnarwal.com"; // Assuming standard format, adjust if needed
 const siteName = "Amit Narwal | Freelance Full Stack & AI Developer";
 const siteDescription =
   "Hire Amit Narwal, a premium Freelance Full Stack & AI Developer specializing in high-performance web applications using React, Next.js, Node.js, and Machine Learning. Delivering scalable AI solutions, API architecture, and digital excellence.";

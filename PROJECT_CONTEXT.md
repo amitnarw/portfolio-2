@@ -1,4 +1,4 @@
-# Amit Narwal — Portfolio Website
+# Amit Narwal , Portfolio Website
 
 ## Overview
 
@@ -13,7 +13,7 @@ Personal portfolio website for **Amit Narwal**, a full stack web developer (PERN
 | UI Library      | React                                                               | 19.2.3                     |
 | Styling         | Tailwind CSS                                                        | v4 (CSS-first config)      |
 | Components      | shadcn/ui (new-york style)                                          | latest                     |
-| Package Manager | pnpm                                                                | —                          |
+| Package Manager | pnpm                                                                | ,                          |
 | Fonts           | Poppins (sans), Instrument Serif (serif), PT Sans Narrow (headings) | Google Fonts via next/font |
 
 ## Project Structure
@@ -22,8 +22,8 @@ Personal portfolio website for **Amit Narwal**, a full stack web developer (PERN
 portfolio2/
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Root layout — fonts, SEO metadata, JSON-LD schemas
-│   │   ├── page.tsx            # Home page — assembles all sections
+│   │   ├── layout.tsx          # Root layout ,  fonts, SEO metadata, JSON-LD schemas
+│   │   ├── page.tsx            # Home page ,  assembles all sections
 │   │   ├── globals.css         # Tailwind v4 theme tokens, custom animations, global styles
 │   │   ├── robots.ts           # SEO: robots.txt generation
 │   │   ├── sitemap.ts          # SEO: sitemap.xml generation
@@ -76,10 +76,10 @@ Defined directly in `globals.css` using semantic CSS variables inside `@theme in
 
 Custom keyframes defined in `globals.css`:
 
-- `animate-fade-in-up` — fade in from below
-- `animate-slide-in-left` / `animate-slide-in-right` — slide in from sides
-- `animate-float` — gentle floating motion
-- `animate-pulse-dot` — pulsing dot for the "available" badge
+- `animate-fade-in-up` , fade in from below
+- `animate-slide-in-left` / `animate-slide-in-right` , slide in from sides
+- `animate-float` , gentle floating motion
+- `animate-pulse-dot` , pulsing dot for the "available" badge
 
 ## SEO Setup
 
@@ -92,12 +92,12 @@ Custom keyframes defined in `globals.css`:
 - Semantic HTML tags throughout (`<header>`, `<main>`, `<section>`, etc.)
 - `"Amit Narwal"` is in the keywords list for name-based search
 
-### TODO — update these placeholders:
+### TODO , update these placeholders:
 
-- `siteUrl` in `layout.tsx`, `robots.ts`, `sitemap.ts` — currently `"https://yourname.dev"`
-- `sameAs` links in JSON-LD — currently placeholder GitHub/LinkedIn URLs
-- Twitter handle — currently commented out
-- `og-image.png` — needs to be created and placed in `/public/`
+- `siteUrl` in `layout.tsx`, `robots.ts`, `sitemap.ts` , currently `"https://yourname.dev"`
+- `sameAs` links in JSON-LD , currently placeholder GitHub/LinkedIn URLs
+- Twitter handle , currently commented out
+- `og-image.png` , needs to be created and placed in `/public/`
 
 ## Sections (Planned)
 
@@ -111,7 +111,7 @@ The page is a single-page portfolio with anchor sections:
 | Services         | ❌ Not started          | `#services`     |
 | Testimonials     | ❌ Not started          | `#testimonials` |
 | Contact          | ❌ Not started          | `#contact`      |
-| Blog             | ❌ Not started (future) | —               |
+| Blog             | ❌ Not started (future) | ,               |
 
 ## Navbar Links
 
@@ -120,7 +120,7 @@ Currently links to: Home, Works, About, Services, Testimonials, Contact (CTA but
 ## Coding Conventions
 
 - **Component files**: one component per file, PascalCase export, kebab-case filename
-- **Styling**: Tailwind utility classes only — no inline styles. Use arbitrary values for complex gradients (e.g. `bg-[radial-gradient(...)]`).
+- **Styling**: Tailwind utility classes only , no inline styles. Use arbitrary values for complex gradients (e.g. `bg-[radial-gradient(...)]`).
 - **shadcn**: components live in `src/components/ui/`, add via `pnpm dlx shadcn@latest add <component>`
 - **Imports**: use `@/` path alias (maps to `src/`)
 - **No AI fingerprints**: all copy on the site must sound natural and human. No buzzwords, no exaggerated marketing-speak, no "leveraging" or "cutting-edge" or "transformative" type language. Write like a real person talking to a potential client.
@@ -149,9 +149,9 @@ When building the next section (e.g., Works, About, Services):
 ## Key Rules
 
 1. Three fonts only: Poppins, Instrument Serif, PT Sans Narrow. Don't add more.
-2. Write all website copy as a human would — casual, straightforward, no fluff.
+2. Write all website copy as a human would , casual, straightforward, no fluff.
 3. Every section needs an `id` attribute matching the navbar anchor links.
 4. Keep the hero section at exactly viewport height (`h-dvh`).
 5. Use `clamp()` for fluid typography where possible.
 6. All metadata and JSON-LD must stay accurate and up to date.
-7. This is a client-facing portfolio — it needs to look premium and polished.
+7. This is a client-facing portfolio , it needs to look premium and polished.

@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { ThemeToggleButton } from "@/components/layout/theme-toggle-button";
 import { PremiumButton1 } from "@/components/shared/premium-button-1";
 import NavLinkNew from "../shared/nav-link";
+import { PremiumButton } from "../shared/premium-button";
 
 type StartViewTransition = (callback: () => void | Promise<void>) => {
   ready: Promise<void>;
@@ -18,7 +19,7 @@ const navLinks = [
   { label: "Works", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
@@ -76,6 +77,18 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileOpen]);
 
   const toggleTheme = (event: MouseEvent<HTMLButtonElement>) => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -148,14 +161,14 @@ export default function Navbar() {
         aria-hidden="true"
         className={cn(
           "pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 backdrop-blur-xl mask-[linear-gradient(to_top,transparent_0%,black_70%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_70%,black_100%)]",
-          isScrolled ? "opacity-100" : "opacity-0",
+          isScrolled && !isMobileOpen ? "opacity-100" : "opacity-0",
         )}
       />
 
       <nav
         className={cn(
-          "relative z-10 mx-auto flex items-center justify-between rounded-full px-6 py-3 lg:px-10 transition-all duration-500 ease-out",
-          isScrolled
+          "relative z-50 mx-auto flex items-center justify-between rounded-full px-6 py-3 lg:px-10 transition-all duration-500 ease-out",
+          isScrolled && !isMobileOpen
             ? "bg-foreground/80 backdrop-blur-2xl text-background shadow-2xl max-w-[70dvw] sm:max-w-250"
             : "bg-transparent text-foreground max-w-full sm:max-w-350",
         )}
@@ -166,7 +179,11 @@ export default function Navbar() {
           href="/"
           className={cn(
             "font-serif italic text-2xl tracking-wide transition-opacity hover:opacity-70",
-            isScrolled ? "text-background" : "text-foreground",
+            isMobileOpen
+              ? "text-white"
+              : isScrolled
+                ? "text-background"
+                : "text-foreground",
           )}
         >
           Amit Narwal.
@@ -176,7 +193,11 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <NavLinkNew href={link.href} label={link.label} isScrolled={isScrolled} />
+              <NavLinkNew
+                href={link.href}
+                label={link.label}
+                isScrolled={isScrolled}
+              />
             </li>
           ))}
         </ul>
@@ -194,6 +215,7 @@ export default function Navbar() {
           >
             Contact
           </PremiumButton1>
+
           <ThemeToggleButton
             theme={theme}
             size="lg"
@@ -202,81 +224,122 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className={cn(
-            "inline-flex items-center justify-center rounded-lg p-2 transition-colors md:hidden",
-            isScrolled
-              ? "text-background hover:bg-background/10"
-              : "text-foreground hover:bg-muted",
-          )}
-          aria-label="Toggle menu"
-          aria-expanded={isMobileOpen}
-        >
-          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Header Actions */}
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className={cn(
+              "relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 transition-all",
+              isMobileOpen
+                ? "text-white"
+                : isScrolled
+                  ? "text-background"
+                  : "text-foreground",
+            )}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileOpen}
+          >
+            <span
+              className={cn(
+                "h-0.5 w-6 transition-all duration-300 ease-out bg-current",
+                isMobileOpen ? "translate-y-1 rotate-45" : "",
+              )}
+            />
+            <span
+              className={cn(
+                "h-0.5 w-6 transition-all duration-300 ease-out bg-current",
+                isMobileOpen ? "-translate-y-1 -rotate-45" : "",
+              )}
+            />
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "relative z-10 md:hidden overflow-hidden transition-all duration-500 ease-in-out",
-          isMobileOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0",
+          "fixed inset-0 z-40 bg-black/60 backdrop-blur-3xl transition-all duration-500 ease-in-out md:hidden overflow-hidden",
+          isMobileOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
         )}
       >
-        <div
-          className={cn(
-            "px-6 py-6 backdrop-blur-xl",
-            isScrolled
-              ? "border-t border-background/20 bg-foreground/95"
-              : "border-t border-border/50 bg-background/95",
-          )}
-        >
-          <ul className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  onClick={() => setIsMobileOpen(false)}
-                  className={cn(
-                    "block text-base font-medium transition-colors",
-                    isScrolled
-                      ? activeSection === link.href
-                        ? "text-background"
-                        : "text-background/70 hover:text-background"
-                      : activeSection === link.href
-                        ? "text-foreground"
-                        : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-            <li className="pt-2">
-              <PremiumButton1
-                href="mailto:amitnarwal115@gmail.com"
-                className={cn(
-                  "px-6 py-2.5",
-                  isScrolled
-                    ? "bg-background text-foreground"
-                    : "bg-foreground text-background",
-                )}
+        <div className="flex h-full flex-col px-8 pt-32 pb-8">
+          {/* Main Links */}
+          <nav className="flex flex-col gap-3">
+            {navLinks.map((link, index) => (
+              <Link
+                key={link.label}
+                href={link.href}
                 onClick={() => setIsMobileOpen(false)}
+                className={cn(
+                  "text-5xl font-semibold tracking-tight text-white transition-all duration-500",
+                  isMobileOpen
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-4 opacity-0",
+                )}
+                style={{ transitionDelay: `${index * 50}ms` }}
               >
-                Contact
-              </PremiumButton1>
-            </li>
-            <li>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Contact Button */}
+          <div
+            className={cn(
+              "mt-8 mb-4 transition-all duration-500 delay-300",
+              isMobileOpen
+                ? "translate-y-0 opacity-100"
+                : "translate-y-4 opacity-0",
+            )}
+          >
+            <PremiumButton text="Contact Me" />
+          </div>
+
+          {/* Legal Links (Bottom) */}
+          <div className="mt-auto flex flex-col gap-4 border-t border-white/10 pt-8 pb-4">
+            <div
+              className={cn(
+                "flex justify-between items-center transition-all duration-500 delay-400",
+                isMobileOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0",
+              )}
+            >
+              <Link
+                href="/privacy"
+                onClick={() => setIsMobileOpen(false)}
+                className="text-sm font-medium text-white/50 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                onClick={() => setIsMobileOpen(false)}
+                className="text-sm font-medium text-white/50 hover:text-white transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+            </div>
+
+            <div
+              className={cn(
+                "flex items-center justify-between transition-all duration-500 delay-500",
+                isMobileOpen ? "opacity-100" : "opacity-0",
+              )}
+            >
+              <span className="text-xs text-white/30">
+                © {new Date().getFullYear()} Amit Narwal.
+              </span>
               <ThemeToggleButton
                 theme={theme}
-                isScrolled={isScrolled}
+                isScrolled={true}
                 onToggle={toggleTheme}
-                fullWidth
+                className="text-white"
               />
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
