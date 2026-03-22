@@ -148,7 +148,7 @@ export default function SkillsMarquee() {
                     <img
                       src={item.wordmark}
                       alt={item.name}
-                      className={`w-40 sm:w-80 h-14 max-w-none transition-all duration-300 ease-out ${
+                      className={`w-30 sm:w-80 h-14 max-w-none transition-all duration-300 ease-out ${
                         hoveredItem === item.name
                           ? "opacity-100 scale-125"
                           : "opacity-75 scale-100"

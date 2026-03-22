@@ -83,10 +83,36 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative mx-auto flex h-full max-w-350 flex-col justify-between px-6 pt-20 pb-5 lg:px-12 lg:pt-28 lg:pb-8">
+        <div className="mt-10 flex sm:hidden flex-col justify-between gap-6 sm:flex-row items-center z-2 w-full">
+          <h2
+            className="animate-slide-in-right max-w-72 text-right text-sm leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto hidden sm:block"
+            style={{ animationDelay: "0.5s", animationFillMode: "both" }}
+          >
+            Freelance expert specializing in
+            <br />
+            <strong>React, Next.js, AI Integration,</strong>
+            <br />
+            and high-performance Full Stack
+            <br />
+            Application Architecture.
+          </h2>
+          <h2
+            className="animate-slide-in-right text-sm text-center leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto block sm:hidden"
+            style={{ animationDelay: "0.5s", animationFillMode: "both" }}
+          >
+            Freelance expert specializing in{" "}
+            <strong className="italic font-serif tracking-wider">
+              React, Next.js, AI Integration,
+            </strong>{" "}
+            and high-performance Full Stack Application Architecture.
+          </h2>
+          <HireMe />
+        </div>
+
         {/* ─ "Hey, there" text ─ */}
-        <div className="flex justify-center animate-fade-in-up mt-6 sm:mt-0 z-2">
+        <div className="flex justify-center animate-fade-in-up mb-30 sm:mb-0 z-2">
           <div
-            className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-6 sm:gap-40 items-center pl-0 sm:pl-10"
+            className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-25 sm:gap-40 items-center pl-5 sm:pl-10"
             aria-hidden="true"
           >
             <span>Hey,</span>
@@ -97,26 +123,32 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Person image goes here later */}
+        {/* Animated Person Image Container */}
         <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full z-1 left-1/2 -translate-x-1/2 pointer-events-none">
-          <div className="h-[60dvh] sm:h-[88dvh] w-full sm:w-auto z-10">
-            <Image
-              src="/my-img.png"
-              alt="my-img"
-              height={600}
-              width={600}
-              priority
-              className="h-full w-full sm:w-auto object-contain object-bottom sm:object-top pointer-events-auto"
-              style={{
-                maskImage: "linear-gradient(to top, transparent 0%, black 20%)",
-                WebkitMaskImage:
-                  "linear-gradient(to top, transparent 0%, black 20%)",
-              }}
-            />
+          <div
+            className="h-[60dvh] sm:h-[88dvh] w-full sm:w-auto z-10 animate-fade-in-up"
+            style={{ animationDelay: "0.3s", animationFillMode: "both" }}
+          >
+            <div className="h-full w-full animate-float">
+              <Image
+                src="/my-img.png"
+                alt="Amit Narwal"
+                height={800}
+                width={800}
+                priority
+                className="h-full w-full sm:w-auto object-contain object-bottom sm:object-top pointer-events-auto"
+                style={{
+                  maskImage:
+                    "linear-gradient(to top, transparent 0%, black 20%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to top, transparent 0%, black 20%)",
+                }}
+              />
+            </div>
           </div>
         </div>
 
-        <div className="mb-6 sm:mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center z-2 w-full">
+        <div className="mb-6 sm:mb-10 hidden sm:flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center z-2 w-full">
           <HireMe />
           <h2
             className="animate-slide-in-right max-w-72 text-right text-sm leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto"
@@ -133,9 +165,9 @@ export default function Hero() {
         </div>
 
         {/* ─ Bottom section ─ */}
-        <div className="shrink-0 mb-6 sm:mb-10 z-2 relative">
+        <div className="shrink-0 mb-10 z-2 relative">
           {/* Name + Title row */}
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end w-full">
+          <div className="flex items-start justify-between gap-4 flex-row sm:items-end w-full">
             <div
               className="animate-slide-in-left w-full sm:w-auto"
               style={{ animationDelay: "0.6s", animationFillMode: "both" }}

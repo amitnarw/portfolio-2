@@ -151,6 +151,10 @@ export default function Navbar() {
     });
   };
 
+  const openMail = () => {
+    window.open("mailto:amitnarwal115@gmail.com");
+  };
+
   return (
     <header
       className={cn(
@@ -265,20 +269,39 @@ export default function Navbar() {
         )}
       >
         <div className="flex h-full flex-col px-8 pt-32 pb-8">
+          {/* Theme Toggle at Top Right */}
+          <div
+            className={cn(
+              "absolute top-7 right-18 transition-all duration-500 delay-100",
+              isMobileOpen
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-4 opacity-0",
+            )}
+          >
+            <ThemeToggleButton
+              theme={theme}
+              isScrolled={true}
+              onToggle={toggleTheme}
+              className="text-white"
+            />
+          </div>
+
           {/* Main Links */}
-          <nav className="flex flex-col gap-3">
+          <nav className="flex flex-col gap-3 items-start">
             {navLinks.map((link, index) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileOpen(false)}
                 className={cn(
-                  "text-5xl font-semibold tracking-tight text-white transition-all duration-500",
+                  "text-5xl font-semibold tracking-wide text-white transition-all duration-500 font-heading",
                   isMobileOpen
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0",
                 )}
-                style={{ transitionDelay: `${index * 50}ms` }}
+                style={{
+                  transitionDelay: `${index * 50}ms`,
+                }}
               >
                 {link.label}
               </Link>
@@ -288,17 +311,17 @@ export default function Navbar() {
           {/* Contact Button */}
           <div
             className={cn(
-              "mt-8 mb-4 transition-all duration-500 delay-300",
+              "mt-auto mb-6 transition-all duration-500 delay-300",
               isMobileOpen
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0",
             )}
           >
-            <PremiumButton text="Contact Me" />
+            <PremiumButton text="Contact Me" onClick={openMail} />
           </div>
 
           {/* Legal Links (Bottom) */}
-          <div className="mt-auto flex flex-col gap-4 border-t border-white/10 pt-8 pb-4">
+          <div className="flex flex-col gap-4 border-t border-white/10 pt-8 pb-4">
             <div
               className={cn(
                 "flex justify-between items-center transition-all duration-500 delay-400",
@@ -332,12 +355,6 @@ export default function Navbar() {
               <span className="text-xs text-white/30">
                 © {new Date().getFullYear()} Amit Narwal.
               </span>
-              <ThemeToggleButton
-                theme={theme}
-                isScrolled={true}
-                onToggle={toggleTheme}
-                className="text-white"
-              />
             </div>
           </div>
         </div>

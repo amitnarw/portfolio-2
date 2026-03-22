@@ -16,7 +16,7 @@ export default function SectionHeader({
       {backgroundText && (
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-6 top-12 sm:top-4 text-[clamp(3rem,10vw,7rem)] font-semibold uppercase leading-none tracking-[0.06em] text-primary/20 lg:left-12"
+          className="pointer-events-none absolute left-6 top-10 sm:top-4 text-[clamp(4rem,10vw,7rem)] font-semibold uppercase leading-none tracking-[0.06em] text-primary/30 dark:text-primary/20 lg:left-12"
         >
           {backgroundText}
         </div>
@@ -25,7 +25,7 @@ export default function SectionHeader({
       <div
         className={`relative flex flex-col justify-between gap-4 pt-4 sm:flex-row sm:items-end ${className || ""}`}
       >
-        <h2 className="text-[clamp(2.2rem,4.2vw,3.7rem)] font-medium font-serif italic leading-none tracking-tight">
+        <h2 className="text-[clamp(3rem,4.2vw,5rem)] font-medium font-serif italic leading-none tracking-tight">
           {title}
         </h2>
 

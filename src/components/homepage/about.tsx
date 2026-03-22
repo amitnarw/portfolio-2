@@ -5,16 +5,16 @@ import { useEffect, useRef, useState } from "react";
 
 const aboutData = [
   {
-    title: "5M+",
-    description: "SUCCESS PROJECT",
+    title: "20+",
+    description: "FULL-STACK APPS COMPLETED",
   },
   {
-    title: "3K+",
-    description: "PRODUCT LAUNCHED",
+    title: "3+",
+    description: "AI-DRIVEN PRODUCTS LIVE",
   },
   {
     title: "9+",
-    description: "CLIENTS WORLDWIDE",
+    description: "GLOBAL CLIENTS SERVED",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function About() {
                   key={index}
                   className="flex items-center justify-center bg-radial from-transparent to-primary/10 border border-primary/50 dark:border-primary/20"
                 >
-                  <div className="flex flex-col items-start p-10">
+                  <div className="flex flex-col gap-1 items-start p-10">
                     <h1 className="text-5xl">{item.title}</h1>
                     <p className="text-sm">{item.description}</p>
                   </div>

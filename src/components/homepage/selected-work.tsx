@@ -72,7 +72,7 @@ function ProjectCard({
         <div className="flex flex-col gap-5 items-start justify-between h-full p-4">
           {/* Content */}
           <div className="flex-1">
-            <h3 className="text-[clamp(1.2rem,2.2vw,2.2rem)] font-medium leading-tight text-foreground font-heading">
+            <h3 className="text-[clamp(1.8rem,2.2vw,2.2rem)] font-medium leading-tight text-foreground font-heading">
               {project.title}
             </h3>
 
@@ -96,7 +96,9 @@ function ProjectCard({
           </div>
 
           <PremiumButton1
-            href="mailto:amitnarwal115@gmail.com"
+            href={project.siteUrl || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               "px-6 py-2.5",
               "border border-border bg-foreground text-background hover:shadow-lg",
