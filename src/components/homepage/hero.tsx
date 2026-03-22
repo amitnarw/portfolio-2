@@ -1,5 +1,6 @@
 import { PremiumButton } from "@/components/shared/premium-button";
 import Image from "next/image";
+import { HireMe } from "../shared/hire-me";
 
 export default function Hero() {
   return (
@@ -83,25 +84,29 @@ export default function Hero() {
       {/* Content */}
       <div className="relative mx-auto flex h-full max-w-350 flex-col justify-between px-6 pt-20 pb-5 lg:px-12 lg:pt-28 lg:pb-8">
         {/* ─ "Hey, there" text ─ */}
-        <div className="flex justify-center animate-fade-in-up z-2">
-          <h2 className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-40 items-center pl-10">
+        <div className="flex justify-center animate-fade-in-up mt-6 sm:mt-0 z-2">
+          <div
+            className="font-serif italic text-[clamp(2.5rem,6vw,5rem)] text-foreground/90 tracking-wide leading-none flex flex-row gap-6 sm:gap-40 items-center pl-0 sm:pl-10"
+            aria-hidden="true"
+          >
             <span>Hey,</span>
             <div className="flex flex-row items-start">
               <span></span>
-              <span className="ml-4">there</span>
+              <span className="ml-2 sm:ml-4">there</span>
             </div>
-          </h2>
+          </div>
         </div>
 
         {/* Person image goes here later */}
-        <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full z-1 left-1/2 -translate-x-1/2">
-          <div className="h-[88dvh] w-auto z-10">
+        <div className="flex flex-1 items-center justify-center min-h-0 absolute bottom-0 w-full z-1 left-1/2 -translate-x-1/2 pointer-events-none">
+          <div className="h-[60dvh] sm:h-[88dvh] w-full sm:w-auto z-10">
             <Image
               src="/my-img.png"
               alt="my-img"
               height={600}
               width={600}
-              className="h-full w-auto object-contain"
+              priority
+              className="h-full w-full sm:w-auto object-contain object-bottom sm:object-top pointer-events-auto"
               style={{
                 maskImage: "linear-gradient(to top, transparent 0%, black 20%)",
                 WebkitMaskImage:
@@ -111,45 +116,51 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mb-10 flex flex-col items-center justify-between gap-2 sm:flex-row sm:items-center z-2">
-          <PremiumButton text="Hire Me" />
-          <p
-            className="animate-slide-in-right max-w-60 text-right text-xs sm:text-sm leading-relaxed text-foreground/60"
+        <div className="mb-6 sm:mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center z-2 w-full">
+          <HireMe />
+          <h2
+            className="animate-slide-in-right max-w-72 text-right text-sm leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto"
             style={{ animationDelay: "0.5s", animationFillMode: "both" }}
           >
-            Specialized in React, Node.js,
+            Freelance expert specializing in
             <br />
-            PostgreSQL, MongoDB, and Full
+            <strong>React, Next.js, AI Integration,</strong>
             <br />
-            Stack Development.
-          </p>
+            and high-performance Full Stack
+            <br />
+            Application Architecture.
+          </h2>
         </div>
 
         {/* ─ Bottom section ─ */}
-        <div className="shrink-0 mb-10 z-2">
+        <div className="shrink-0 mb-6 sm:mb-10 z-2 relative">
           {/* Name + Title row */}
-          <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end">
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end w-full">
             <div
-              className="animate-slide-in-left"
+              className="animate-slide-in-left w-full sm:w-auto"
               style={{ animationDelay: "0.6s", animationFillMode: "both" }}
             >
               <h1
                 style={{ fontFamily: "var(--font-bebas-neue)" }}
-                className="text-[clamp(2.5rem,6vw,5.5rem)] font-normal uppercase leading-[0.85] tracking-tight text-foreground"
+                className="text-[clamp(3.5rem,10vw,5.5rem)] font-normal uppercase leading-[0.85] tracking-tight text-foreground"
               >
-                I AM
-                <br />
+                <span className="sr-only">
+                  Freelance Full Stack Developer & AI Engineer{" "}
+                </span>
+                <span aria-hidden="true">I AM</span>
+                <br aria-hidden="true" />
                 <span className="block">AMIT NARWAL</span>
               </h1>
             </div>
 
             <div
-              className="animate-slide-in-right"
+              className="animate-slide-in-right self-end sm:self-auto"
               style={{ animationDelay: "0.8s", animationFillMode: "both" }}
             >
               <p
                 style={{ fontFamily: "var(--font-bebas-neue)" }}
-                className="text-right text-[clamp(1.5rem,4vw,3.5rem)] font-normal uppercase leading-none tracking-tight text-foreground"
+                className="text-right text-[clamp(2rem,6vw,3.5rem)] font-normal uppercase leading-none tracking-tight text-foreground"
+                aria-hidden="true"
               >
                 FULL
                 <br />

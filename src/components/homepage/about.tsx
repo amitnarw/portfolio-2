@@ -42,18 +42,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden text-foreground dark:bg-card py-20"
+      className="relative overflow-hidden text-foreground dark:bg-card mt-30"
       aria-label="About section"
       ref={sectionRef}
     >
       {/* Noise texture overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E")',
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none" />
 
       <div className="relative mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-16">
         <SectionHeader title="About Me" subtitle="" backgroundText="ABOUT" />
@@ -67,11 +61,11 @@ export default function About() {
               user-friendly applications that help businesses grow their digital
               presence.
             </p>
-            <div className="grid grid-cols-3 border-2 border-foreground/20 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-10">
               {aboutData.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center border-x border-foreground/20"
+                  className="flex items-center justify-center bg-radial from-transparent to-primary/10 border border-primary/50 dark:border-primary/20"
                 >
                   <div className="flex flex-col items-start p-10">
                     <h1 className="text-5xl">{item.title}</h1>

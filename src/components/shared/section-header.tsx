@@ -16,7 +16,7 @@ export default function SectionHeader({
       {backgroundText && (
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-6 top-4 text-[clamp(3rem,10vw,7rem)] font-semibold uppercase leading-none tracking-[0.06em] text-primary/20 lg:left-12"
+          className="pointer-events-none absolute left-6 top-12 sm:top-4 text-[clamp(3rem,10vw,7rem)] font-semibold uppercase leading-none tracking-[0.06em] text-primary/20 lg:left-12"
         >
           {backgroundText}
         </div>
@@ -29,7 +29,7 @@ export default function SectionHeader({
           {title}
         </h2>
 
-        <p className="w-fit pb-1 text-[clamp(1.2rem,1.5vw,2rem)] font-normal leading-none text-primary">
+        <p className="w-fit pb-1 text-[clamp(1.2rem,1.5vw,2rem)] font-normal leading-none text-primary hidden sm:block">
           {subtitle}
         </p>
       </div>

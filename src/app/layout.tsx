@@ -25,10 +25,10 @@ const bebasNeue = Bebas_Neue({
 });
 
 // Site config
-const siteUrl = "https://yourname.dev"; // TODO: Replace with your actual domain
-const siteName = "Amit Narwal | Full Stack Developer";
+const siteUrl = "https://amitnarwal.dev"; // Assuming standard format, adjust if needed
+const siteName = "Amit Narwal | Freelance Full Stack & AI Developer";
 const siteDescription =
-  "I'm Amit Narwal, a full stack developer who builds web apps with React, Next.js, Node.js, PostgreSQL, and MongoDB. I work with both the PERN and MERN stacks. Open to freelance work and full-time roles.";
+  "Hire Amit Narwal, a premium Freelance Full Stack & AI Developer specializing in high-performance web applications using React, Next.js, Node.js, and Machine Learning. Delivering scalable AI solutions, API architecture, and digital excellence.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,27 +39,18 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "Amit Narwal",
-    "Full Stack Developer",
-    "Web Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "MERN Stack Developer",
-    "PERN Stack Developer",
-    "PostgreSQL",
-    "MongoDB",
-    "TypeScript",
-    "JavaScript",
-    "Frontend Developer",
-    "Backend Developer",
-    "Freelance Developer",
-    "Software Engineer",
-    "AI Integration Developer",
-    "Chrome Extension Developer",
-    "Performance Optimization",
-    "Web Performance",
-    "UI/UX Developer",
-    "Portfolio Developer",
+    "Hire Full Stack Developer",
+    "Freelance AI Developer",
+    "Machine Learning Engineer",
+    "Next.js SEO Expert",
+    "React Performance Optimization",
+    "Senior Node.js Backend Architect",
+    "Custom Chrome Extension Developer",
+    "Scalable Web Applications",
+    "API Development Solutions",
+    "Freelance Software Engineer",
+    "Creative Web Developer",
+    "Premium Web Design",
   ],
   authors: [{ name: "Amit Narwal", url: siteUrl }],
   creator: "Amit Narwal",
@@ -96,20 +87,19 @@ export const metadata: Metadata = {
     title: siteName,
     description: siteDescription,
     images: [`${siteUrl}/og-image.png`],
-    // creator: "@yourtwitterhandle",
   },
   alternates: {
     canonical: siteUrl,
   },
 };
 
-// Structured data for search engines
+// Structured data for search engines & AI Models
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Amit Narwal",
   url: siteUrl,
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Freelance Full Stack & AI Developer",
   description: siteDescription,
   knowsAbout: [
     "React",
@@ -118,21 +108,58 @@ const personSchema = {
     "Express.js",
     "PostgreSQL",
     "MongoDB",
+    "Machine Learning",
+    "Artificial Intelligence",
     "TypeScript",
-    "JavaScript",
-    "HTML",
-    "CSS",
     "Tailwind CSS",
-    "REST API",
-    "GraphQL",
-    "Git",
-    "Docker",
+    "REST & GraphQL APIs",
+    "System Architecture",
   ],
   sameAs: [
     "https://github.com/yourusername",
     "https://linkedin.com/in/yourusername",
-    // "https://twitter.com/yourusername",
   ],
+};
+
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Amit Narwal - Web & AI Development Services",
+  image: `${siteUrl}/my-img.png`,
+  description:
+    "Premium freelance web development and AI integration services for businesses looking to scale with high-performance digital products.",
+  provider: {
+    "@type": "Person",
+    name: "Amit Narwal",
+  },
+  areaServed: "Worldwide",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Web Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Full Stack Application Development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI & Machine Learning Integration",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Performance & SEO Optimization",
+        },
+      },
+    ],
+  },
 };
 
 const websiteSchema = {
@@ -158,7 +185,11 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([personSchema, websiteSchema]),
+            __html: JSON.stringify([
+              personSchema,
+              websiteSchema,
+              professionalServiceSchema,
+            ]),
           }}
         />
       </head>

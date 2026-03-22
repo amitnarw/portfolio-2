@@ -415,6 +415,24 @@
   }
 }
 
+.animated-border-gradient-small {
+  --border-size: 1px;
+  --border-angle: 0turn;
+  padding: var(--border-size);
+  background-image: 
+    linear-gradient(var(--card), var(--card)),
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      var(--primary) 80%,
+      transparent 100%
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: var(--border-size) solid transparent;
+  animation: border-spin 4s linear infinite;
+}
+
 .animated-border-gradient {
   --border-size: 2px;
   --border-angle: 0turn;
@@ -433,3 +451,29 @@
   animation: border-spin 4s linear infinite;
 }
 
+/* ── Marquee Animations ── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}

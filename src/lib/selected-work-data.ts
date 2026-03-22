@@ -9,43 +9,39 @@ export type WorkProject = {
 
 export const selectedWorkProjects: WorkProject[] = [
   {
-    id: "bon-seours",
-    title: "Bon Secours Mercy Health",
-    image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+    id: "inTesters",
+    title: "InTesters - Play Store Testing",
+    image: "/intesters.png",
     description:
-      "At Bon Secours Mercy Health, we are committed to transforming the way health care is delivered — combining compassion, excellence, and innovation to serve communities with dignity and care.",
-    tags: ["Branding", "Design", "Development"],
-    siteUrl: "#",
+      "Accelerate your Play Store launch with InTesters. We provide real Android tester communities to meet Google's closed testing requirements in 14 days, ensuring a seamless transition to production.",
+    tags: ["Android", "Play Console", "Beta Testing", "App Development"],
+    siteUrl: "https://intesters.com",
   },
   {
-    id: "medibank",
-    title: "Medibank Employee Experience",
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=900&q=80",
+    id: "ai_chrome_extension",
+    title: "AI Auto-fill Chrome Extension",
+    image: "/autofill-chrome_extension.jpg",
     description:
-      "At Medibank, we believe that great customer care starts with a great employee experience. Our people are the heart of everything we do — their well-being, growth, and sense of purpose shape the quality of care we provide.",
-    tags: ["Branding", "Design", "Development"],
+      "Boost productivity with an AI-powered Chrome Extension. Automate complex form-filling and repetitive data entry using advanced LLMs and context-aware automation for a seamless browsing experience.",
+    tags: ["AI", "Chrome Extension", "Automation", "LLM", "JavaScript"],
     siteUrl: "#",
   },
+  // {
+  //   id: "invoice-generator",
+  //   title: "Invoice Generator",
+  //   image: "/invoice-generator.webp",
+  //   description:
+  //     "A professional Invoice Management and Billing platform with a SaaS-inspired analytics dashboard. Automate your billing workflows, track real-time revenue KPIs, and generate high-quality PDF invoices.",
+  //   tags: ["Next.js", "Dashboard", "SaaS", "Data Visualization", "TypeScript"],
+  //   siteUrl: "https://invoice-generator-115.vercel.app",
+  // },
   {
-    id: "saas-analytics",
-    title: "SaaS Analytics Dashboard",
-    image:
-      "https://images.unsplash.com/photo-1551281044-8b6db4028a9d?auto=format&fit=crop&w=900&q=80",
+    id: "portfolio",
+    title: "Portfolio website",
+    image: "/portfolio.webp",
     description:
-      "A full dashboard with live KPIs, role-based access, and reporting workflows.",
-    tags: ["Design", "Development"],
-    siteUrl: "#",
-  },
-  {
-    id: "healthcare-booking",
-    title: "Healthcare Booking Platform",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Appointment booking and patient records interface with clean scheduling UX.",
-    tags: ["Design", "Development"],
+      "A premium developer portfolio engineered for maximum SEO and performance. Featuring a sleek bento-grid layout, fluid Framer Motion animations, and a focus on visual storytelling.",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO-Optimized", "UI/UX"],
     siteUrl: "#",
   },
 ];

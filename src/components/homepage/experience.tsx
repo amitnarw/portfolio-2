@@ -29,7 +29,7 @@ export default function Experience() {
 
       <div className="relative mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-16">
         <SectionHeader
-          title="EXPERIENCE"
+          title="Professional background"
           subtitle="4+ years of experience"
           backgroundText="EXPERIENCE"
         />

@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/tooltip";
 import { useIsDarkTheme } from "@/hooks/use-is-dark-theme";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
-const DEVICON_BASE =
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
+const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
 const techStack = [
   {
@@ -131,15 +131,16 @@ export default function SkillsMarquee() {
         {/* Right fade gradient */}
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-linear-to-l from-background to-transparent" />
         <div
-          className={`flex min-w-max whitespace-nowrap items-center animate-tech-stack-marquee ${isPaused ? "paused" : ""}`}
+          className={`flex min-w-max whitespace-nowrap items-center justify-center animate-tech-stack-marquee ${isPaused ? "paused" : ""}`}
         >
           {loopedTechStack.map((item, index) => (
             <div key={`${item.name}-${index}`} className="contents">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <button
+                  <Button
                     type="button"
-                    className="mr-10 cursor-pointer inline-flex items-center"
+                    variant="ghost"
+                    className="cursor-pointer inline-flex items-center"
                     aria-label={item.name}
                     onMouseEnter={() => setHoveredItem(item.name)}
                     onMouseLeave={() => setHoveredItem(null)}
@@ -147,21 +148,22 @@ export default function SkillsMarquee() {
                     <img
                       src={item.wordmark}
                       alt={item.name}
-                      className={`w-10 h-auto max-w-none transition-all duration-300 ease-out ${
+                      className={`w-40 sm:w-80 h-14 max-w-none transition-all duration-300 ease-out ${
                         hoveredItem === item.name
                           ? "opacity-100 scale-125"
                           : "opacity-75 scale-100"
                       }`}
                       style={{
-                        filter: hoveredItem === item.name ? "none" : mutedFilter,
+                        filter:
+                          hoveredItem === item.name ? "none" : mutedFilter,
                       }}
                     />
-                  </button>
+                  </Button>
                 </TooltipTrigger>
                 <TooltipContent side="top">{item.name}</TooltipContent>
               </Tooltip>
-              <span className="mr-20 inline-flex items-center">
-                <MarqueeStar size={20} className="text-orange-300" />
+              <span className="inline-flex items-center">
+                <MarqueeStar size={30} className="text-orange-300" />
               </span>
             </div>
           ))}
