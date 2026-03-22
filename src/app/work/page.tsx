@@ -11,7 +11,9 @@ export default function WorkPage() {
         <section className="mx-auto w-full max-w-350 px-6 pb-16 pt-28 lg:px-12 lg:pb-24 lg:pt-32">
           <div className="flex flex-wrap items-end justify-between gap-4 border-b border-foreground/10 pb-8">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Portfolio</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                Portfolio
+              </p>
               <h1 className="mt-2 text-[clamp(2.2rem,4.8vw,4.8rem)] font-medium uppercase leading-none tracking-tight">
                 All Work
               </h1>
@@ -37,11 +39,14 @@ export default function WorkPage() {
                 />
 
                 <div className="mt-4 flex items-center justify-between gap-3">
-                  <h2 className="text-base font-medium leading-tight">{project.title}</h2>
-                  <p className="text-sm font-semibold text-muted-foreground">{project.year}</p>
+                  <h2 className="text-base font-medium leading-tight">
+                    {project.title}
+                  </h2>
                 </div>
 
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
 
                 <Link
                   href={project.siteUrl || "#"}
