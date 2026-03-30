@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { selectedWorkProjects } from "@/lib/selected-work-data";
+import ProjectCard from "@/components/shared/project-card";
 
 export default function WorkPage() {
   return (
@@ -26,35 +27,9 @@ export default function WorkPage() {
             </Link>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {selectedWorkProjects.map((project) => (
-              <article
-                key={project.id}
-                className="bg-accent p-3 ring-1 ring-black/10 transition-transform duration-200 hover:-translate-y-1 dark:bg-card dark:ring-white/10"
-              >
-                <div
-                  className="h-62 w-full bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url('${project.image}')` }}
-                  aria-hidden="true"
-                />
-
-                <div className="mt-4 flex items-center justify-between gap-3">
-                  <h2 className="text-base font-medium leading-tight">
-                    {project.title}
-                  </h2>
-                </div>
-
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-
-                <Link
-                  href={project.siteUrl || "#"}
-                  className="mt-4 inline-flex text-sm font-medium underline underline-offset-4"
-                >
-                  Open website
-                </Link>
-              </article>
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {selectedWorkProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
         </section>

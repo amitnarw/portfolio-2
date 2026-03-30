@@ -91,8 +91,8 @@ function ServiceCard({ service }: { service: (typeof services)[0] }) {
         </p>
       </div>
 
-      <div className="absolute -bottom-8 -right-8 pointer-events-none transform -rotate-12 text-primary/20 dark:text-primary/10 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:text-primary/30">
-        <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-linear-to-tl from-primary/20 to-primary/5 blur-2xl translate-y-2 transition-opacity duration-500 group-hover:opacity-75"></div>
+      <div className="absolute -bottom-8 -right-8 pointer-events-none transform -rotate-12 text-primary/20 dark:text-primary/10">
+        <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-linear-to-tl from-primary/20 to-primary/5 blur-2xl translate-y-2"></div>
         <service.icon size={120} strokeWidth={1} />
       </div>
     </div>

@@ -26,22 +26,22 @@ export const selectedWorkProjects: WorkProject[] = [
     tags: ["AI", "Chrome Extension", "Automation", "LLM", "JavaScript"],
     siteUrl: "#",
   },
-  // {
-  //   id: "invoice-generator",
-  //   title: "Invoice Generator",
-  //   image: "/invoice-generator.webp",
-  //   description:
-  //     "A professional Invoice Management and Billing platform with a SaaS-inspired analytics dashboard. Automate your billing workflows, track real-time revenue KPIs, and generate high-quality PDF invoices.",
-  //   tags: ["Next.js", "Dashboard", "SaaS", "Data Visualization", "TypeScript"],
-  //   siteUrl: "https://invoice-generator-115.vercel.app",
-  // },
   {
     id: "portfolio",
     title: "Portfolio website",
     image: "/portfolio.webp",
     description:
-      "A premium developer portfolio engineered for maximum SEO and performance. Featuring a sleek bento-grid layout, fluid Framer Motion animations, and a focus on visual storytelling.",
+    "A premium developer portfolio engineered for maximum SEO and performance. Featuring a sleek bento-grid layout, fluid Framer Motion animations, and a focus on visual storytelling.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO-Optimized", "UI/UX"],
-    siteUrl: "#",
+    siteUrl: "http://amitnarwal.com",
+  },
+  {
+    id: "cbr_painters_australia",
+    title: "CBR Painters Australia",
+    image: "/cbr_painters_australia.webp",
+    description:
+      "A professional business website for a painting service, featuring a high-converting landing page and essential service pages. Includes integrated contact features enabling clients to easily reach out via email and phone.",
+    tags: ["Landing Page", "Business Website", "Next.js", "Responsive Design", "Lead Generation"],
+    siteUrl: "https://cbr-painters.vercel.app",
   },
 ];

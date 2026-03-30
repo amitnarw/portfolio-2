@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import type { MouseEvent } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { ThemeToggleButton } from "@/components/layout/theme-toggle-button";
@@ -15,14 +16,15 @@ type StartViewTransition = (callback: () => void | Promise<void>) => {
 };
 
 const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "Works", href: "/work" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/#about" },
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -49,8 +51,11 @@ export default function Navbar() {
     }
   }, []);
 
-  // Track active section using Intersection Observer
+  // Track active section using Intersection Observer - for on-page navigation
   useEffect(() => {
+    // Only use Intersection Observer on the home page
+    if (pathname !== "/") return;
+
     const observerOptions = {
       root: null,
       rootMargin: "-20% 0px -70% 0px",
@@ -67,7 +72,7 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-    const sections = ["home", "works", "about", "services", "testimonials"];
+    const sections = ["home", "about", "services", "work"]; // IDs to track
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -76,7 +81,7 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   // Lock scroll when mobile menu is open
   useEffect(() => {
@@ -175,6 +180,7 @@ export default function Navbar() {
           isScrolled && !isMobileOpen
             ? "bg-foreground/80 backdrop-blur-2xl text-background shadow-2xl max-w-[70dvw] sm:max-w-250"
             : "bg-transparent text-foreground max-w-full sm:max-w-350",
+          isMobileOpen && "pointer-events-none",
         )}
         aria-label="Main navigation"
       >
@@ -182,7 +188,7 @@ export default function Navbar() {
         <Link
           href="/"
           className={cn(
-            "font-serif italic text-2xl tracking-wide transition-opacity hover:opacity-70",
+            "relative pointer-events-auto font-serif italic text-2xl tracking-wide transition-opacity hover:opacity-70",
             isMobileOpen
               ? "text-white"
               : isScrolled
@@ -201,6 +207,11 @@ export default function Navbar() {
                 href={link.href}
                 label={link.label}
                 isScrolled={isScrolled}
+                isActive={
+                  (pathname === "/" && link.href.includes("#") && link.href.endsWith(activeSection.replace("#", ""))) ||
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname.startsWith(link.href))
+                }
               />
             </li>
           ))}
@@ -233,7 +244,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className={cn(
-              "relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 transition-all",
+              "relative z-50 pointer-events-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 transition-all",
               isMobileOpen
                 ? "text-white"
                 : isScrolled
@@ -288,24 +299,42 @@ export default function Navbar() {
 
           {/* Main Links */}
           <nav className="flex flex-col gap-3 items-start">
-            {navLinks.map((link, index) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsMobileOpen(false)}
-                className={cn(
-                  "text-5xl font-semibold tracking-wide text-white transition-all duration-500 font-heading",
-                  isMobileOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-4 opacity-0",
-                )}
-                style={{
-                  transitionDelay: `${index * 50}ms`,
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link, index) => {
+              const isActive =
+                (pathname === "/" && link.href.includes("#") && link.href.endsWith(activeSection.replace("#", ""))) ||
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => {
+                    setIsMobileOpen(false);
+                    if (link.href.startsWith("/#")) {
+                      const id = link.href.replace("/#", "");
+                      const element = document.getElementById(id);
+                      if (element) {
+                        e.preventDefault();
+                        element.scrollIntoView({ behavior: "smooth" });
+                        window.history.pushState(null, "", link.href);
+                      }
+                    }
+                  }}
+                  className={cn(
+                    "text-5xl font-semibold tracking-wide transition-all duration-500 font-heading",
+                    isMobileOpen
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-4 opacity-0",
+                    isActive ? "text-white" : "text-white/40 hover:text-white",
+                  )}
+                  style={{
+                    transitionDelay: `${index * 50}ms`,
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Contact Button */}

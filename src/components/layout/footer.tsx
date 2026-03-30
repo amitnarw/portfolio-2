@@ -5,8 +5,8 @@ import { AnimatedNavLink } from "@/components/shared/nav-link";
 import { HireMe } from "../shared/hire-me";
 
 const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
   { label: "Blog", href: "/blog" },
   { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },

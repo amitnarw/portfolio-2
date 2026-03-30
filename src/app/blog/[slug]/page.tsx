@@ -133,7 +133,7 @@ export default async function BlogPostPage({
         />
 
         <article
-          className="mx-auto w-full max-w-350 px-6 lg:px-12"
+          className="mx-auto w-full max-w-6xl px-6 lg:px-12"
           itemScope
           itemType="http://schema.org/BlogPosting"
         >
@@ -147,78 +147,75 @@ export default async function BlogPostPage({
                 size={14}
                 className="transition-transform duration-300 group-hover:-translate-x-1"
               />
-              <span className="text-xs sm:text-sm font-medium">Back to Articles</span>
+              <span className="text-xs sm:text-sm font-medium">
+                Back to Articles
+              </span>
             </PremiumButton1>
           </div>
 
           {/* Header */}
-          <header className="mb-10">
-
+          <header className="mb-12">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <Badge
+                variant="outline"
+                className="animated-border-gradient px-4 py-1 text-xs font-semibold"
+              >
+                {article.category}
+              </Badge>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium">
+                <div className="flex items-center gap-2">
+                  <Calendar size={14} className="text-primary/70" />
+                  <time
+                    dateTime={new Date(article.date).toISOString()}
+                    itemProp="datePublished"
+                  >
+                    {article.date}
+                  </time>
+                </div>
+                <div className="flex items-center gap-2 border-l border-foreground/10 pl-4">
+                  <Clock size={14} className="text-primary/70" />
+                  <span>{article.readTime} read</span>
+                </div>
+              </div>
+            </div>
 
             <h1
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-foreground mb-8"
+              className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-wide text-foreground mb-8 font-heading"
               itemProp="headline"
             >
               {article.title}
             </h1>
+
+            <div className="flex items-center gap-3.5 pt-4 border-t border-foreground/5">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg shadow-primary/5">
+                <Image
+                  src="/my-img.png"
+                  alt="Amit Narwal"
+                  fill
+                  className="object-cover scale-110"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span
+                  itemProp="author"
+                  itemScope
+                  itemType="http://schema.org/Person"
+                  className="text-sm font-bold text-foreground"
+                >
+                  <span itemProp="name">Amit Narwal</span>
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Freelance Full Stack & AI Developer
+                </span>
+              </div>
+            </div>
           </header>
 
-          <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-14 items-start relative">
-            {/* Sidebar Meta Info */}
-            <aside className="lg:w-72 shrink-0 lg:sticky lg:top-32 space-y-10 py-2 border-l border-primary/10 pl-6 lg:pl-10">
-              <div className="space-y-8">
-                {/* Category Section */}
-                <div className="flex flex-col gap-2.5">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Category</span>
-                  <div>
-                    <Badge
-                      variant="outline"
-                      className="animated-border-gradient px-4! py-1! text-xs font-semibold"
-                    >
-                      {article.category}
-                    </Badge>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Expert Author</span>
-                  <div className="flex items-center gap-3.5">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg shadow-primary/5">
-                      <Image src="/my-img.png" alt="Amit Narwal" fill className="object-cover scale-110" />
-                    </div>
-                    <span itemProp="author" itemScope itemType="http://schema.org/Person" className="text-sm font-bold text-foreground">
-                      <span itemProp="name">Amit Narwal</span>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2.5">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Publication Details</span>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-sm text-foreground/80 font-medium">
-                      <Calendar size={16} className="text-primary/70" />
-                      <time dateTime={new Date(article.date).toISOString()} itemProp="datePublished">
-                        {article.date}
-                      </time>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm text-foreground/80 font-medium">
-                      <Clock size={16} className="text-primary/70" />
-                      <span>{article.readTime} read</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-10 border-t border-primary/10 hidden lg:block">
-                <p className="text-xs text-muted-foreground leading-relaxed italic">
-                  Expert insights on Full Stack development, AI integration, and scalable architecture.
-                </p>
-              </div>
-            </aside>
-
+          <div className="relative">
             {/* Main Content Area */}
-            <div className="flex-1 min-w-0">
+            <div className="min-w-0 relative">
               {/* Hero Image */}
-              <div className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl mb-12 shadow-xl shadow-primary/5 border border-primary/10">
+              <div className="relative aspect-4/3 w-full md:w-[45%] lg:w-[40%] xl:w-[35%] float-none md:float-left md:mr-8 lg:mr-10 mb-8 md:mb-10 overflow-hidden rounded-2xl shadow-xl shadow-primary/5 border border-primary/10">
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -231,14 +228,16 @@ export default async function BlogPostPage({
 
               {/* Content Body */}
               <div
-                className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 font-medium leading-relaxed"
+                className="prose prose-lg dark:prose-invert max-w-none w-full text-foreground/90 font-medium leading-relaxed [&>div:first-child]:flow-root [&>*:nth-child(2)]:clear-left [&>*:nth-child(2)]:pt-2 sm:[&>*:nth-child(2)]:pt-8"
+                itemScope
+                itemType="http://schema.org/Article"
                 itemProp="articleBody"
               >
                 {article.content}
               </div>
+              <div className="clear-both"></div>
             </div>
           </div>
-
 
           {/* AEO Author Bio / Grounding */}
           <aside className="mt-20 p-8 rounded-3xl bg-secondary/5 border border-secondary/20 flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left">

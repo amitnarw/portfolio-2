@@ -1,6 +1,7 @@
 "use client";
 
 import PremiumButton2 from "@/components/shared/premium-button-2";
+import SectionHeader from "@/components/shared/section-header";
 import { BlogCard } from "@/components/shared/blog-card";
 
 import { blogArticles } from "@/lib/blog-data";
@@ -43,15 +44,11 @@ export default function BlogArticles() {
 
       <div className="relative mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-16">
         {/* Section header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-[clamp(2.3rem,5.2vw,4.6rem)] font-semibold leading-[0.95] tracking-tight text-foreground">
-            Blog & Articles
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-            Insights on design, development, and technology from my experience
-            building digital products.
-          </p>
-        </div>
+        <SectionHeader
+          title="Blog & Articles"
+          subtitle="Insights on design and technology"
+          backgroundText="BLOG"
+        />
 
         {/* Articles Grid */}
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
