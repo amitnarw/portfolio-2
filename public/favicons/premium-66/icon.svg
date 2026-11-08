@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Sea Mark">
+<title>Amit Narwal — Sea Mark</title>
+<rect width="512" height="512" rx="88" fill="#E8DFC8"/>
+
+<rect x="72" y="72" width="368" height="368" fill="none" stroke="#123047" stroke-width="6"/>
+<rect x="88" y="88" width="336" height="336" fill="none" stroke="#123047" stroke-width="2" opacity=".55"/>
+<g stroke="#123047" stroke-width="2" opacity=".3">
+<path d="M88 120 L424 120"/><path d="M88 392 L424 392"/><path d="M120 88 L120 424"/><path d="M392 88 L392 424"/>
+</g>
+<polygon points="256,104 282,230 408 256 282,282 256,408 230,282 104 256 230 230" fill="#123047"/>
+<polygon points="256,152 274,238 360 256 274,274 256,360 238,274 152 256 238 238" fill="#E8DFC8"/>
+<g fill="none" stroke="#123047" stroke-width="5" stroke-linecap="round">
+<path d="M112 336 C142 316 172 356 202 336 C232 316 262 356 292 336"/>
+<path d="M112 364 C142 344 172 384 202 364 C232 344 262 384 292 364"/>
+</g>
+<path d="M232 312 L256 244 L280 312 M240 290 L272 290" fill="none" stroke="#C73E2E" stroke-width="9"
+      stroke-linecap="round" stroke-linejoin="round"/>
+<text x="316" y="344" font-family="Georgia, serif" font-size="19" letter-spacing="1" fill="#123047">28.6N</text>
+<text x="316" y="368" font-family="Georgia, serif" font-size="19" letter-spacing="1" fill="#123047">77.2E</text>
+
+</svg>

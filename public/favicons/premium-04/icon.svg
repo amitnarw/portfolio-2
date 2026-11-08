@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Lotus Apex">
+<title>Amit Narwal — Lotus Apex</title>
+<rect width="512" height="512" rx="88" fill="#0F1F1A"/>
+
+<defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B7C9A8"/><stop offset="100%" stop-color="#6B8A6B"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#0F1F1A"/>
+<!-- side petals -->
+<path d="M256 392 C178 392 140 332 132 242 C170 272 220 282 256 256 Z" fill="url(#g4)" opacity=".55"/>
+<path d="M256 392 C334 392 372 332 380 242 C342 272 292 282 256 256 Z" fill="url(#g4)" opacity=".55"/>
+<!-- centre petal A -->
+<path d="M256 392 C216 288 212 200 256 108 C300 200 296 288 256 392" fill="url(#g4)"/>
+<!-- inner vein A -->
+<path d="M256 392 L256 168" stroke="#0F1F1A" stroke-width="10" stroke-linecap="round"/>
+<path d="M228 300 L284 300" stroke="#0F1F1A" stroke-width="8" stroke-linecap="round"/>
+<!-- base arc -->
+<path d="M156 368 Q256 408 356 368" fill="none" stroke="#B7C9A8" stroke-width="6" stroke-linecap="round"/>
+
+</svg>

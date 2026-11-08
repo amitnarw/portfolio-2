@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Terracotta Atelier">
+<title>Amit Narwal — Terracotta Atelier</title>
+<rect width="512" height="512" rx="88" fill="#1A1A1A"/>
+
+<rect width="512" height="512" rx="88" fill="#1A1A1A"/>
+<!-- clay ring -->
+<circle cx="256" cy="256" r="148" fill="none" stroke="#C8522E" stroke-width="38"/>
+<circle cx="256" cy="256" r="148" fill="none" stroke="#A64628" stroke-width="38" stroke-dasharray="28 22" opacity=".35"/>
+<!-- thumb-pressed A -->
+<path d="M196 342 L256 186 L316 342" fill="none" stroke="#F5F1E8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M220 284 L292 284" stroke="#F5F1E8" stroke-width="12" stroke-linecap="round"/>
+<!-- clay speckle -->
+<g fill="#F5F1E8" opacity=".55"><circle cx="318" cy="136" r="6"/><circle cx="138" cy="226" r="5"/><circle cx="368" cy="304" r="5"/></g>
+
+</svg>

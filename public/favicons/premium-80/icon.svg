@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Open Source">
+<title>Amit Narwal — Open Source</title>
+<rect width="512" height="512" rx="88" fill="#0E1A14"/>
+
+<defs><linearGradient id="k80" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#9CC0A6"/><stop offset="100%" stop-color="#5C8A6C"/></linearGradient></defs>
+<!-- bracket-like A legs -->
+<path d="M256 128 L150 392" fill="none" stroke="url(#k80)" stroke-width="24" stroke-linecap="round"/>
+<path d="M256 128 L362 392" fill="none" stroke="url(#k80)" stroke-width="24" stroke-linecap="round"/>
+<!-- leg curls (bracket serifs) -->
+<path d="M150 392 C142 412 158 424 176 418" fill="none" stroke="url(#k80)" stroke-width="12" stroke-linecap="round"/>
+<path d="M362 392 C370 412 354 424 336 418" fill="none" stroke="url(#k80)" stroke-width="12" stroke-linecap="round"/>
+<!-- crossbar -->
+<path d="M198 312 L314 312" fill="none" stroke="url(#k80)" stroke-width="16" stroke-linecap="round"/>
+<!-- leaves grown from the crossbar -->
+<path d="M256 316 C256 286 234 270 208 270 C208 298 230 316 256 316 Z" fill="#9CC0A6"/>
+<path d="M256 304 C256 274 278 258 304 258 C304 286 282 304 256 304 Z" fill="#7EA88A"/>
+<path d="M256 236 C256 212 268 196 288 188 C292 210 280 230 256 236 Z" fill="#7EA88A" opacity=".9"/>
+<!-- flower / period -->
+<circle cx="256" cy="122" r="17" fill="#F5F1E8"/>
+<circle cx="256" cy="122" r="7" fill="#0E1A14"/>
+
+</svg>

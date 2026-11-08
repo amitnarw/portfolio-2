@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Isometric Cube">
+<title>Amit Narwal — Isometric Cube</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<!-- iso cube -->
+<polygon points="256,112 356,170 356,286 256,344 156,286 156,170" fill="none" stroke="#1A1A1A" stroke-width="16" stroke-linejoin="round"/>
+<polygon points="256,112 356,170 256,228 156,170" fill="#DDD8C8"/>
+<polygon points="156,170 256,228 256,344 156,286" fill="#D9D1BC"/>
+<polygon points="256,228 356,170 356,286 256,344" fill="#C9BFB0"/>
+<!-- A edge highlight -->
+<path d="M216 302 L256 196 L296 302 M228 268 L284 268" fill="none" stroke="#1A1A1A" stroke-width="12" stroke-linecap="round"/>
+
+</svg>

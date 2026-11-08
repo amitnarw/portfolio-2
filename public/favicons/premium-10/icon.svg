@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Serif Ligature">
+<title>Amit Narwal — Serif Ligature</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<defs><linearGradient id="g10" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A1A1A"/><stop offset="100%" stop-color="#3A3630"/></linearGradient></defs>
+<!-- A -->
+<path d="M112 368 L200 148 L288 368" fill="none" stroke="url(#g10)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 296 L250 296" stroke="url(#g10)" stroke-width="14" stroke-linecap="round"/>
+<!-- N sharing stem space, optical kerning -->
+<path d="M288 368 L288 148 L400 368 L400 148" fill="none" stroke="url(#g10)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- period exclamation: single gold dot baseline right -->
+<circle cx="424" cy="352" r="16" fill="#B87333"/>
+<!-- hairline rule below -->
+<path d="M112 404 L400 404" stroke="#B87333" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+
+</svg>

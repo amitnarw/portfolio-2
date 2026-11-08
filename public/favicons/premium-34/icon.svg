@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Chisel A">
+<title>Amit Narwal — Chisel A</title>
+<rect width="512" height="512" rx="88" fill="#2A2A28"/>
+
+<rect width="512" height="512" rx="88" fill="#2A2A28"/>
+<!-- granite slab -->
+<rect x="148" y="118" width="216" height="276" rx="12" fill="#8A8A86"/>
+<rect x="160" y="130" width="192" height="252" rx="8" fill="#6A6A66"/>
+<!-- chisel A incision -->
+<path d="M212 352 L256 176 L300 352" fill="none" stroke="#2A2A28" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M226 284 L286 284" stroke="#2A2A28" stroke-width="12" stroke-linecap="round"/>
+<!-- chisel flecks -->
+<g stroke="#2A2A28" stroke-width="4" stroke-linecap="round"><path d="M200 168 L216 184"/><path d="M312 168 L296 184"/><path d="M256 152 L256 176"/></g>
+<g fill="#F5F1E8" opacity=".5"><circle cx="186" cy="352" r="5"/><circle cx="326" cy="352" r="5"/></g>
+
+</svg>

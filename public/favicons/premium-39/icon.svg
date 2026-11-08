@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Minimal Line A">
+<title>Amit Narwal — Minimal Line A</title>
+<rect width="512" height="512" rx="88" fill="#FBFBF8"/>
+
+<rect width="512" height="512" rx="88" fill="#FBFBF8"/>
+<!-- single-weight architectural line, Swiss -->
+<path d="M146 384 L256 128 L366 384" fill="none" stroke="#111111" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 292 L330 292" stroke="#111111" stroke-width="18" stroke-linecap="round"/>
+<!-- red tick accent -->
+<rect x="346" y="368" width="36" height="10" fill="#C73E2E"/>
+<!-- baseline hairline -->
+<path d="M112 404 L400 404" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

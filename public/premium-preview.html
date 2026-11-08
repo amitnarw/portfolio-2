@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amit Narwal — Premium Portfolio Concept</title>
+  <meta name="description" content="A premium, proof-driven portfolio concept: editorial typography, cohesive gold accent, case studies, services, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Instrument+Serif:ital@1&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link id="live-favicon" rel="icon" href="favicons/option-1/favicon.ico" sizes="any" />
+  <style>
+    :root {
+      --font-sans: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      --font-serif: "Instrument Serif", Georgia, serif;
+      --font-display: "Bebas Neue", "Poppins", sans-serif;
+      --bg: #07080b;
+      --surface: #0d1016;
+      --surface-2: #131820;
+      --border: rgba(255, 255, 255, .08);
+      --fg: #f2f0ea;
+      --muted: #8b909b;
+      --accent: #ffdb68;
+      --accent-weak: rgba(255, 219, 104, .12);
+      --radius-sm: 14px;
+      --radius-md: 22px;
+      --radius-lg: 32px;
+      --step: 1.2rem;
+      --gutter: clamp(1.25rem, 4vw, 3rem);
+      --maxw: 1240px;
+    }
+    html[data-theme="light"] {
+      --bg: #fbfaf6;
+      --surface: #fff;
+      --surface-2: #f3efe6;
+      --border: rgba(0, 0, 0, .08);
+      --fg: #111317;
+      --muted: #5f6368;
+      --accent: #ad8000;
+      --accent-weak: rgba(173, 128, 0, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ::selection { background: var(--accent); color: #0a0a0a; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+    .skip-link {
+      position: fixed; left: 1rem; top: -4rem; z-index: 1000;
+      background: var(--accent); color: #000; padding: .6rem 1rem; border-radius: .6rem;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .container { width: min(var(--maxw), calc(100% - (var(--gutter) * 2))); margin: 0 auto; }
+
+    /* Top bar */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg) 72%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: .75rem; font-weight: 600; letter-spacing: .02em; }
+    .brand-mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--surface); border: 1px solid var(--border);
+      display: grid; place-items: center; overflow: hidden;
+    }
+    .brand-mark img { width: 100%; height: 100%; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0; align-items: center; }
+    nav a { font-size: .92rem; color: var(--muted); transition: color .2s; }
+    nav a:hover, nav a:focus-visible { color: var(--fg); }
+    .cta-link {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .65rem 1rem; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--surface); font-size: .9rem; color: var(--fg);
+      transition: border-color .2s, transform .2s;
+    }
+    .cta-link:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .theme-toggle {
+      background: transparent; border: 1px solid var(--border); color: var(--fg);
+      width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero { padding: 96px 0 80px; position: relative; overflow: hidden; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.2fr .9fr; gap: 3rem; align-items: end;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .55rem; padding: .35rem .75rem;
+      border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+      font-size: .85rem; color: var(--muted);
+    }
+    .live-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #32d583; box-shadow: 0 0 0 4px rgba(50,213,131,.18);
+      animation: pulse 1.9s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+    @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.6rem, 10vw, 8.6rem);
+      line-height: .88; letter-spacing: .01em; margin: .9rem 0 1.3rem; text-transform: uppercase;
+      text-wrap: balance;
+    }
+    .hero .lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--muted); max-width: 60ch; line-height: 1.7; text-wrap: pretty; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .6rem; padding: .9rem 1.25rem;
+      border-radius: 999px; border: 1px solid var(--border); font-weight: 600;
+      transition: transform .24s cubic-bezier(.2,.8,.2,1), border-color .2s, background .2s;
+      will-change: transform;
+    }
+    .btn--primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+    .btn--primary:hover { transform: translateY(-2px); }
+    .btn--ghost { background: var(--surface); }
+    .btn--ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .hero-meta { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .75rem; margin-top: 1.8rem; max-width: 420px; }
+    .meta-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: .8rem .9rem; }
+    .meta-card strong { display: block; font-size: 1.05rem; }
+    .meta-card span { font-size: .78rem; color: var(--muted); }
+    .portrait-wrap {
+      position: relative; overflow: hidden; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); background: var(--surface);
+      aspect-ratio: 4/5; max-width: 420px; margin-left: auto;
+      box-shadow: 0 30px 80px rgba(0,0,0,.35);
+    }
+    .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .portrait-arc {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(120% 100% at 50% 100%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 58%);
+    }
+
+    /* Reveal motion */
+    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+    [data-reveal].is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      .live-dot { animation: none; }
+    }
+
+    /* Proof strip */
+    .proof { padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface-2); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .proof-item { padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+    .proof-item .num { font-family: var(--font-display); font-size: 2.4rem; color: var(--accent); line-height: 1; }
+    .proof-item p { margin: .35rem 0 0; font-size: .85rem; color: var(--muted); }
+    @media (max-width: 700px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Sections */
+    section { padding: 96px 0; }
+    @media (max-width: 700px) { section { padding: 64px 0; } }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .section-head h2 { font-size: clamp(2.4rem, 4vw, 4rem); margin: 0; text-wrap: balance; font-family: var(--font-serif); font-style: italic; line-height: 1.02; }
+    .section-head .kicker { font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+    /* Case studies */
+    .featured-case {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: stretch;
+      border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+      background: var(--surface);
+    }
+    .featured-case-media { position: relative; min-height: 360px; background: #000; }
+    .featured-case-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .featured-case-body { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .metric { display: inline-flex; gap: .4rem; align-items: center; padding: .4rem .7rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font-size: .8rem; color: var(--muted); }
+    .metric b { color: var(--accent); font-weight: 700; }
+    .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
+    .case-card { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); transition: transform .3s ease, border-color .3s; }
+    .case-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .case-card img { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
+    .case-card-body { padding: 1.1rem; display: flex; flex-direction: column; gap: .6rem; }
+    .case-card h3 { margin: 0; font-size: 1.15rem; }
+    .case-card p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+    .tag { display: inline-block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: .3rem .6rem; }
+    @media (max-width: 900px) { .featured-case, .case-grid { grid-template-columns: 1fr; } }
+
+    /* Services */
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .service { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.6rem; background: var(--surface); position: relative; overflow: hidden; }
+    .service h3 { margin: .6rem 0 .4rem; font-size: 1.35rem; }
+    .service p { color: var(--muted); font-size: .92rem; line-height: 1.6; }
+    .service .price { margin-top: 1rem; display: flex; justify-content: space-between; color: var(--fg); border-top: 1px solid var(--border); padding-top: .9rem; font-size: .9rem; }
+    .service .price b { color: var(--accent); }
+    @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr; } }
+
+    /* Testimonials */
+    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .quote { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; background: var(--surface); }
+    .quote p { margin: 0 0 1rem; font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; line-height: 1.5; }
+    .quote footer { color: var(--muted); font-size: .85rem; }
+    @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
+
+    /* Process */
+    .step-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .step { padding: 1rem; }
+    .step-num { font-family: var(--font-display); font-size: 3rem; color: color-mix(in srgb, var(--fg) 14%, transparent); line-height: 1; }
+    .step h3 { margin: .6rem 0 .4rem; font-size: 1.2rem; }
+    .step p { color: var(--muted); font-size: .9rem; }
+    @media (max-width: 900px) { .step-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* About */
+    .about-wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2rem; align-items: center; }
+    .about-aside { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--surface); aspect-ratio: 4/5; }
+    .about-aside img { width: 100%; height: 100%; object-fit: cover; }
+    .about-copy h3 { font-size: clamp(1.6rem, 2.6vw, 2.5rem); font-family: var(--font-serif); font-style: italic; line-height: 1.06; margin: 0 0 1rem; }
+    .about-copy p { color: var(--muted); line-height: 1.7; }
+    @media (max-width: 900px) { .about-wrap { grid-template-columns: 1fr; } }
+
+    /* Brand / favicon */
+    .option-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .option-card {
+      border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.2rem; background: var(--surface);
+      display: flex; flex-direction: column; gap: .8rem; align-items: center;
+    }
+    .option-card.selected { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-weak); }
+    .swatch-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: .4rem; width: 100%; }
+    .swatch { padding: .5rem; border-radius: 12px; border: 1px solid var(--border); display: grid; place-items: center; min-height: 68px; }
+    .swatch.light { background: #fafaf8; }
+    .swatch.dark { background: #0a0a0a; }
+    .swatch img { width: 40px; height: 40px; object-fit: contain; }
+    .option-card h3 { margin: 0; font-size: 1.05rem; }
+    .option-card .choose { margin-top: .4rem; border: 0; background: transparent; color: var(--accent); cursor: pointer; font-weight: 600; }
+    @media (max-width: 900px) { .option-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .option-grid { grid-template-columns: 1fr; } }
+
+    /* Contact */
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .form { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.6rem; display: grid; gap: 1rem; }
+    .form label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin: 0 0 .4rem; }
+    .form input, .form textarea, .form select {
+      width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: .7rem;
+      color: var(--fg); padding: .7rem .8rem; font: inherit;
+    }
+    .form textarea { min-height: 120px; resize: vertical; }
+    .form .submit-row { display: flex; gap: .7rem; flex-wrap: wrap; }
+    @media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; } }
+
+    /* Footer */
+    footer { padding: 60px 0 40px; border-top: 1px solid var(--border); background: var(--bg); }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
+    .footer-grid h4 { margin: 0 0 .6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .footer-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .powered-note { margin-top: 2.5rem; color: var(--muted); font-size: .8rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #32d583; display: inline-block; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <script>
+    (function() {
+      var t = localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+    })();
+  </script>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark"><img src="favicons/option-1/icon.png" alt="" width="18" height="18" /></span>
+        Amit Narwal
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#about">About</a></li>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme" id="theme-toggle">◐</button>
+        </ul>
+      </nav>
+      <a class="cta-link" href="#contact">Start a project →</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="eyebrow"><span class="live-dot"></span> Available for select projects — Q1 2027</span>
+          <h1>
+            I design &amp; ship<br />
+            AI-powered<br />
+            portfolio-grade<br />
+            software.
+          </h1>
+          <p class="lede">
+            Freelance full-stack engineer and AI integrator. I help founders turn a complex product idea into
+            a fast, credible, production-ready web application — from architecture to deployment to SEO.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#work">View case studies</a>
+            <a class="btn btn--ghost" href="#contact">Start a project</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-card"><strong>New Delhi → Worldwide</strong><span>Remote-first, async friendly</span></div>
+            <div class="meta-card"><strong>48h response</strong><span>Typical intro reply time</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap" data-reveal>
+          <img src="my-img.png" alt="Amit Narwal, freelance full-stack and AI developer" width="420" height="525" />
+          <div class="portrait-arc" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="proof" aria-label="Proof metrics">
+      <div class="container proof-grid">
+        <div class="proof-item"><div class="num">40+</div><p>full-stack apps shipped</p></div>
+        <div class="proof-item"><div class="num">3.1x</div><p>faster LCP on redesigned sites</p></div>
+        <div class="proof-item"><div class="num">9+</div><p>global clients served</p></div>
+        <div class="proof-item"><div class="num">100%</div><p>projects delivered on brief</p></div>
+      </div>
+    </section>
+
+    <!-- Featured work -->
+    <section id="work" aria-label="Selected work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Selected work</span>
+            <h2>Proof over promise.</h2>
+          </div>
+          <p class="tag">Featured case study</p>
+        </div>
+
+        <article class="featured-case" data-reveal>
+          <div class="featured-case-media">
+            <img src="portfolio.webp" alt="Portfolio project screenshot" loading="lazy" />
+          </div>
+          <div class="featured-case-body">
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+              <span class="metric"><b>+3.1x</b> performance score</span>
+              <span class="metric"><b>−62%</b> LCP</span>
+              <span class="metric"><b>+18%</b> inbound leads</span>
+            </div>
+            <h3 style="font-size:1.6rem;margin:.4rem 0 .2rem">AI-powered listing platform</h3>
+            <p style="color:var(--muted);line-height:1.65;font-size:.95rem">
+              Rebuilt a content-heavy SaaS frontend with Next.js, server caching, and an AI enrichment pipeline.
+              Replaced a 6s TTFB experience with a sub-second edge-rendered product page and measurable SEO uplift.
+            </p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem">
+              <span class="tag">Next.js</span><span class="tag">AI integration</span><span class="tag">Performance</span><span class="tag">SEO</span>
+            </div>
+            <a class="btn btn--ghost" style="margin-top:.4rem" href="#contact">Read the full case study →</a>
+          </div>
+        </article>
+
+        <div class="case-grid">
+          <article class="case-card" data-reveal>
+            <img src="invoice-generator.webp" alt="Invoice generator" loading="lazy" />
+            <div class="case-card-body">
+              <h3>Invoice generator SaaS</h3>
+              <p>Full-stack billing tool built with React and Node; reduced manual invoicing time by 70% for early customers.</p>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="tag">Full-stack</span><span class="tag">Payments</span></div>
+            </div>
+          </article>
+          <article class="case-card" data-reveal>
+            <img src="web-mcp.jpg" alt="Web MCP project" loading="lazy" />
+            <div class="case-card-body">
+              <h3>MCP-powered agent tools</h3>
+              <p>Browser and model-context tooling that automates workflows teams previously did by hand every week.</p>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="tag">AI agents</span><span class="tag">Node.js</span></div>
+            </div>
+          </article>
+          <article class="case-card" data-reveal>
+            <img src="hrseo.jpg" alt="SEO project" loading="lazy" />
+            <div class="case-card-body">
+              <h3>SEO recovery for a service brand</h3>
+              <p>Technical cleanup, Core Web Vitals pass, and content structure rebuild — 2x organic traffic in four months.</p>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="tag">SEO</span><span class="tag">Next.js</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results/About proof split -->
+    <section id="results" aria-label="Client outcomes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Outcomes</span>
+            <h2>Numbers that outlast the launch.</h2>
+          </div>
+        </div>
+        <div class="quote-grid" data-reveal>
+          <figure class="quote">
+            <p>"Amit doesn't just ship features — he asks why we're building them, then ships something better than the brief."</p>
+            <footer>— Product lead, SaaS startup</footer>
+          </figure>
+          <figure class="quote">
+            <p>"The site feels genuinely premium now. Leads doubled within two months and the team barely needs to explain the product."</p>
+            <footer>— Founder, agency client</footer>
+          </figure>
+          <figure class="quote">
+            <p>"Fast, opinionated, and unusually reliable. He owned the whole stack, including the parts we didn't know we needed."</p>
+            <footer>— CTO, European consultancy</footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" aria-label="Services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Offerings</span>
+            <h2>Three ways to work together.</h2>
+          </div>
+        </div>
+        <div class="service-grid">
+          <div class="service" data-reveal>
+            <span class="tag">01 — flagship</span>
+            <h3>Product build sprint</h3>
+            <p>End-to-end design &amp; engineering for your MVP or v2. Discovery, architecture, build, deploy, measure.</p>
+            <div class="price"><span>4–8 weeks</span><b>from $4,500</b></div>
+          </div>
+          <div class="service" data-reveal>
+            <span class="tag">02 — integration</span>
+            <h3>AI integration sprint</h3>
+            <p>Add RAG, agents, or tooling to an existing product without destabilising it. Guardrails included.</p>
+            <div class="price"><span>2–3 weeks</span><b>from $2,800</b></div>
+          </div>
+          <div class="service" data-reveal>
+            <span class="tag">03 — advisory</span>
+            <h3>Performance &amp; SEO audit</h3>
+            <p>Diagnose Core Web Vitals, architecture, and SEO, then deliver prioritised fixes with before/after tracking.</p>
+            <div class="price"><span>1 week</span><b>from $1,200</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section aria-label="Process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Process</span>
+            <h2>A calm, transparent way to ship.</h2>
+          </div>
+        </div>
+        <div class="step-grid">
+          <div class="step" data-reveal><div class="step-num">01</div><h3>Understand</h3><p>Scope, users, constraints, and the one metric that actually matters.</p></div>
+          <div class="step" data-reveal><div class="step-num">02</div><h3>Design</h3><p>Flows, layout, copy structure, and a component system that can scale.</p></div>
+          <div class="step" data-reveal><div class="step-num">03</div><h3>Build</h3><p>Clean Next.js/Node architecture with measurable performance targets.</p></div>
+          <div class="step" data-reveal><div class="step-num">04</div><h3>Measure</h3><p>Launch, monitor Core Web Vitals, iterate on what the data shows.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-label="About">
+      <div class="container">
+        <div class="about-wrap" data-reveal>
+          <div class="about-aside">
+            <img src="my-img.png" alt="Amit Narwal" loading="lazy" />
+          </div>
+          <div class="about-copy">
+            <span class="kicker">About</span>
+            <h3>Full-stack engineer, AI integrator, and an opinionated partner in craft.</h3>
+            <p>
+              I'm Amit Narwal. I build fast, scalable web applications and AI-driven products, and work with
+              founders who want a senior partner rather than an anonymous hand-off. Based in New Delhi, shipping for
+              clients worldwide — focused on React, Next.js, Node, and applied AI.
+            </p>
+            <p>
+              Specialist interests: search-friendly architecture, Chrome extensions, resilient APIs, and the small
+              details — spacing, focus states, motion, and loaded performance — that make a product feel premium.
+            </p>
+            <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem">
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/amit-narwal-08b34322b/" target="_blank" rel="noreferrer">LinkedIn →</a>
+              <a class="btn btn--ghost" href="mailto:amitnarwal115@gmail.com">amitnarwal115@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand identity & favicon chooser -->
+    <section id="brand" aria-label="Brand mark">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Identity</span>
+            <h2>Choosing the right mark.</h2>
+          </div>
+          <p class="tag">Tap one — the browser tab updates instantly</p>
+        </div>
+
+        <div class="option-grid">
+          <article class="option-card" data-option="1">
+            <h3>Option 1 — Gold on ink</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-1/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-1/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">Refined version of the current monogram. Safest choice.</p>
+            <button class="choose" type="button" data-pick="1">Use Option 1</button>
+          </article>
+
+          <article class="option-card" data-option="2">
+            <h3>Option 2 — Ink on gold</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-2/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-2/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">Inverted for maximum visibility on light browser chrome.</p>
+            <button class="choose" type="button" data-pick="2">Use Option 2</button>
+          </article>
+
+          <article class="option-card" data-option="3">
+            <h3>Option 3 — Editorial "A."</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-3/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-3/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">Monogram that echoes the "Amit Narwal." wordmark's period.</p>
+            <button class="choose" type="button" data-pick="3">Use Option 3</button>
+          </article>
+
+          <article class="option-card" data-option="4">
+            <h3>Option 4 — Ring monogram</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-4/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-4/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">Insulated, medallion-style. Reads well at 16px.</p>
+            <button class="choose" type="button" data-pick="4">Use Option 4</button>
+          </article>
+
+          <article class="option-card" data-option="5">
+            <h3>Option 5 — Gold plate</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-5/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-5/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">Inverted plate: gold background, dark mark. Bold and distinctive.</p>
+            <button class="choose" type="button" data-pick="5">Use Option 5</button>
+          </article>
+
+          <article class="option-card" data-option="6">
+            <h3>Option 6 — Two-tone split</h3>
+            <div class="swatch-row">
+              <div class="swatch dark"><img src="favicons/option-6/icon.png" alt="" width="40" height="40" /></div>
+              <div class="swatch light"><img src="favicons/option-6/icon.png" alt="" width="32" height="32" /></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin:0">A gold, N cream — a nod to the serif-plus-sans pairing.</p>
+            <button class="choose" type="button" data-pick="6">Use Option 6</button>
+          </article>
+        </div>
+
+        <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
+          <p style="color:var(--muted);font-size:.9rem;margin:0">Selected for this page: <b id="pick-label">Option 1</b></p>
+          <a class="btn btn--ghost" href="#contact">Tell me which one</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Contact</span>
+            <h2>Start with the brief. I'll handle the rest.</h2>
+          </div>
+        </div>
+        <div class="contact-wrap">
+          <div>
+            <p style="color:var(--muted);line-height:1.7">Tell me what you're building, the timeline, and what success looks like. I reply within 48 hours and we'll book a 30-minute call to decide if we're a fit.</p>
+            <div style="margin-top:1.5rem;display:grid;gap:.8rem">
+              <a class="btn btn--primary" href="https://cal.com" target="_blank" rel="noreferrer">Book a 30-min call →</a>
+              <a class="btn btn--ghost" href="mailto:amitnarwal115@gmail.com">amitnarwal115@gmail.com</a>
+              <div style="color:var(--muted);font-size:.9rem;display:flex;gap:.9rem;flex-wrap:wrap">
+                <span>LinkedIn</span><span>·</span><span>New Delhi (IST, UTC+5:30)</span><span>·</span><span>Reply within 48h</span>
+              </div>
+            </div>
+          </div>
+          <form class="form" action="mailto:amitnarwal115@gmail.com" method="post" enctype="text/plain">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline">
+                <option>2–3 weeks</option>
+                <option>4–6 weeks</option>
+                <option>8+ weeks</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="brief">Brief</label>
+              <textarea id="brief" name="brief" required></textarea>
+            </div>
+            <div class="submit-row">
+              <button class="btn btn--primary" type="submit">Send brief</button>
+              <button class="btn btn--ghost" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Amit Narwal</h4>
+          <p style="color:var(--muted);max-width:34ch;line-height:1.6">Freelance full-stack &amp; AI developer building premium digital products for ambitious teams.</p>
+          <p class="powered-note"><span class="status-dot"></span><span>Available for select projects · 48h reply</span></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/amit-narwal-08b34322b/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="powered-note">© 2026 Amit Narwal · Premium portfolio concept page · Favicon gallery includes 6 options</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var themeBtn = document.getElementById('theme-toggle');
+      function update() {
+        var t = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        if (themeBtn) themeBtn.textContent = t === 'light' ? '☼' : '◐';
+      }
+      function toggle() {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        update();
+      }
+      if (themeBtn) themeBtn.addEventListener('click', toggle);
+      update();
+
+      // reveal on scroll
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce) { els.forEach(function (e) { e.classList.add('is-visible'); }); }
+      else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.14 });
+        els.forEach(function (e) { io.observe(e); });
+      }
+
+      // live favicon picker
+      var variants = {
+        1: 'favicons/option-1/favicon.ico',
+        2: 'favicons/option-2/favicon.ico',
+        3: 'favicons/option-3/favicon.ico',
+        4: 'favicons/option-4/favicon.ico',
+        5: 'favicons/option-5/favicon.ico',
+        6: 'favicons/option-6/favicon.ico'
+      };
+      var labels = { 1:'Option 1',2:'Option 2',3:'Option 3',4:'Option 4',5:'Option 5',6:'Option 6' };
+      var link = document.getElementById('live-favicon');
+      var label = document.getElementById('pick-label');
+      function pick(n) {
+        if (link) link.href = variants[n] + '?v=' + Date.now();
+        if (label) label.textContent = labels[n];
+        document.querySelectorAll('.option-card').forEach(function (c) {
+          c.classList.toggle('selected', c.getAttribute('data-option') === String(n));
+        });
+      }
+      document.querySelectorAll('[data-pick]').forEach(function (b) {
+        b.addEventListener('click', function () { pick(this.getAttribute('data-pick')); });
+      });
+      pick(1);
+    })();
+  </script>
+</body>
+</html>

@@ -1,15 +1,29 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogArticles } from "@/lib/blog-data";
+import { selectedWorkProjects } from "@/lib/selected-work-data";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import Link from "next/link";
-import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
+import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { PremiumButton1 } from "@/components/shared/premium-button-1";
 
 const siteUrl = "https://amitnarwal.com";
+
+const relatedWorkByBlog: Record<string, string> = {
+  "nextjs-16-2-performance-agent-ready": "portfolio-website",
+  "latest-ai-models-ranking-2026": "exaldia-ai-seo-tools",
+  "nextjs-vulnerabilities-security-guide-2026": "web-mcp",
+  "postgresql-performance-optimization-2026": "cbr-painters-australia",
+  "postgresql-replication-high-availability": "cbr-painters-australia",
+  "modernizing-nextjs-seo-geo": "exaldia-ai-seo-tools",
+  "litellm-supply-chain-attack-teampcp": "web-mcp",
+  "agentic-ai-workflows-2025": "web-mcp",
+  "ui-ux-best-practices-2025": "portfolio-website",
+  "building-scalable-apis-nodejs": "intesters",
+};
 
 export async function generateMetadata({
   params,
@@ -24,8 +38,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} | Amit Narwal`,
+    title: article.title,
     description: article.excerpt,
+    alternates: { canonical: `${siteUrl}/blog/${article.slug}` },
     keywords: [
       article.category,
       "Amit Narwal Blog",
@@ -180,7 +195,7 @@ export default async function BlogPostPage({
             </div>
 
             <h1
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-wide text-foreground mb-8 font-heading"
+              className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-wide md:tracking-[0.03em] lg:tracking-wide text-foreground mb-8 font-heading"
               itemProp="headline"
             >
               {article.title}
@@ -238,6 +253,32 @@ export default async function BlogPostPage({
               <div className="clear-both"></div>
             </div>
           </div>
+
+          {/* Related project */}
+          {(() => {
+            const relatedSlug = relatedWorkByBlog[article.slug];
+            if (!relatedSlug) return null;
+            const project = selectedWorkProjects.find((p) => p.slug === relatedSlug);
+            if (!project) return null;
+            return (
+              <aside className="mt-12 p-6 rounded-2xl border border-foreground/10 bg-muted/40">
+                <p className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
+                  Related project
+                </p>
+                <h2 className="text-xl font-bold font-heading text-foreground mb-2">
+                  <Link
+                    href={`/work/${project.slug}`}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {project.title}
+                  </Link>
+                </h2>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  {project.description}
+                </p>
+              </aside>
+            );
+          })()}
 
           {/* AEO Author Bio / Grounding */}
           <aside className="mt-20 p-8 rounded-3xl bg-secondary/5 border border-secondary/20 flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Braided Rope">
+<title>Amit Narwal — Braided Rope</title>
+<rect width="512" height="512" rx="88" fill="#0F1F1A"/>
+
+<rect width="512" height="512" rx="88" fill="#0F1F1A"/>
+<!-- two braids as AN -->
+<path d="M128 384 C128 280 188 192 256 192" fill="none" stroke="#B8985A" stroke-width="36" stroke-linecap="round"/>
+<path d="M384 384 C384 280 324 192 256 192" fill="none" stroke="#7C6AA8" stroke-width="36" stroke-linecap="round"/>
+<!-- crossover weave -->
+<path d="M256 192 L256 384" stroke="#F5F1E8" stroke-width="10" stroke-dasharray="14 14" stroke-linecap="round"/>
+<!-- knot dot -->
+<circle cx="256" cy="384" r="18" fill="#F5F1E8"/>
+<circle cx="256" cy="384" r="8" fill="#0F1F1A"/>
+
+</svg>

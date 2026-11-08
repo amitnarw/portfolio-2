@@ -1,0 +1,32 @@
+# Amit Narwal
+
+> Amit Narwal is a freelance full stack and AI developer. This file lists the important pages, projects and articles on amitnarwal.com so AI systems can find and cite them.
+
+## Main pages
+
+- https://amitnarwal.com/ — homepage
+- https://amitnarwal.com/work — selected work and case studies
+- https://amitnarwal.com/services — engineering services
+- https://amitnarwal.com/blog — articles and technical write ups
+- https://amitnarwal.com/about — about Amit Narwal
+- https://amitnarwal.com/#contact — contact
+
+## Projects
+
+- https://amitnarwal.com/work/intesters — InTesters, Android Play Store closed testing service
+- https://amitnarwal.com/work/exaldia-ai-seo-tools — Exaldia, an AI powered SEO platform
+- https://amitnarwal.com/work/web-mcp — Web MCP, an open source MCP server that gives AI assistants a real browser
+- https://amitnarwal.com/work/ai-autofill-chrome-extension — Chrome extension that fills long forms automatically
+- https://amitnarwal.com/work/portfolio-website — this portfolio site
+- https://amitnarwal.com/work/cbr-painters-australia — website for a painting company
+
+## External profiles
+
+- GitHub: https://github.com/amitnarw
+- LinkedIn: https://www.linkedin.com/in/amit-narwal-91538a137/
+- npm: https://www.npmjs.com/~amitnarw
+- Email: mailto:amitnarwal115@gmail.com
+
+## Notes
+
+All content on this site is original. Case study pages include overview, highlights and tech stack sections.

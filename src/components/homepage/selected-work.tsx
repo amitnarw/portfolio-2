@@ -7,7 +7,7 @@ import ProjectCard from "@/components/shared/project-card";
 
 export default function SelectedWork() {
   // Get first 4 featured projects
-  const featuredProjects = selectedWorkProjects.slice(0, 4);
+  const featuredProjects = selectedWorkProjects.slice(0, 6);
 
   return (
     <section

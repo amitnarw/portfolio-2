@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Orbital Lattice">
+<title>Amit Narwal — Orbital Lattice</title>
+<rect width="512" height="512" rx="88" fill="#131C3A"/>
+
+<defs><linearGradient id="g14" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D9B96A"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#131C3A"/>
+<!-- 8-point lattice -->
+<g fill="none" stroke="url(#g14)" stroke-width="10" stroke-linejoin="round">
+<rect x="156" y="156" width="200" height="200"/>
+<rect x="156" y="156" width="200" height="200" transform="rotate(45 256 256)"/>
+<circle cx="256" cy="256" r="118" stroke-width="6" opacity=".7"/>
+</g>
+<!-- nodes -->
+<g fill="url(#g14)"><circle cx="256" cy="156" r="14"/><circle cx="356" cy="256" r="14"/><circle cx="256" cy="356" r="14"/><circle cx="156" cy="256" r="14"/><circle cx="186" cy="186" r="10"/><circle cx="326" cy="186" r="10"/><circle cx="326" cy="326" r="10"/><circle cx="186" cy="326" r="10"/></g>
+<!-- A negative centre -->
+<path d="M226 314 L256 222 L286 314" fill="none" stroke="#131C3A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M238 280 L274 280" stroke="#131C3A" stroke-width="10" stroke-linecap="round"/>
+
+</svg>

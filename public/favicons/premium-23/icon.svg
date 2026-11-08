@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Mango Leaf Monsoon">
+<title>Amit Narwal — Mango Leaf Monsoon</title>
+<rect width="512" height="512" rx="88" fill="#101E33"/>
+
+<rect width="512" height="512" rx="88" fill="#101E33"/>
+<!-- mango leaf shape -->
+<path d="M256 92 C334 140 362 222 352 308 C298 252 268 180 256 92" fill="#1F4D3A"/>
+<path d="M256 92 C178 140 150 222 160 308 C214 252 244 180 256 92" fill="#2A7A5C" opacity=".9"/>
+<!-- vein -->
+<path d="M256 92 L256 380" stroke="#101E33" stroke-width="8" stroke-linecap="round"/>
+<!-- rain chain forming A -->
+<g fill="none" stroke="#A8C4D8" stroke-width="10" stroke-linecap="round">
+<path d="M200 368 L256 244 L312 368" />
+<path d="M228 316 L284 316" stroke-width="8"/>
+</g>
+<g fill="#A8C4D8"><circle cx="200" cy="368" r="8"/><circle cx="312" cy="368" r="8"/><circle cx="256" cy="244" r="8"/></g>
+
+</svg>

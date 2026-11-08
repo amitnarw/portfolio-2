@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Thread &amp; Needle">
+<title>Amit Narwal — Thread &amp; Needle</title>
+<rect width="512" height="512" rx="88" fill="#F0E8D8"/>
+
+<path d="M366 100 L196 270" stroke="#1F3A5F" stroke-width="12" stroke-linecap="round"/>
+<path d="M196 270 L172 294" stroke="#1F3A5F" stroke-width="6" stroke-linecap="round"/>
+<circle cx="378" cy="88" r="15" fill="none" stroke="#1F3A5F" stroke-width="6"/>
+<path d="M362 122 C304 184 384 240 322 302 C262 362 342 400 286 440"
+      fill="none" stroke="#C73E2E" stroke-width="6" stroke-dasharray="11 10" stroke-linecap="round"/>
+<path d="M158 372 L232 196 L306 372" fill="none" stroke="#1F3A5F" stroke-width="16"
+      stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="19 10"/>
+<path d="M190 310 L274 310" stroke="#1F3A5F" stroke-width="13" stroke-linecap="round" stroke-dasharray="15 8"/>
+<g stroke="#1F3A5F" stroke-width="3" opacity=".35">
+<path d="M108 132 L148 132"/><path d="M108 156 L148 156"/><path d="M108 180 L148 180"/>
+</g>
+
+</svg>

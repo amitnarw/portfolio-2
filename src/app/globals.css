@@ -89,6 +89,13 @@
     @apply border-border outline-ring/50;
   }
 
+  /* Bebas Neue is a condensed display face tuned for large text.
+     Default to modest letter-spacing at base so small headings don't
+     close up; individual `tracking-*` utilities override this. */
+  .font-heading {
+    letter-spacing: 0.04em;
+  }
+
   html {
     scroll-behavior: smooth;
   }

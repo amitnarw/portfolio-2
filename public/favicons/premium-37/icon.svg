@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Paper Plane">
+<title>Amit Narwal — Paper Plane</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<!-- paper plane -->
+<polygon points="108,256 404,128 320,384 256,284" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round"/>
+<polygon points="256,284 404,128 256,256" fill="#E8DFC8"/>
+<polygon points="256,284 320,384 256,384" fill="#D8CDB0"/>
+<!-- trail loop into A -->
+<path d="M108 256 C160 312 210 360 256 284" fill="none" stroke="#C73E2E" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 14"/>
+<!-- A on wing -->
+<path d="M264 264 L282 212 L300 264" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+
+</svg>

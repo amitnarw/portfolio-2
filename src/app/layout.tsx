@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Poppins, Instrument_Serif, Bebas_Neue } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -37,6 +37,18 @@ export const metadata: Metadata = {
     template: `%s | Amit Narwal`,
   },
   description: siteDescription,
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+      {
+        url: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
   keywords: [
     "Amit Narwal",
     "Hire Full Stack Developer",
@@ -88,9 +100,14 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [`${siteUrl}/og-image.png`],
   },
-  alternates: {
-    canonical: siteUrl,
-  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+  colorScheme: "dark light",
 };
 
 // Structured data for search engines & AI Models
@@ -114,10 +131,14 @@ const personSchema = {
     "Tailwind CSS",
     "REST & GraphQL APIs",
     "System Architecture",
+    "MCP",
+    "Browser Automation",
+    "Chrome Extensions",
   ],
   sameAs: [
-    "https://github.com/yourusername",
-    "https://linkedin.com/in/yourusername",
+    "https://github.com/amitnarw",
+    "https://www.linkedin.com/in/amit-narwal-91538a137/",
+    "https://www.npmjs.com/~amitnarw",
   ],
 };
 

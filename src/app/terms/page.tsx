@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions",
+  description: "Terms and conditions for Amit Narwal's website and services.",
+  alternates: { canonical: "https://amitnarwal.com/terms" },
+};
 
 export default function TermsPage() {
   return (

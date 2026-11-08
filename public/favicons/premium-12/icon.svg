@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Signal Wave">
+<title>Amit Narwal — Signal Wave</title>
+<rect width="512" height="512" rx="88" fill="#06202E"/>
+
+<defs><radialGradient id="g12bg" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#0B3A4A"/><stop offset="100%" stop-color="#06202E"/></radialGradient></defs>
+<rect width="512" height="512" rx="88" fill="url(#g12bg)"/>
+<g fill="none" stroke="#E6F4F3" stroke-linecap="round">
+<circle cx="228" cy="286" r="36" stroke-width="10" opacity=".95"/>
+<circle cx="228" cy="286" r="76" stroke-width="8" opacity=".65"/>
+<circle cx="228" cy="286" r="116" stroke-width="6" opacity=".42"/>
+<circle cx="228" cy="286" r="156" stroke-width="4" opacity=".25"/>
+<circle cx="228" cy="286" r="196" stroke-width="3" opacity=".16"/>
+</g>
+<!-- A formed by gap/wave fusion on right -->
+<path d="M300 356 L330 250 L360 356" fill="none" stroke="#E6F4F3" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M312 310 L348 310" stroke="#E6F4F3" stroke-width="12" stroke-linecap="round"/>
+<circle cx="228" cy="286" r="16" fill="#E6F4F3"/>
+<!-- tusk needle -->
+<path d="M228 286 L338 168" stroke="#7ECFC4" stroke-width="9" stroke-linecap="round"/>
+
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Tusk Spiral">
+<title>Amit Narwal — Tusk Spiral</title>
+<rect width="512" height="512" rx="88" fill="#061019"/>
+
+<defs><radialGradient id="g2bg" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#0E2A3A"/><stop offset="100%" stop-color="#061019"/></radialGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A8E6E0"/><stop offset="100%" stop-color="#3A9EA8"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="url(#g2bg)"/>
+<!-- outer ring hairline -->
+<circle cx="256" cy="256" r="178" fill="none" stroke="#A8E6E0" stroke-width="3" opacity=".7"/>
+<!-- double helix: two opposing spirals -->
+<path d="M256 256 C286 256 300 222 256 210 C212 198 212 238 256 250" fill="none" stroke="url(#g2)" stroke-width="12" stroke-linecap="round"/>
+<path d="M256 256 C226 256 212 290 256 302 C300 314 300 274 256 262" fill="none" stroke="#A8E6E0" stroke-width="12" stroke-linecap="round" opacity=".85"/>
+<!-- center node dot -->
+<circle cx="256" cy="256" r="14" fill="#E6FFFB"/>
+<!-- tusk tip needle up-right -->
+<path d="M232 150 L322 82" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
+<circle cx="326" cy="78" r="10" fill="#A8E6E0"/>
+
+</svg>

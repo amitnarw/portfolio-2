@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Architectural AN">
+<title>Amit Narwal — Architectural AN</title>
+<rect width="512" height="512" rx="88" fill="#1A1A1A"/>
+
+<defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5F1E8"/><stop offset="100%" stop-color="#E7DFC8"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#1A1A1A"/>
+<!-- A frame: two pillars + diagonal beam -->
+<path d="M112 374 L198 148 L284 374" fill="none" stroke="url(#g3)" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+<!-- crossbar -->
+<path d="M150 300 L246 300" stroke="url(#g3)" stroke-width="20" stroke-linecap="round"/>
+<!-- bridge into N: beam extends to N -->
+<path d="M246 300 L330 300" stroke="#B87333" stroke-width="20" stroke-linecap="round"/>
+<!-- N -->
+<path d="M330 374 L330 148 L412 374 L412 148" fill="none" stroke="url(#g3)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- copper node at junction -->
+<circle cx="330" cy="300" r="16" fill="#B87333"/>
+<circle cx="330" cy="300" r="7" fill="#1A1A1A"/>
+
+</svg>

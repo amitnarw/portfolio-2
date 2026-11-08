@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Mirror Pair">
+<title>Amit Narwal — Mirror Pair</title>
+<rect width="512" height="512" rx="88" fill="#101010"/>
+
+<rect width="512" height="512" rx="88" fill="#101010"/>
+<defs><linearGradient id="g32" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E6E6E6"/><stop offset="100%" stop-color="#8A8A8A"/></linearGradient></defs>
+<!-- mirrored A pair, chrome to black fade -->
+<path d="M116 384 L180 148 L244 384" fill="none" stroke="url(#g32)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268 384 L332 148 L396 384" fill="none" stroke="#1A1A1A" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+<!-- center mirror line -->
+<rect x="252" y="124" width="8" height="260" fill="#F5F1E8" opacity=".7"/>
+<!-- reflection ticks -->
+<g stroke="#F5F1E8" stroke-width="4" stroke-linecap="round" opacity=".5"><path d="M180 384 L180 406"/><path d="M332 384 L332 406"/></g>
+
+</svg>

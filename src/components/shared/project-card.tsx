@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { PremiumButton1 } from "@/components/shared/premium-button-1";
 import { cn } from "@/lib/utils";
@@ -50,29 +51,37 @@ export default function ProjectCard({
       <div className="flex flex-col h-full bg-background/40 backdrop-blur-sm rounded-[14px]">
         {/* Image */}
         <div className="p-2">
-          <div className="relative aspect-video overflow-hidden rounded-2xl group/image">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-700 ease-out"
-              style={{
-                transform: isHovered ? "scale(1.1)" : "scale(1)",
-              }}
-              sizes="(max-width: 768px) 80vw, 40vw"
-            />
+          <Link
+            href={`/work/${project.slug}`}
+            aria-label={`Read the case study for ${project.title}`}
+            className="block"
+          >
+            <div className="relative aspect-video overflow-hidden rounded-2xl group/image cursor-pointer">
+              <Image
+                src={project.image}
+                alt={project.imageAlt}
+                fill
+                className="object-cover transition-transform duration-700 ease-out"
+                style={{
+                  transform: isHovered ? "scale(1.1)" : "scale(1)",
+                }}
+                sizes="(max-width: 768px) 80vw, 40vw"
+              />
 
-            <div className="absolute inset-0 bg-black/5 transition-colors duration-500 group-hover:bg-black/10" />
-            <div className="absolute inset-0 bg-linear-to-t from-background/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          </div>
+              <div className="absolute inset-0 bg-black/5 transition-colors duration-500 group-hover:bg-black/10" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </div>
+          </Link>
         </div>
 
         <div className="flex flex-col gap-5 items-start justify-between flex-1 p-5 pt-2">
           {/* Content */}
           <div className="w-full">
-            <h3 className="text-[clamp(1.8rem,2.2vw,2.2rem)] font-medium leading-tight text-foreground font-heading">
-              {project.title}
-            </h3>
+            <Link href={`/work/${project.slug}`} className="block">
+              <h3 className="text-[clamp(1.8rem,2.2vw,2.2rem)] leading-tight text-foreground font-heading hover:text-primary transition-colors tracking-[0.04em]">
+                {project.title}
+              </h3>
+            </Link>
 
             {/* Tags */}
             <div className="mt-4 flex flex-wrap gap-2">
@@ -93,17 +102,32 @@ export default function ProjectCard({
             </p>
           </div>
 
-          <PremiumButton1
-            href={project.siteUrl || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "px-6 py-2.5 w-full sm:w-auto",
-              "border border-border bg-foreground text-background hover:shadow-lg",
-            )}
-          >
-            View Project
-          </PremiumButton1>
+          <div className="flex flex-wrap items-center gap-3 w-full">
+            <PremiumButton1
+              href={`/work/${project.slug}`}
+              className={cn(
+                "px-6 py-2.5 w-full sm:w-auto",
+                "border border-border bg-foreground text-background hover:shadow-lg",
+              )}
+            >
+              Read case study
+            </PremiumButton1>
+
+            {project.siteUrl && project.siteUrl !== "#" ? (
+              <PremiumButton1
+                href={project.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                ariaLabel={`Open ${project.title} live site`}
+                className={cn(
+                  "px-6 py-2.5 w-full sm:w-auto",
+                  "border border-foreground/20 bg-background hover:bg-foreground/5",
+                )}
+              >
+                View Project
+              </PremiumButton1>
+            ) : null}
+          </div>
         </div>
       </div>
     </article>

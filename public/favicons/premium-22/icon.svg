@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Aurora Form">
+<title>Amit Narwal — Aurora Form</title>
+<rect width="512" height="512" rx="88" fill="#0B1220"/>
+
+<defs><linearGradient id="g22a" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7CF5C8"/><stop offset="50%" stop-color="#A8E6D8"/><stop offset="100%" stop-color="#3A9EA8"/></linearGradient>
+<linearGradient id="g22b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A2B4A"/><stop offset="100%" stop-color="#0B1220"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="url(#g22b)"/>
+<!-- aurora curtains -->
+<path d="M88 340 C188 260 288 360 388 268 L388 356 C288 448 188 348 88 428 Z" fill="url(#g22a)" opacity=".55"/>
+<path d="M118 300 C198 236 298 336 378 256 L378 300 C298 380 198 280 118 344 Z" fill="#7CF5C8" opacity=".35"/>
+<!-- A in negative -->
+<path d="M216 342 L256 236 L296 342 M232 298 L280 298" fill="none" stroke="#0B1220" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="256" cy="152" r="12" fill="#E6FFFB"/>
+
+</svg>

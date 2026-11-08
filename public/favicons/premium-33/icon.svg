@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Globe Wire">
+<title>Amit Narwal — Globe Wire</title>
+<rect width="512" height="512" rx="88" fill="#0B1220"/>
+
+<rect width="512" height="512" rx="88" fill="#0B1220"/>
+<!-- wire globe -->
+<circle cx="256" cy="256" r="178" fill="none" stroke="#D9B96A" stroke-width="6"/>
+<ellipse cx="256" cy="256" rx="132" ry="178" fill="none" stroke="#D9B96A" stroke-width="4" opacity=".75"/>
+<line x1="78" y1="256" x2="434" y2="256" stroke="#D9B96A" stroke-width="4" opacity=".75"/>
+<ellipse cx="256" cy="184" rx="148" ry="42" fill="none" stroke="#D9B96A" stroke-width="4" opacity=".6"/>
+<ellipse cx="256" cy="328" rx="148" ry="42" fill="none" stroke="#D9B96A" stroke-width="4" opacity=".6"/>
+<!-- A meridian -->
+<path d="M196 342 L256 172 L316 342" fill="none" stroke="#D9B96A" stroke-width="22" stroke-linecap="round"/>
+<path d="M216 280 L296 280" stroke="#0B1220" stroke-width="12" stroke-linecap="round"/>
+<circle cx="256" cy="256" r="10" fill="#D9B96A"/>
+
+</svg>

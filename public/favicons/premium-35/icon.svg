@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Anchor Mark">
+<title>Amit Narwal — Anchor Mark</title>
+<rect width="512" height="512" rx="88" fill="#0B1622"/>
+
+<rect width="512" height="512" rx="88" fill="#0B1622"/>
+<!-- anchor shaft -->
+<rect x="238" y="112" width="36" height="228" rx="18" fill="#D9B96A"/>
+<!-- crossbar -->
+<rect x="176" y="168" width="160" height="24" rx="12" fill="#D9B96A"/>
+<!-- flukes -->
+<path d="M112 256 C112 340 176 384 256 384 C336 384 400 340 400 256 L360 256 L360 296 C352 348 306 344 256 344 C206 344 160 348 152 296 L152 256 Z" fill="#D9B96A"/>
+<!-- ring -->
+<circle cx="256" cy="98" r="28" fill="none" stroke="#D9B96A" stroke-width="12"/>
+<!-- A hidden in fluke gap -->
+<path d="M232 340 L256 276 L280 340" fill="none" stroke="#0B1622" stroke-width="12" stroke-linecap="round"/>
+
+</svg>

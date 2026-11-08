@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Twin Cranes">
+<title>Amit Narwal — Twin Cranes</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<!-- twin crane silhouettes (mirrored) -->
+<g fill="#C73E2E">
+<path d="M128 384 L128 260 L180 200 L232 260 L232 384 Z"/>
+<path d="M180 200 L208 200 L232 260 L208 252 Z" opacity=".8"/>
+<path d="M256 384 L256 260 L308 200 L360 260 L360 384 Z" fill="#2B2520"/>
+<path d="M308 200 L336 200 L360 260 L336 252 Z" fill="#2B2520" opacity=".8"/>
+</g>
+<!-- hearts formed by negatives -->
+<path d="M180 384 C160 340 150 314 180 298 C210 314 220 340 240 384" fill="none" stroke="#C73E2E" stroke-width="10" stroke-linecap="round"/>
+<circle cx="256" cy="130" r="14" fill="#C73E2E"/>
+
+</svg>

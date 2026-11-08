@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Compass Cartographer">
+<title>Amit Narwal — Compass Cartographer</title>
+<rect width="512" height="512" rx="88" fill="#E8DFC8"/>
+
+<rect width="512" height="512" rx="88" fill="#E8DFC8"/>
+<defs><linearGradient id="g16" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A2B4A"/><stop offset="100%" stop-color="#0E1A30"/></linearGradient></defs>
+<g transform="rotate(8 256 256)">
+<!-- 16-point star -->
+<polygon points="256,70 270,196 332,120 282,214 412,196 296,238 376,292 282,252 312,376 256,286 200,376 230,252 136,292 216,238 100,196 230,214 180,120 242,196" fill="url(#g16)"/>
+</g>
+<circle cx="256" cy="256" r="78" fill="#E8DFC8" stroke="#1A2B4A" stroke-width="6"/>
+<!-- coordinates -->
+<text x="256" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="2" fill="#1A2B4A">28.6°N</text>
+<text x="256" y="274" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="2" fill="#1A2B4A">77.2°E</text>
+<!-- north needle -->
+<path d="M256 96 L262 256 L250 256 Z" fill="#C73E2E"/>
+
+</svg>

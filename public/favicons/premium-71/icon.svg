@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Eclipse Twins">
+<title>Amit Narwal — Eclipse Twins</title>
+<rect width="512" height="512" rx="88" fill="#0A0A0A"/>
+
+<defs><radialGradient id="k71" cx=".5" cy=".5" r=".5">
+<stop offset="0%" stop-color="#FFF3C4"/><stop offset="70%" stop-color="#FFD976"/><stop offset="100%" stop-color="#C9A86A"/>
+</radialGradient></defs>
+<circle cx="256" cy="256" r="168" fill="url(#k71)"/>
+<circle cx="306" cy="230" r="150" fill="#0A0A0A"/>
+<path d="M256 88 A168 168 0 0 1 424 256" fill="none" stroke="#FFF3C4" stroke-width="6" stroke-linecap="round"/>
+<path d="M192 342 L256 194 L320 342 M218 294 L294 294" fill="none" stroke="#FFD976" stroke-width="14"
+      stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="256" cy="154" r="9" fill="#FFF3C4"/>
+
+</svg>

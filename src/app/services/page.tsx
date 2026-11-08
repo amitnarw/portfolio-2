@@ -28,8 +28,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Premium Engineering Services | Amit Narwal",
-  description: "Crafting future-proof digital products with AI integration, high-end frontend engineering, and scalable cloud architecture.",
+  title: "Premium Engineering Services",
+  description: "AI integration, high-end frontend engineering and scalable cloud architecture for future-proof digital products. By Amit Narwal.",
+  alternates: { canonical: "https://amitnarwal.com/services" },
 };
 
 const services = [
@@ -186,7 +187,7 @@ export default function ServicesPage() {
                 <Link href="mailto:amitnarwal115@gmail.com" className="group relative flex items-center justify-center w-48 h-48 rounded-full border border-foreground/10 hover:border-primary transition-colors duration-500">
                   <div className="absolute inset-2 rounded-full border border-dashed border-foreground/10 animate-[spin_20s_linear_infinite] group-hover:border-primary/50" />
                   <div className="flex flex-col items-center text-center p-4">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">Let's talk</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">Let&apos;s talk</span>
                     <ArrowRight size={24} className="mt-2 transition-transform group-hover:translate-x-2" />
                   </div>
                 </Link>
@@ -202,7 +203,7 @@ export default function ServicesPage() {
                   <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left">
                     <div className="flex items-center gap-3 mb-2">
                        <stat.icon size={16} className="text-primary" />
-                       <span className="text-3xl md:text-4xl font-heading uppercase">{stat.value}</span>
+                       <span className="text-3xl md:text-4xl font-heading uppercase tracking-[0.05em]">{stat.value}</span>
                     </div>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</span>
                   </div>
@@ -329,7 +330,7 @@ export default function ServicesPage() {
                      </div>
                    </div>
                    
-                   <h3 className="text-2xl font-heading uppercase mb-5 z-10 relative">{step.title}</h3>
+                   <h3 className="text-[1.75rem] font-heading uppercase mb-5 z-10 relative tracking-[0.07em]">{step.title}</h3>
                    <p className="text-background/50 leading-relaxed text-base group-hover:text-background/80 transition-colors duration-500 z-10 relative min-h-[5rem]">
                      {step.description}
                    </p>
@@ -391,7 +392,7 @@ export default function ServicesPage() {
               <div className="relative z-10 max-w-5xl mx-auto">
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60 mb-10 block animate-pulse">Taking bookings for Q3 2024</span>
                 <h2 className="text-[clamp(2.5rem,8.5vw,7.5rem)] font-heading leading-[0.85] tracking-tighter uppercase mb-12">
-                  Let's Build <br /> Something <span className="text-primary italic font-serif normal-case tracking-normal">Timeless.</span>
+                  Let&apos;s Build <br /> Something <span className="text-primary italic font-serif normal-case tracking-normal">Timeless.</span>
                 </h2>
                 
                 <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

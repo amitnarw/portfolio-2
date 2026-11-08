@@ -1,81 +1,136 @@
 "use client";
 
-import SectionHeader from "@/components/shared/section-header";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import MarqueeStar from "@/components/homepage/marquee-star";
+import { cn } from "@/lib/utils";
 
-const aboutData = [
-  {
-    title: "20+",
-    description: "FULL-STACK APPS COMPLETED",
-  },
-  {
-    title: "3+",
-    description: "AI-DRIVEN PRODUCTS LIVE",
-  },
-  {
-    title: "9+",
-    description: "GLOBAL CLIENTS SERVED",
-  },
+const aboutIntro =
+  "I build fast, scalable web apps and AI-powered products for founders who need software that actually ships.";
+
+const aboutStats = [
+  { value: "20", suffix: "+", label: "Apps shipped" },
+  { value: "3", suffix: "+", label: "AI products live" },
+  { value: "9", suffix: "+", label: "Clients worldwide" },
 ];
 
-export default function About() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+/** Fade-up reveal on first intersection. */
+function Reveal({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setVisible(true);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.15 },
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden text-foreground dark:bg-card mt-16"
-      aria-label="About section"
-      ref={sectionRef}
+    <div
+      ref={ref}
+      className={cn(
+        "transition-all duration-700 ease-out",
+        visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
+        className,
+      )}
+      style={{ transitionDelay: `${delay}ms` }}
     >
-      {/* Noise texture overlay */}
-      <div className="absolute inset-0 pointer-events-none" />
+      {children}
+    </div>
+  );
+}
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 py-6 lg:px-0 lg:py-8">
-        <SectionHeader title="About Me" subtitle="" backgroundText="ABOUT" />
+/** Small uppercase label with an amber rule. */
+function Eyebrow({ children }: { children: ReactNode }) {
+  return (
+    <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">
+      <span aria-hidden className="h-[2px] w-8 bg-primary" />
+      {children}
+    </p>
+  );
+}
 
-        <div className="space-y-6 flex flex-row justify-between">
-          {/* Header */}
-          <div className="space-y-4">
-            <p className="text-[clamp(1.1rem,2vw,1.5rem)] leading-relaxed text-muted-foreground/80">
-              Hi, I'm a passionate full-stack developer with expertise in modern
-              web technologies. I specialize in building fast, scalable, and
-              user-friendly applications that help businesses grow their digital
-              presence.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6">
-              {aboutData.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center bg-radial from-transparent to-primary/10 border border-primary/50 dark:border-primary/20"
-                >
-                  <div className="flex flex-col gap-1 items-start p-6">
-                    <h1 className="text-4xl">{item.title}</h1>
-                    <p className="text-xs">{item.description}</p>
-                  </div>
-                </div>
-              ))}
+/** Bebas Neue numeral with an amber "+" suffix. */
+function StatNumber({
+  value,
+  suffix = "+",
+  className,
+}: {
+  value: string;
+  suffix?: string;
+  className?: string;
+}) {
+  return (
+    <span
+      className={cn("font-heading leading-none tracking-[0.02em]", className)}
+    >
+      {value}
+      <span className="text-orange-500 dark:text-primary">{suffix}</span>
+    </span>
+  );
+}
+
+export default function About() {
+  return (
+    <section id="about" aria-label="About section" className="bg-background">
+      <div className="mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-20">
+        <Reveal className="relative overflow-hidden rounded-[2rem] bg-[#0B0B0C] px-6 py-12 text-[#FFF6E0] dark:bg-[#131315] dark:ring-1 dark:ring-white/10 sm:px-10 lg:px-14 lg:py-16">
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
+            <MarqueeStar
+              size={150}
+              className="absolute -bottom-12 -left-12 text-primary/15"
+            />
+          </div>
+
+          <div className="relative grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <Eyebrow>About</Eyebrow>
+              <h2 className="mt-5 font-serif text-[clamp(2.75rem,4.5vw,4.25rem)] italic leading-[1.02] tracking-tight">
+                About Me
+              </h2>
+              <p className="mt-5 text-sm text-white/60">
+                Amit Narwal — Full-stack &amp; AI Developer
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="max-w-2xl text-[clamp(1.3rem,2vw,1.8rem)] leading-snug text-white/85">
+                {aboutIntro}
+              </p>
+              <ul className="mt-10 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
+                {aboutStats.map((stat) => (
+                  <li key={stat.label}>
+                    <StatNumber
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      className="text-4xl sm:text-5xl lg:text-6xl"
+                    />
+                    <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/50">
+                      {stat.label}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

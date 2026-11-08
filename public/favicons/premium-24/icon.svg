@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Peacock Eye">
+<title>Amit Narwal — Peacock Eye</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<!-- eye almond -->
+<path d="M256 96 C340 148 372 256 256 356 C140 256 172 148 256 96" fill="#1F4D3A"/>
+<!-- inner jewel -->
+<ellipse cx="256" cy="226" rx="72" ry="54" fill="#0F3A2A"/>
+<ellipse cx="256" cy="226" rx="52" ry="38" fill="#C9A86A"/>
+<ellipse cx="256" cy="226" rx="28" ry="22" fill="#7ECFC4"/>
+<circle cx="256" cy="226" r="12" fill="#F5F1E8"/>
+<!-- A hint in almond bottom -->
+<path d="M224 334 L256 272 L288 334" fill="none" stroke="#F5F1E8" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+<!-- year notch -->
+<path d="M120 404 L392 404" stroke="#1F4D3A" stroke-width="6" stroke-linecap="round"/>
+
+</svg>

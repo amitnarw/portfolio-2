@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Harbor Light">
+<title>Amit Narwal — Harbor Light</title>
+<rect width="512" height="512" rx="88" fill="#0A2A33"/>
+
+<path d="M236 210 L88 138 L88 282 Z" fill="#FFD976" opacity=".22"/>
+<path d="M236 210 L424 112 L424 308 Z" fill="#FFD976" opacity=".14"/>
+<path d="M214 380 L234 164 L278 164 L298 380 Z" fill="#E6F4F3"/>
+<rect x="228" y="136" width="56" height="26" fill="#C73E2E"/>
+<rect x="232" y="244" width="48" height="16" fill="#C73E2E"/>
+<circle cx="256" cy="192" r="21" fill="#FFD976"/>
+<path d="M236 348 L256 282 L276 348 M244 326 L268 326" fill="none" stroke="#0A2A33" stroke-width="9"
+      stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="none" stroke="#7ECFC4" stroke-width="6" stroke-linecap="round" opacity=".85">
+<path d="M84 404 C114 384 144 424 174 404 C204 384 234 424 264 404 C294 384 324 424 354 404 C384 384 414 424 444 404"/>
+<path d="M84 432 C114 412 144 452 174 432 C204 412 234 452 264 432 C294 412 324 452 354 432 C384 412 414 452 444 432" opacity=".45"/>
+</g>
+
+</svg>

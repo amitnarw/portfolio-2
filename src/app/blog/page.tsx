@@ -1,11 +1,19 @@
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+
 import { BlogCard } from "@/components/shared/blog-card";
 import { PremiumButton1 } from "@/components/shared/premium-button-1";
 
-import { blogArticles } from "@/lib/blog-data";
+import { blogArticles, type BlogPost } from "@/lib/blog-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog and Articles",
+  description:
+    "Notes on Next.js, AI, PostgreSQL and building web apps, written by Amit Narwal.",
+  alternates: { canonical: "https://amitnarwal.com/blog" },
+};
 
 export default function BlogPage() {
   return (
@@ -41,7 +49,7 @@ export default function BlogPage() {
           {/* Articles Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogArticles.map((article, index) => (
-              <BlogCard key={article.title} article={article as any} index={index} />
+              <BlogCard key={article.title} article={article as BlogPost} index={index} />
             ))}
           </div>
         </div>

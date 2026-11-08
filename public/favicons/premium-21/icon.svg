@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Roman Arch">
+<title>Amit Narwal — Roman Arch</title>
+<rect width="512" height="512" rx="88" fill="#1E1E20"/>
+
+<defs><linearGradient id="g21" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EDE6D6"/><stop offset="100%" stop-color="#D8CDB0"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#1E1E20"/>
+<!-- aqueduct arch -->
+<path d="M112 384 L112 256 A144 144 0 0 1 400 256 L400 384 L340 384 L340 256 A84 84 0 0 0 172 256 L172 384 Z" fill="url(#g21)"/>
+<!-- keystone -->
+<polygon points="240,118 272,118 268,156 244,156" fill="#8A7A60"/>
+<!-- A voussoir lines -->
+<path d="M168 384 L168 256 A88 88 0 0 1 344 256 L344 384" fill="none" stroke="#1E1E20" stroke-width="4" opacity=".3"/>
+
+</svg>

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Hero from "@/components/homepage/hero";
 import Footer from "@/components/layout/footer";
@@ -9,6 +10,10 @@ import SelectedWork from "@/components/homepage/selected-work";
 import Experience from "@/components/homepage/experience";
 import BlogArticles from "@/components/homepage/blog-articles";
 import { Marquee } from "@/components/ui/marquee";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://amitnarwal.com" },
+};
 
 export default function Home() {
   return (
@@ -29,8 +34,8 @@ export default function Home() {
           duration={10}
           gap={2}
           items={[
-            <span>Contact Me</span>,
-            <MarqueeStar size={50} className="text-orange-400" />,
+            <span key="contact">Contact Me</span>,
+            <MarqueeStar key="star" size={50} className="text-orange-400" />,
           ]}
         />
         <Footer />

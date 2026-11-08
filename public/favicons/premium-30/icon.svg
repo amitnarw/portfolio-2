@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Fortress Bastion">
+<title>Amit Narwal — Fortress Bastion</title>
+<rect width="512" height="512" rx="88" fill="#1F1E1A"/>
+
+<rect width="512" height="512" rx="88" fill="#1F1E1A"/>
+<!-- bastion silhouette -->
+<path d="M112 384 L112 288 L180 288 L180 240 L256 148 L332 240 L332 288 L400 288 L400 384 Z" fill="#B8985A"/>
+<!-- battlement notches -->
+<g fill="#1F1E1A"><rect x="180" y="222" width="32" height="18"/><rect x="300" y="222" width="32" height="18"/></g>
+<rect x="240" y="230" width="32" height="18" fill="#1F1E1A"/>
+<!-- A gateway -->
+<path d="M256 384 L256 268 A36 36 0 0 1 292 304 L292 384 Z" fill="#1F1E1A"/>
+<path d="M256 384 L256 268 A36 36 0 0 0 220 304 L220 384 Z" fill="#1F1E1A" opacity=".85"/>
+<!-- flag -->
+<path d="M256 148 L256 104 L312 120 L256 136" fill="#C73E2E"/>
+
+</svg>

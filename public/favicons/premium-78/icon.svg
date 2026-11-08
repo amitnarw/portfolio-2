@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Soundform">
+<title>Amit Narwal — Soundform</title>
+<rect width="512" height="512" rx="88" fill="#0E0E12"/>
+<rect x="116" y="300" width="20" height="80" rx="10" fill="#E63946"/>
+<rect x="148" y="268" width="20" height="112" rx="10" fill="#E63946"/>
+<rect x="180" y="232" width="20" height="148" rx="10" fill="#E63946"/>
+<rect x="212" y="196" width="20" height="184" rx="10" fill="#E63946"/>
+<rect x="282" y="196" width="20" height="184" rx="10" fill="#E63946"/>
+<rect x="314" y="232" width="20" height="148" rx="10" fill="#E63946"/>
+<rect x="346" y="268" width="20" height="112" rx="10" fill="#E63946"/>
+<rect x="378" y="300" width="20" height="80" rx="10" fill="#E63946"/>
+<rect x="196" y="300" width="132" height="18" rx="9" fill="#E63946"/>
+<path d="M116 300 L148 268 L180 232 L212 196 M282 196 L314 232 L346 268 L378 300"
+      fill="none" stroke="#F5F1E8" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+<path d="M196 309 L328 309" stroke="#F5F1E8" stroke-width="3" opacity=".35"/>
+<circle cx="256" cy="412" r="11" fill="#E63946"/>
+<circle cx="256" cy="412" r="4" fill="#0E0E12"/>
+
+</svg>

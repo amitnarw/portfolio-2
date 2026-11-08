@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — The Keystone">
+<title>Amit Narwal — The Keystone</title>
+<rect width="512" height="512" rx="88" fill="#1F1E1A"/>
+
+<defs><linearGradient id="k65" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#D6C7A4"/><stop offset="100%" stop-color="#AD9C7A"/></linearGradient></defs>
+<!-- arch band -->
+<path d="M88 404 A168 168 0 0 1 424 404 L360 404 A104 104 0 0 0 152 404 Z" fill="url(#k65)"/>
+<!-- stone joints -->
+<g stroke="#1F1E1A" stroke-width="5" opacity=".85">
+<path d="M152 404 L152 372"/><path d="M360 404 L360 372"/>
+<path d="M131 336 L163 352"/><path d="M381 336 L349 352"/>
+<path d="M171 272 L199 296"/><path d="M341 272 L313 296"/>
+<path d="M230 236 L238 268"/><path d="M282 236 L274 268"/>
+</g>
+<!-- keystone with A cut -->
+<path d="M226 108 L286 108 L304 244 L208 244 Z" fill="#E8D9B0"/>
+<path d="M232 108 L280 108 L292 244 L220 244 Z" fill="none" stroke="#1F1E1A" stroke-width="3" opacity=".25"/>
+<path d="M256 136 L232 214 M256 136 L280 214 M242 190 L270 190"
+      fill="none" stroke="#1F1E1A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- ground -->
+<path d="M96 420 L416 420" stroke="#B8A98A" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+
+</svg>

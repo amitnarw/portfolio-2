@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Ink Bloom">
+<title>Amit Narwal — Ink Bloom</title>
+<rect width="512" height="512" rx="88" fill="#F5F7F2"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F7F2"/>
+<!-- brush ink petals — black, variable -->
+<path d="M256 382 C248 302 240 210 256 108 C272 210 264 302 256 382" fill="#111111"/>
+<path d="M256 382 C196 318 168 254 150 176 C208 210 246 288 256 382" fill="#111111" opacity=".92"/>
+<path d="M256 382 C316 318 344 254 362 176 C304 210 266 288 256 382" fill="#111111" opacity=".92"/>
+<path d="M256 382 C206 346 160 344 108 360 C150 308 214 306 256 382" fill="#111111" opacity=".78"/>
+<path d="M256 382 C306 346 352 344 404 360 C362 308 298 306 256 382" fill="#111111" opacity=".78"/>
+<!-- vein -->
+<path d="M256 382 L256 138" stroke="#F5F7F2" stroke-width="7" stroke-linecap="round"/>
+<!-- root tick -->
+<path d="M210 404 L302 404" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+
+</svg>

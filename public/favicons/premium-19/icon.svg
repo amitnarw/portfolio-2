@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Sundial">
+<title>Amit Narwal — Sundial</title>
+<rect width="512" height="512" rx="88" fill="#D9C7A5"/>
+
+<defs><linearGradient id="g19" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E9D8A6"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#D9C7A5"/>
+<circle cx="256" cy="256" r="188" fill="#B8985A"/>
+<circle cx="256" cy="256" r="168" fill="#D9C7A5"/>
+<!-- hour marks -->
+<g stroke="#1A1A1A" stroke-width="8" stroke-linecap="round">
+<line x1="256" y1="104" x2="256" y2="128"/><line x1="256" y1="384" x2="256" y2="408"/>
+<line x1="104" y1="256" x2="128" y2="256"/><line x1="384" y1="256" x2="408" y2="256"/>
+<line x1="148" y1="148" x2="164" y2="164"/><line x1="348" y1="348" x2="364" y2="364"/>
+<line x1="364" y1="148" x2="348" y2="164"/><line x1="164" y1="348" x2="148" y2="364"/>
+</g>
+<!-- gnomon as A leg -->
+<polygon points="256,108 268,256 244,256" fill="url(#g19)" stroke="#1A1A1A" stroke-width="4"/>
+<!-- centre pin -->
+<circle cx="256" cy="256" r="34" fill="url(#g19)" stroke="#1A1A1A" stroke-width="4"/>
+<path d="M240 286 L256 224 L272 286" fill="none" stroke="#1A1A1A" stroke-width="10" stroke-linecap="round"/>
+
+</svg>

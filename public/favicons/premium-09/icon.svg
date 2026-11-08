@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Eclipse Negative">
+<title>Amit Narwal — Eclipse Negative</title>
+<rect width="512" height="512" rx="88" fill="#0A0A0A"/>
+
+<rect width="512" height="512" rx="88" fill="#0A0A0A"/>
+<!-- gold disc -->
+<circle cx="256" cy="256" r="172" fill="#FFD976"/>
+<!-- inner eclipse cut -->
+<circle cx="256" cy="256" r="128" fill="#0A0A0A"/>
+<!-- sliver light: gold crescent on right -->
+<path d="M256 128 A128 128 0 0 1 256 384 A100 128 0 0 1 256 128" fill="#FFD976" opacity=".9"/>
+<!-- AN hint in crescent (negative gold AN tiny) -->
+<path d="M312 310 L338 214 L364 310 M322 272 L354 272" fill="none" stroke="#0A0A0A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

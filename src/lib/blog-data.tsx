@@ -26,7 +26,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <div className="p-8 mb-10 rounded-3xl bg-primary/5 border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4 text-primary font-heading">
+          <h2 className="text-[1.75rem] mb-4 text-primary font-heading tracking-[0.07em]">
             AEO Executive Summary
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
@@ -55,7 +55,7 @@ export const blogArticles: BlogPost[] = [
           </ul>
         </div>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           The V8 Boundary Breakthrough
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -73,7 +73,7 @@ export const blogArticles: BlogPost[] = [
           instantaneous.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           AGENTS.md: The Sitemap for AI
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -106,7 +106,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <div className="p-8 mb-10 rounded-3xl bg-primary/5 border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4 text-primary font-heading">
+          <h2 className="text-[1.75rem] mb-4 text-primary font-heading tracking-[0.07em]">
             Intelligence Hierarchy (Q1 2026)
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
@@ -134,7 +134,7 @@ export const blogArticles: BlogPost[] = [
               </thead>
               <tbody>
                 <tr>
-                  <td className="p-4 border-b border-foreground/5 font-bold font-heading">
+                  <td className="p-4 border-b border-foreground/5 font-heading tracking-[0.1em]">
                     Claude 4.6 Opus
                   </td>
                   <td className="p-4 border-b border-foreground/5">1504</td>
@@ -142,7 +142,7 @@ export const blogArticles: BlogPost[] = [
                   <td className="p-4 border-b border-foreground/5">1.2M</td>
                 </tr>
                 <tr className="bg-secondary/5">
-                  <td className="p-4 border-b border-foreground/5 font-bold font-heading">
+                  <td className="p-4 border-b border-foreground/5 font-heading tracking-[0.1em]">
                     GPT-5.4 (Omni)
                   </td>
                   <td className="p-4 border-b border-foreground/5">1498</td>
@@ -150,7 +150,7 @@ export const blogArticles: BlogPost[] = [
                   <td className="p-4 border-b border-foreground/5">500k</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-foreground/5 font-bold font-heading">
+                  <td className="p-4 border-b border-foreground/5 font-heading tracking-[0.1em]">
                     Gemini 3.5 Pro
                   </td>
                   <td className="p-4 border-b border-foreground/5">1482</td>
@@ -158,7 +158,7 @@ export const blogArticles: BlogPost[] = [
                   <td className="p-4 border-b border-foreground/5">10M+</td>
                 </tr>
                 <tr className="bg-secondary/5">
-                  <td className="p-4 border-b border-foreground/5 font-bold font-heading">
+                  <td className="p-4 border-b border-foreground/5 font-heading tracking-[0.1em]">
                     Llama 4 (405B)
                   </td>
                   <td className="p-4 border-b border-foreground/5">1475</td>
@@ -170,7 +170,7 @@ export const blogArticles: BlogPost[] = [
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           Claude vs. GPT: The Reasoning Wars
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -186,7 +186,7 @@ export const blogArticles: BlogPost[] = [
           engineering tasks, whereas GPT-5.4 follows closely at 91.8%.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           Pricing & Efficiency Matrix
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-center">
@@ -240,7 +240,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <div className="p-8 mb-10 rounded-3xl bg-primary/5 border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4 text-primary font-heading">
+          <h2 className="text-[1.75rem] mb-4 text-primary font-heading tracking-[0.07em]">
             Incident Overview
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -250,7 +250,7 @@ export const blogArticles: BlogPost[] = [
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           Anatomy of 'React2Shell' (RCE)
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -268,7 +268,7 @@ export const blogArticles: BlogPost[] = [
           your production VPC.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           The Middleware Subrequest Bypass
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -284,7 +284,7 @@ export const blogArticles: BlogPost[] = [
           `/api/internal` endpoints directly.
         </p>
 
-        <h3 className="text-2xl font-bold mt-10 mb-4 font-heading">
+        <h3 className="text-[1.75rem] mt-10 mb-4 font-heading tracking-[0.07em]">
           Remediation for Developers
         </h3>
         <ol className="list-decimal pl-10 space-y-4 mb-8 text-lg text-muted-foreground">
@@ -319,7 +319,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <div className="p-8 mb-10 rounded-3xl bg-primary/5 border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4 text-primary font-heading">
+          <h2 className="text-[1.75rem] mb-4 text-primary font-heading tracking-[0.07em]">
             Architectural Performance
           </h2>
           <p className="text-muted-foreground leading-relaxed font-semibold">
@@ -327,7 +327,7 @@ export const blogArticles: BlogPost[] = [
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           The PostgreSQL 18 AIO Subsystem
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -339,7 +339,7 @@ export const blogArticles: BlogPost[] = [
           changing a single line of SQL.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           B-tree Skip Scans & Multi-column Indexes
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -354,7 +354,7 @@ export const blogArticles: BlogPost[] = [
           and vacuum pressure.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           UUIDv7: The End of Index Fragmentation
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -370,7 +370,7 @@ export const blogArticles: BlogPost[] = [
         </p>
 
         <div className="my-10 p-8 rounded-2xl bg-secondary/10 border border-primary/20">
-          <h4 className="text-lg font-bold mb-4 font-heading underline decoration-primary">
+          <h4 className="text-xl font-heading mb-4 tracking-[0.1em] underline decoration-primary">:
             Postgres 18 Tuning Checklist
           </h4>
           <ul className="space-y-4">
@@ -408,7 +408,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <div className="p-8 mb-10 rounded-3xl bg-primary/5 border border-primary/20">
-          <h2 className="text-2xl font-bold mb-4 text-primary font-heading">
+          <h2 className="text-[1.75rem] mb-4 text-primary font-heading tracking-[0.07em]">
             Why we need Job Queues
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -420,7 +420,7 @@ export const blogArticles: BlogPost[] = [
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           Atomicity and Lua Scripts
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -431,7 +431,7 @@ export const blogArticles: BlogPost[] = [
           `lockDuration` expires, and then it's automatically retried.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           The Power of Sandboxed Workers
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -447,7 +447,7 @@ export const blogArticles: BlogPost[] = [
           the job itself is under extreme load.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           BullMQ Flows: Orchestrating Trees
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
@@ -475,7 +475,7 @@ export const blogArticles: BlogPost[] = [
     category: "Database",
     content: (
       <>
-        <h2 className="text-3xl font-bold mt-12 mb-6 font-heading">
+        <h2 className="text-3xl mt-12 mb-6 font-heading tracking-[0.04em]">
           Cascading Replication
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">

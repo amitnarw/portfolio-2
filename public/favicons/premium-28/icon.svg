@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Zaha Sweep">
+<title>Amit Narwal — Zaha Sweep</title>
+<rect width="512" height="512" rx="88" fill="#0E0E12"/>
+
+<rect width="512" height="512" rx="88" fill="#0E0E12"/>
+<!-- sweeping curve AN -->
+<path d="M112 384 L212 128 L312 384" fill="none" stroke="#F5F1E8" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- fluid extension to N -->
+<path d="M312 384 C352 320 312 224 400 160" fill="none" stroke="#E6E6E6" stroke-width="36" stroke-linecap="round"/>
+<path d="M400 160 L400 384" stroke="#F5F1E8" stroke-width="36" stroke-linecap="round"/>
+<path d="M156 284 L276 284" stroke="#0E0E12" stroke-width="16" stroke-linecap="round"/>
+<circle cx="212" cy="128" r="18" fill="#F5F1E8"/>
+
+</svg>

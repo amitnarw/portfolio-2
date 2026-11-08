@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Vinyl Groove">
+<title>Amit Narwal — Vinyl Groove</title>
+<rect width="512" height="512" rx="88" fill="#0A0A0A"/>
+
+<rect width="512" height="512" rx="88" fill="#0A0A0A"/>
+<circle cx="256" cy="256" r="188" fill="#111111"/>
+<circle cx="256" cy="256" r="188" fill="none" stroke="#C0C0C8" stroke-width="4"/>
+<circle cx="256" cy="256" r="156" fill="none" stroke="#C0C0C8" stroke-width="3" opacity=".55"/>
+<circle cx="256" cy="256" r="124" fill="none" stroke="#C0C0C8" stroke-width="3" opacity=".35"/>
+<circle cx="256" cy="256" r="92" fill="#0A0A0A"/>
+<circle cx="256" cy="256" r="92" fill="none" stroke="#C0C0C8" stroke-width="4"/>
+<!-- label A + groove into A -->
+<circle cx="256" cy="256" r="52" fill="#C0C0C8"/>
+<path d="M230 276 L256 212 L282 276 M238 250 L274 250" fill="none" stroke="#0A0A0A" stroke-width="10" stroke-linecap="round"/>
+<circle cx="256" cy="256" r="9" fill="#0A0A0A"/>
+<path d="M92 344 A188 188 0 0 0 344 92" fill="none" stroke="#C0C0C8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+
+</svg>

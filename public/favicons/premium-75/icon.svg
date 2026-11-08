@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Inkwell">
+<title>Amit Narwal — Inkwell</title>
+<rect width="512" height="512" rx="88" fill="#0E0E12"/>
+
+<path d="M150 296 C150 258 188 236 256 236 C324 236 362 258 362 296 L362 388 C362 424 320 442 256 442 C192 442 150 424 150 388 Z" fill="#F5F1E8"/>
+<path d="M150 296 C150 330 190 348 256 348 C322 348 362 330 362 296 C362 330 322 348 256 348 C190 348 150 330 150 296 Z" fill="#0E0E12"/>
+<path d="M214 330 L256 258 L298 330 M226 306 L286 306" fill="none" stroke="#0E0E12" stroke-width="16"
+      stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="226" y="190" width="60" height="52" fill="#F5F1E8"/>
+<rect x="212" y="176" width="88" height="18" rx="9" fill="#F5F1E8"/>
+<rect x="212" y="176" width="88" height="7" rx="3.5" fill="#C0C0C8"/>
+<circle cx="384" cy="206" r="16" fill="#C0C0C8"/>
+<path d="M384 222 L384 258" stroke="#C0C0C8" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

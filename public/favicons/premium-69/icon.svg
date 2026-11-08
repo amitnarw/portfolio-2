@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Brutal Reset">
+<title>Amit Narwal — Brutal Reset</title>
+<rect width="512" height="512" rx="88" fill="#B8B8B0"/>
+
+<rect x="116" y="140" width="210" height="252" fill="#1A1A1A"/>
+<rect x="116" y="140" width="210" height="20" fill="#FF5A1F"/>
+<!-- A cut through the block -->
+<path d="M221 178 L172 352 M221 178 L270 352 M188 292 L254 292"
+      fill="none" stroke="#B8B8B0" stroke-width="28" stroke-linecap="square"/>
+<!-- reset arc -->
+<path d="M382 158 A68 68 0 1 1 330 122" fill="none" stroke="#FF5A1F" stroke-width="15" stroke-linecap="round"/>
+<polygon points="318,96 352,128 312,142" fill="#FF5A1F"/>
+<!-- datum line -->
+<path d="M96 414 L416 414" stroke="#1A1A1A" stroke-width="6" opacity=".5"/>
+
+</svg>

@@ -321,7 +321,7 @@ export default function Navbar() {
                     }
                   }}
                   className={cn(
-                    "text-5xl font-semibold tracking-wide transition-all duration-500 font-heading",
+                    "text-5xl tracking-wide transition-all duration-500 font-heading",
                     isMobileOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-4 opacity-0",

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Knot Enigma">
+<title>Amit Narwal — Knot Enigma</title>
+<rect width="512" height="512" rx="88" fill="#15102A"/>
+
+<defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D4C3FC"/><stop offset="100%" stop-color="#7C6AA8"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#15102A"/>
+<!-- knot path (figure-8 with loops) -->
+<path d="M256 150 C196 150 158 198 178 248 C198 298 256 268 256 320 C256 372 314 402 334 352 C354 302 316 254 256 280" fill="none" stroke="url(#g5)" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+<!-- inner second loop echo -->
+<path d="M178 248 C172 278 196 310 228 304" fill="none" stroke="#D4C3FC" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+<!-- AI nodes -->
+<circle cx="256" cy="150" r="18" fill="#D4C3FC"/><circle cx="256" cy="150" r="8" fill="#15102A"/>
+<circle cx="334" cy="352" r="18" fill="#D4C3FC"/><circle cx="334" cy="352" r="8" fill="#15102A"/>
+<circle cx="178" cy="248" r="14" fill="none" stroke="#D4C3FC" stroke-width="8"/>
+<circle cx="256" cy="320" r="14" fill="none" stroke="#D4C3FC" stroke-width="8"/>
+<!-- centre A negative -->
+<path d="M228 342 L256 258 L284 342 M240 314 L272 314" fill="none" stroke="#15102A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

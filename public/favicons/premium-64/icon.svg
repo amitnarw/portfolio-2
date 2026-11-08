@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Cell &amp; Petal">
+<title>Amit Narwal — Cell &amp; Petal</title>
+<rect width="512" height="512" rx="88" fill="#171126"/>
+<path d="M240.5 193.9 Q218.3 140.0 256.0 106.0 Q293.7 140.0 271.5 193.9 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="256.0" cy="92.0" r="9" fill="#C9A86A"/>
+<path d="M289.0 201.1 Q311.4 147.3 362.1 149.9 Q364.7 200.6 310.9 223.0 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="372.0" cy="140.0" r="9" fill="#C9A86A"/>
+<path d="M318.1 240.5 Q372.0 218.3 406.0 256.0 Q372.0 293.7 318.1 271.5 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="420.0" cy="256.0" r="9" fill="#C9A86A"/>
+<path d="M310.9 289.0 Q364.7 311.4 362.1 362.1 Q311.4 364.7 289.0 310.9 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="372.0" cy="372.0" r="9" fill="#C9A86A"/>
+<path d="M271.5 318.1 Q293.7 372.0 256.0 406.0 Q218.3 372.0 240.5 318.1 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="256.0" cy="420.0" r="9" fill="#C9A86A"/>
+<path d="M223.0 310.9 Q200.6 364.7 149.9 362.1 Q147.3 311.4 201.1 289.0 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="140.0" cy="372.0" r="9" fill="#C9A86A"/>
+<path d="M193.9 271.5 Q140.0 293.7 106.0 256.0 Q140.0 218.3 193.9 240.5 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="92.0" cy="256.0" r="9" fill="#C9A86A"/>
+<path d="M201.1 223.0 Q147.3 200.6 149.9 149.9 Q200.6 147.3 223.0 201.1 Z" fill="#E8D9FF" opacity=".95"/>
+<circle cx="140.0" cy="140.0" r="9" fill="#C9A86A"/>
+<circle cx="256" cy="256" r="62" fill="#241A3D" stroke="#E8D9FF" stroke-width="8"/>
+<circle cx="256" cy="256" r="46" fill="none" stroke="#C9A86A" stroke-width="2" opacity=".55"/>
+<path d="M236 284 L256 226 L276 284 M244 264 L268 264" fill="none" stroke="#E8D9FF"
+      stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

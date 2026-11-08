@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Auric Monolith">
+<title>Amit Narwal — Auric Monolith</title>
+<rect width="512" height="512" rx="88" fill="#171512"/>
+
+<defs><linearGradient id="g11" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5F1E8"/><stop offset="100%" stop-color="#D8CFB8"/></linearGradient></defs>
+<rect width="512" height="512" rx="88" fill="#171512"/>
+<!-- monolith slab -->
+<path d="M178 80 L334 80 L352 432 L160 432 Z" fill="url(#g11)"/>
+<path d="M334 80 L352 432 L372 432 L358 80 Z" fill="#8A7A60"/>
+<!-- incised A -->
+<path d="M256 140 L200 332 L312 332 Z" fill="none" stroke="#171512" stroke-width="22" stroke-linejoin="round"/>
+<path d="M222 268 L290 268" stroke="#171512" stroke-width="14" stroke-linecap="round"/>
+<!-- shadow base -->
+<rect x="160" y="432" width="192" height="14" fill="#A67C52"/>
+
+</svg>

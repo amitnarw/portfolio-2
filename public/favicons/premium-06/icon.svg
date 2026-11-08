@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Origami Crane">
+<title>Amit Narwal — Origami Crane</title>
+<rect width="512" height="512" rx="88" fill="#F3EFE8"/>
+
+<rect width="512" height="512" rx="88" fill="#F3EFE8"/>
+<!-- crane silhouette — faceted triangles -->
+<!-- body -->
+<polygon points="112,352 256,208 400,352 256,392" fill="#2B2520"/>
+<!-- wing up -->
+<polygon points="256,208 330,86 400,172" fill="#C8522E"/>
+<polygon points="256,208 182,86 112,172" fill="#E8845A"/>
+<!-- neck/head -->
+<polygon points="400,352 438,278 412,322" fill="#2B2520"/>
+<polygon points="112,352 74,278 100,322" fill="#2B2520"/>
+<!-- fold lines -->
+<path d="M256 208 L256 392" stroke="#F3EFE8" stroke-width="6"/>
+<path d="M256 212 L400 352" stroke="#F3EFE8" stroke-width="6"/>
+<!-- AN negative in wing -->
+<path d="M256 270 L282 200 L308 270 M266 242 L298 242" fill="none" stroke="#F3EFE8" stroke-width="10" stroke-linecap="round"/>
+
+</svg>

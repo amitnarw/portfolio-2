@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Proof Seal">
+<title>Amit Narwal — Proof Seal</title>
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+
+<rect width="512" height="512" rx="88" fill="#F5F1E8"/>
+<!-- red vermillion square seal, slightly rotated -->
+<g transform="rotate(-6 256 256)">
+<rect x="132" y="124" width="248" height="264" fill="#C73E2E"/>
+<rect x="144" y="136" width="224" height="240" fill="none" stroke="#F5F1E8" stroke-width="6"/>
+<!-- Q.E.D. square glyph -->
+<rect x="238" y="172" width="36" height="36" fill="none" stroke="#F5F1E8" stroke-width="8"/>
+<text x="256" y="320" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="86" fill="#F5F1E8">AN</text>
+<text x="256" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" letter-spacing="3" fill="#F5F1E8">Q.E.D.</text>
+</g>
+
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal - Nebula Birth">
+<title>Amit Narwal — Nebula Birth</title>
+<rect width="512" height="512" fill="#0F0F1F"/>
+<defs><radialGradient id="g36a" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#E8D9FF" stop-opacity=".95"/><stop offset="45%" stop-color="#7C6AA8" stop-opacity=".55"/><stop offset="100%" stop-color="#0F0F1F" stop-opacity="0"/></radialGradient></defs>
+<rect width="512" height="512" fill="#0F0F1F"/>
+<circle cx="256" cy="256" r="196" fill="url(#g36a)"/>
+<!-- central vortex A - bolder, larger -->
+<path d="M156 368 L256 112 L356 368" fill="none" stroke="#E8D9FF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190 286 L322 286" stroke="#0F0F1F" stroke-width="28" stroke-linecap="round"/>
+<!-- stardust larger -->
+<g fill="#E8D9FF"><circle cx="156" cy="156" r="9"/><circle cx="356" cy="156" r="8"/><circle cx="112" cy="328" r="7"/><circle cx="400" cy="328" r="7"/><circle cx="256" cy="80" r="8"/></g>
+<g fill="#7C6AA8"><circle cx="120" cy="120" r="5"/><circle cx="392" cy="120" r="5"/><circle cx="84" cy="264" r="4"/><circle cx="428" cy="264" r="4"/><circle cx="256" cy="432" r="5"/></g>
+</svg>

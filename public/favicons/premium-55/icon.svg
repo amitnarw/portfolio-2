@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Universal Sans">
+<title>Amit Narwal — Universal Sans</title>
+<rect width="512" height="512" rx="88" fill="#FBFBF8"/>
+
+<rect x="196" y="148" width="120" height="120" fill="#111"/>
+<rect x="156" y="268" width="80" height="80" fill="#111"/>
+<rect x="276" y="268" width="80" height="80" fill="#111"/>
+<rect x="228" y="228" width="80" height="24" fill="#FBFBF8"/>
+<text x="256" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="2" fill="#111">AN—UNIV</text>
+
+</svg>

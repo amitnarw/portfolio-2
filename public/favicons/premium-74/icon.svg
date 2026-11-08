@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Paper Fold">
+<title>Amit Narwal — Paper Fold</title>
+<rect width="512" height="512" rx="88" fill="#F3EFE8"/>
+
+<defs>
+<linearGradient id="k74a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F6F1E4"/><stop offset="100%" stop-color="#DFD7C4"/></linearGradient>
+<linearGradient id="k74b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D96A3F"/><stop offset="100%" stop-color="#B0442B"/></linearGradient>
+</defs>
+<!-- left facet -->
+<polygon points="256,116 156,400 248,400 302,224" fill="url(#k74a)"/>
+<!-- right facet -->
+<polygon points="256,116 302,224 356,400 264,400" fill="url(#k74b)"/>
+<!-- counter cut -->
+<polygon points="256,238 216,306 296,306" fill="#F3EFE8"/>
+<!-- crossbar fold -->
+<polygon points="196,306 316,306 326,350 186,350" fill="#C9A86A"/>
+<!-- fold lines -->
+<g stroke="#2B2520" stroke-width="4" opacity=".25">
+<path d="M256 116 L256 238"/>
+<path d="M196 306 L256 292 L316 306"/>
+<path d="M186 350 L256 336 L326 350"/>
+</g>
+<!-- apex dot -->
+<circle cx="256" cy="112" r="10" fill="#C9A86A"/>
+
+</svg>
