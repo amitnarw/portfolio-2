@@ -88,7 +88,7 @@ export default function ConceptKineticRail() {
             </p>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              {currentCaseStudy.problem} — {currentCaseStudy.built}
+              {currentCaseStudy.problem} , {currentCaseStudy.built}
             </p>
 
             {/* Capabilities Matrix */}

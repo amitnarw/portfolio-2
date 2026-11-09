@@ -151,7 +151,7 @@ export default function ConceptDossier() {
                           <p className="text-sm font-semibold text-foreground">
                             {d.proof.title}{" "}
                             <span className="font-normal text-muted-foreground">
-                              — {d.proof.result}
+                              , {d.proof.result}
                             </span>
                           </p>
                         </div>

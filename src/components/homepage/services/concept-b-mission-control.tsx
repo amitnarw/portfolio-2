@@ -84,7 +84,7 @@ export default function ConceptBMissionControl() {
         <div className="flex items-center gap-2">
           <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-foreground font-semibold">MISSION CONTROL HUD</span>
-          <span className="text-muted-foreground hidden sm:inline">— Live Telemetry Bay</span>
+          <span className="text-muted-foreground hidden sm:inline">, Live Telemetry Bay</span>
         </div>
         <div className="text-primary font-semibold">
           {activePanel !== null ? `CHANNEL 0${activePanel + 1} ENGAGED` : "ALL CHANNELS ACTIVE"}
