@@ -5,7 +5,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * A — Capability Matrix (Atlas + Airborne + Deadwater system).
+ * A , Capability Matrix (Atlas + Airborne + Deadwater system).
  * 3 disciplines × capability ledger, huge serif title, hairlines only.
  */
 export default function CapabilityMatrix() {
@@ -14,14 +14,14 @@ export default function CapabilityMatrix() {
       <div className={cn(CONTAINER, "py-16 lg:py-24")}>
         <div className="grid gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <Eyebrow>Services — 03</Eyebrow>
+            <Eyebrow>Services , 03</Eyebrow>
             <h2 className="mt-5 font-serif text-[clamp(3.5rem,6vw,5.5rem)] italic leading-[0.95] tracking-tight">
               What I actually do
             </h2>
           </Reveal>
           <Reveal delay={90} className="lg:col-span-5 lg:pt-16">
             <p className="max-w-md text-lg leading-snug text-muted-foreground">
-              I build the whole product — the interface, the AI, and the
+              I build the whole product , the interface, the AI, and the
               infrastructure under it. Three disciplines, one owner.
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">

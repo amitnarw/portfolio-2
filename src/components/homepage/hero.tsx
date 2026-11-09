@@ -84,7 +84,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative mx-auto flex h-full max-w-350 flex-col justify-between px-6 pt-20 pb-5 lg:px-12 lg:pt-28 lg:pb-8">
         <div className="mt-10 flex sm:hidden flex-col justify-between gap-6 sm:flex-row items-center z-2 w-full">
-          <h2
+          <p
             className="animate-slide-in-right max-w-72 text-right text-sm leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto hidden sm:block"
             style={{ animationDelay: "0.5s", animationFillMode: "both" }}
           >
@@ -95,8 +95,8 @@ export default function Hero() {
             and high-performance Full Stack
             <br />
             Application Architecture.
-          </h2>
-          <h2
+          </p>
+          <p
             className="animate-slide-in-right text-sm text-center leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto block sm:hidden"
             style={{ animationDelay: "0.5s", animationFillMode: "both" }}
           >
@@ -105,7 +105,7 @@ export default function Hero() {
               React, Next.js, AI Integration,
             </strong>{" "}
             and high-performance Full Stack Application Architecture.
-          </h2>
+          </p>
           <HireMe />
         </div>
 
@@ -150,7 +150,7 @@ export default function Hero() {
 
         <div className="mb-6 sm:mb-10 hidden sm:flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center z-2 w-full">
           <HireMe />
-          <h2
+          <p
             className="animate-slide-in-right max-w-72 text-right text-sm leading-relaxed text-foreground/80 sm:text-foreground/60 self-end sm:self-auto"
             style={{ animationDelay: "0.5s", animationFillMode: "both" }}
           >
@@ -161,7 +161,7 @@ export default function Hero() {
             and high-performance Full Stack
             <br />
             Application Architecture.
-          </h2>
+          </p>
         </div>
 
         {/* ─ Bottom section ─ */}

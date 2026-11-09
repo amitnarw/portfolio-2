@@ -10,14 +10,14 @@ import { CONTAINER, HEADER_LEAD } from "./container";
 import { cn } from "@/lib/utils";
 
 /**
- * A — Area 17 Capabilities.
+ * A , Area 17 Capabilities.
  * Three columns side by side. Name + one sentence + vertical capability
  * list, proof anchored to the bottom of each column.
  * No numbers, no hairlines-per-item, no Bebas.
  */
 export default function Area17({ id }: { id: string }) {
   return (
-    <LabSection id={id} label="Services — Area 17 style">
+    <LabSection id={id} label="Services , Area 17 style">
       <div className={cn(CONTAINER, "py-16 lg:py-24")}>
         <SectionHeader lead={HEADER_LEAD} />
 
@@ -29,7 +29,7 @@ export default function Area17({ id }: { id: string }) {
               className={cn(
                 "flex flex-col",
                 i > 0 &&
-                  "border-t border-foreground/10 pt-12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-10 lg:pr-10",
+                "border-t border-foreground/10 pt-12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-10 lg:pr-10",
                 i === 2 && "lg:pr-0",
                 i === 0 && "lg:pr-10",
               )}

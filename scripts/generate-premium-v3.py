@@ -14,7 +14,7 @@ def wrap(title, body, bg="#0A0A0A"):
 {body}
 </svg>'''
 
-P21 = wrap("Amit Narwal — Roman Arch",
+P21 = wrap("Amit Narwal , Roman Arch",
 '''
 <defs><linearGradient id="g21" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EDE6D6"/><stop offset="100%" stop-color="#D8CDB0"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#1E1E20"/>
@@ -26,7 +26,7 @@ P21 = wrap("Amit Narwal — Roman Arch",
 <path d="M168 384 L168 256 A88 88 0 0 1 344 256 L344 384" fill="none" stroke="#1E1E20" stroke-width="4" opacity=".3"/>
 ''', bg="#1E1E20")
 
-P22 = wrap("Amit Narwal — Aurora Form",
+P22 = wrap("Amit Narwal , Aurora Form",
 '''
 <defs><linearGradient id="g22a" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7CF5C8"/><stop offset="50%" stop-color="#A8E6D8"/><stop offset="100%" stop-color="#3A9EA8"/></linearGradient>
 <linearGradient id="g22b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A2B4A"/><stop offset="100%" stop-color="#0B1220"/></linearGradient></defs>
@@ -39,7 +39,7 @@ P22 = wrap("Amit Narwal — Aurora Form",
 <circle cx="256" cy="152" r="12" fill="#E6FFFB"/>
 ''', bg="#0B1220")
 
-P23 = wrap("Amit Narwal — Mango Leaf Monsoon",
+P23 = wrap("Amit Narwal , Mango Leaf Monsoon",
 '''
 <rect width="512" height="512" rx="88" fill="#101E33"/>
 <!-- mango leaf shape -->
@@ -55,7 +55,7 @@ P23 = wrap("Amit Narwal — Mango Leaf Monsoon",
 <g fill="#A8C4D8"><circle cx="200" cy="368" r="8"/><circle cx="312" cy="368" r="8"/><circle cx="256" cy="244" r="8"/></g>
 ''', bg="#101E33")
 
-P24 = wrap("Amit Narwal — Peacock Eye",
+P24 = wrap("Amit Narwal , Peacock Eye",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <!-- eye almond -->
@@ -71,7 +71,7 @@ P24 = wrap("Amit Narwal — Peacock Eye",
 <path d="M120 404 L392 404" stroke="#1F4D3A" stroke-width="6" stroke-linecap="round"/>
 ''', bg="#F5F1E8")
 
-P25 = wrap("Amit Narwal — Terracotta Atelier",
+P25 = wrap("Amit Narwal , Terracotta Atelier",
 '''
 <rect width="512" height="512" rx="88" fill="#1A1A1A"/>
 <!-- clay ring -->
@@ -84,7 +84,7 @@ P25 = wrap("Amit Narwal — Terracotta Atelier",
 <g fill="#F5F1E8" opacity=".55"><circle cx="318" cy="136" r="6"/><circle cx="138" cy="226" r="5"/><circle cx="368" cy="304" r="5"/></g>
 ''', bg="#1A1A1A")
 
-P26 = wrap("Amit Narwal — Isometric Cube",
+P26 = wrap("Amit Narwal , Isometric Cube",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <!-- iso cube -->
@@ -96,7 +96,7 @@ P26 = wrap("Amit Narwal — Isometric Cube",
 <path d="M216 302 L256 196 L296 302 M228 268 L284 268" fill="none" stroke="#1A1A1A" stroke-width="12" stroke-linecap="round"/>
 ''', bg="#F5F1E8")
 
-P27 = wrap("Amit Narwal — Mandala Negative",
+P27 = wrap("Amit Narwal , Mandala Negative",
 '''
 <rect width="512" height="512" rx="88" fill="#1A1A1A"/>
 <!-- 12 petals -->
@@ -111,7 +111,7 @@ P27 = wrap("Amit Narwal — Mandala Negative",
 <circle cx="256" cy="256" r="36" fill="none" stroke="#E8A23B" stroke-width="6" opacity=".65"/>
 ''', bg="#1A1A1A")
 
-P28 = wrap("Amit Narwal — Zaha Sweep",
+P28 = wrap("Amit Narwal , Zaha Sweep",
 '''
 <rect width="512" height="512" rx="88" fill="#0E0E12"/>
 <!-- sweeping curve AN -->
@@ -123,7 +123,7 @@ P28 = wrap("Amit Narwal — Zaha Sweep",
 <circle cx="212" cy="128" r="18" fill="#F5F1E8"/>
 ''', bg="#0E0E12")
 
-P29 = wrap("Amit Narwal — Vinyl Groove",
+P29 = wrap("Amit Narwal , Vinyl Groove",
 '''
 <rect width="512" height="512" rx="88" fill="#0A0A0A"/>
 <circle cx="256" cy="256" r="188" fill="#111111"/>
@@ -139,7 +139,7 @@ P29 = wrap("Amit Narwal — Vinyl Groove",
 <path d="M92 344 A188 188 0 0 0 344 92" fill="none" stroke="#C0C0C8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
 ''', bg="#0A0A0A")
 
-P30 = wrap("Amit Narwal — Fortress Bastion",
+P30 = wrap("Amit Narwal , Fortress Bastion",
 '''
 <rect width="512" height="512" rx="88" fill="#1F1E1A"/>
 <!-- bastion silhouette -->
@@ -154,7 +154,7 @@ P30 = wrap("Amit Narwal — Fortress Bastion",
 <path d="M256 148 L256 104 L312 120 L256 136" fill="#C73E2E"/>
 ''', bg="#1F1E1A")
 
-P31 = wrap("Amit Narwal — Twin Cranes",
+P31 = wrap("Amit Narwal , Twin Cranes",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <!-- twin crane silhouettes (mirrored) -->
@@ -169,7 +169,7 @@ P31 = wrap("Amit Narwal — Twin Cranes",
 <circle cx="256" cy="130" r="14" fill="#C73E2E"/>
 ''', bg="#F5F1E8")
 
-P32 = wrap("Amit Narwal — Mirror Pair",
+P32 = wrap("Amit Narwal , Mirror Pair",
 '''
 <rect width="512" height="512" rx="88" fill="#101010"/>
 <defs><linearGradient id="g32" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E6E6E6"/><stop offset="100%" stop-color="#8A8A8A"/></linearGradient></defs>
@@ -182,7 +182,7 @@ P32 = wrap("Amit Narwal — Mirror Pair",
 <g stroke="#F5F1E8" stroke-width="4" stroke-linecap="round" opacity=".5"><path d="M180 384 L180 406"/><path d="M332 384 L332 406"/></g>
 ''', bg="#101010")
 
-P33 = wrap("Amit Narwal — Globe Wire",
+P33 = wrap("Amit Narwal , Globe Wire",
 '''
 <rect width="512" height="512" rx="88" fill="#0B1220"/>
 <!-- wire globe -->
@@ -197,7 +197,7 @@ P33 = wrap("Amit Narwal — Globe Wire",
 <circle cx="256" cy="256" r="10" fill="#D9B96A"/>
 ''', bg="#0B1220")
 
-P34 = wrap("Amit Narwal — Chisel A",
+P34 = wrap("Amit Narwal , Chisel A",
 '''
 <rect width="512" height="512" rx="88" fill="#2A2A28"/>
 <!-- granite slab -->
@@ -211,7 +211,7 @@ P34 = wrap("Amit Narwal — Chisel A",
 <g fill="#F5F1E8" opacity=".5"><circle cx="186" cy="352" r="5"/><circle cx="326" cy="352" r="5"/></g>
 ''', bg="#2A2A28")
 
-P35 = wrap("Amit Narwal — Anchor Mark",
+P35 = wrap("Amit Narwal , Anchor Mark",
 '''
 <rect width="512" height="512" rx="88" fill="#0B1622"/>
 <!-- anchor shaft -->
@@ -226,7 +226,7 @@ P35 = wrap("Amit Narwal — Anchor Mark",
 <path d="M232 340 L256 276 L280 340" fill="none" stroke="#0B1622" stroke-width="12" stroke-linecap="round"/>
 ''', bg="#0B1622")
 
-P36 = wrap("Amit Narwal — Nebula Birth",
+P36 = wrap("Amit Narwal , Nebula Birth",
 '''
 <defs><radialGradient id="g36a" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#E8D9FF" stop-opacity=".9"/><stop offset="45%" stop-color="#7C6AA8" stop-opacity=".55"/><stop offset="100%" stop-color="#0F0F1F" stop-opacity="0"/></radialGradient></defs>
 <rect width="512" height="512" rx="88" fill="#0F0F1F"/>
@@ -238,7 +238,7 @@ P36 = wrap("Amit Narwal — Nebula Birth",
 <g fill="#E8D9FF"><circle cx="168" cy="168" r="6"/><circle cx="344" cy="168" r="5"/><circle cx="128" cy="312" r="4"/><circle cx="384" cy="312" r="4"/><circle cx="256" cy="96" r="5"/></g>
 ''', bg="#0F0F1F")
 
-P37 = wrap("Amit Narwal — Paper Plane",
+P37 = wrap("Amit Narwal , Paper Plane",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <!-- paper plane -->
@@ -251,7 +251,7 @@ P37 = wrap("Amit Narwal — Paper Plane",
 <path d="M264 264 L282 212 L300 264" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
 ''', bg="#F5F1E8")
 
-P38 = wrap("Amit Narwal — Braided Rope",
+P38 = wrap("Amit Narwal , Braided Rope",
 '''
 <rect width="512" height="512" rx="88" fill="#0F1F1A"/>
 <!-- two braids as AN -->
@@ -264,7 +264,7 @@ P38 = wrap("Amit Narwal — Braided Rope",
 <circle cx="256" cy="384" r="8" fill="#0F1F1A"/>
 ''', bg="#0F1F1A")
 
-P39 = wrap("Amit Narwal — Minimal Line A",
+P39 = wrap("Amit Narwal , Minimal Line A",
 '''
 <rect width="512" height="512" rx="88" fill="#FBFBF8"/>
 <!-- single-weight architectural line, Swiss -->
@@ -276,7 +276,7 @@ P39 = wrap("Amit Narwal — Minimal Line A",
 <path d="M112 404 L400 404" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
 ''', bg="#FBFBF8")
 
-P40 = wrap("Amit Narwal — Single Dot Ritual",
+P40 = wrap("Amit Narwal , Single Dot Ritual",
 '''
 <rect width="512" height="512" rx="88" fill="#0A0A0A"/>
 <!-- halo around dot + AN negative -->
@@ -291,7 +291,7 @@ P40 = wrap("Amit Narwal — Single Dot Ritual",
 
 concepts = [
     ("premium-21", P21, "21 Roman Arch", "Aqueduct arch + keystone, travertine + ink.", "Research: Roman aqueduct permanence, keystone as structural node, Swiss arch premium."),
-    ("premium-22", P22, "22 Aurora Form", "Aurora curtain sweeping into A, arctic navy + mint.", "Research: Aurora visual metaphor — rare light, YSL entropy, veil premium."),
+    ("premium-22", P22, "22 Aurora Form", "Aurora curtain sweeping into A, arctic navy + mint.", "Research: Aurora visual metaphor , rare light, YSL entropy, veil premium."),
     ("premium-23", P23, "23 Mango Leaf Monsoon", "Leaf + rain chain forming A, indigo + silver.", "Research: Indian monsoon flow metaphor, leaf symmetry, rain as build rhythm."),
     ("premium-24", P24, "24 Peacock Eye", "Peacock eye jewel with AN hint, ivory + green/gold.", "Research: Peacock eye as royal jewel, mandala Indian heritage without icon cliché."),
     ("premium-25", P25, "25 Terracotta Atelier", "Clay ring with thumb-pressed A, terracotta + charcoal.", "Research: Material craft, thumbprint uniqueness, ceramic atelier premium."),
@@ -330,15 +330,15 @@ all_items = [
     ("premium-08", "08 Seal Crest", "Laurel double ring + AN essence, forest + brass.", "Research: Alfa Romeo/UN laurel legitimacy, kamon jinuki inversion, heritage seal premium."),
     ("premium-09", "09 Eclipse Negative", "Gold disc, black eclipse cut, light sliver with AN hint.", "Research: Swiss eclipse disc, high-contrast negative (FedEx), 14:1 WCAG AAA, minimal surprise."),
     ("premium-10", "10 Serif Ligature", "Editorial serif AN ligature, bone paper, copper dot + rule.", "Research: Instrument Serif italic Didone, optical sizing (Display vs Micro), single-weight serif luxury, tight pair/loose tracking."),
-    ("premium-11", "11 Auric Monolith", "Basalt slab with incised A — builder of lasting systems.", "Research: Swiss architectural monogram, bone/bronze museum premium, Müller-Brockmann grid, Rams monolith."),
-    ("premium-12", "12 Signal Wave", "Echolocation arcs resolving into A — sensing AI.", "Research: Narwhal echolocation physics, concentric signal premium (Sonar), Gestalt resonance."),
-    ("premium-13", "13 Proof Seal", "Vermillion Q.E.D. seal — verified & shipped.", "Research: Mathematical proof mark, editorial seal authority, red/black intellectual premium."),
+    ("premium-11", "11 Auric Monolith", "Basalt slab with incised A , builder of lasting systems.", "Research: Swiss architectural monogram, bone/bronze museum premium, Müller-Brockmann grid, Rams monolith."),
+    ("premium-12", "12 Signal Wave", "Echolocation arcs resolving into A , sensing AI.", "Research: Narwhal echolocation physics, concentric signal premium (Sonar), Gestalt resonance."),
+    ("premium-13", "13 Proof Seal", "Vermillion Q.E.D. seal , verified & shipped.", "Research: Mathematical proof mark, editorial seal authority, red/black intellectual premium."),
     ("premium-14", "14 Orbital Lattice", "Islamic 8-point lattice as neural mesh.", "Research: Girih lattice mathematics, Escher revival, finite rules → infinite, sacred geometry."),
-    ("premium-15", "15 Ink Bloom", "Sumi-e ink lotus — code to flower.", "Research: Japanese ink discipline, lotus counted-petal system, brush Bézier variable width."),
+    ("premium-15", "15 Ink Bloom", "Sumi-e ink lotus , code to flower.", "Research: Japanese ink discipline, lotus counted-petal system, brush Bézier variable width."),
     ("premium-16", "16 Compass Cartographer", "16-point star with Delhi coords.", "Research: Kuyōmon nine-bodies star, kamon radial navigation, parchment cartographer heritage."),
     ("premium-17", "17 Glass Prism", "Prism refracting beam into gold A.", "Research: Transparency/clarity as premium (Aesop, Teenage Eng), refraction as AI distillation."),
     ("premium-18", "18 Feather & Node", "Editorial feather meets circuit node.", "Research: Writer-engineer duality, quill nostalgia (Six Pence), node = system AGI point."),
-    ("premium-19", "19 Sundial", "Brass sundial — infinite time, on schedule.", "Research: Heritage craft (Jaeger), gnomon as structure, paper/brass luxury oxidation."),
+    ("premium-19", "19 Sundial", "Brass sundial , infinite time, on schedule.", "Research: Heritage craft (Jaeger), gnomon as structure, paper/brass luxury oxidation."),
     ("premium-20", "20 Folded Ribbon", "One ribbon through AN to a period dot.", "Research: YSL interlock discipline, single-thread continuity (Rand), dot as ownable signature."),
 ] + [(slug, title, desc, res) for slug, svg, title, desc, res in concepts]
 
@@ -355,7 +355,7 @@ for slug, title, desc, research in all_items:
     '''
 
 gallery = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Amit Narwal — 40 Premium Logo Concepts</title>
+<title>Amit Narwal , 40 Premium Logo Concepts</title>
 <style>
 :root{{--bg:#0a0a0f;--fg:#f2f0ea;--muted:#9aa3b2;--gold:#ffd976;--card:#13131b;--border:rgba(255,255,255,.1)}}
 *{{box-sizing:border-box}}body{{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}}
@@ -373,10 +373,10 @@ h1{{font-family:Georgia,serif;font-style:italic;font-size:clamp(2.4rem,5vw,4rem)
 .pick{{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}}
 .pick button{{background:transparent;border:1px solid var(--border);color:var(--gold);border-radius:999px;padding:8px 14px;cursor:pointer}}
 </style></head><body>
-<header><div class="bar"><strong>Amit Narwal — Premium Mark Exploration</strong><span style="color:var(--muted)">40 concepts • SVG craft • no PIL polygons</span></div></header>
+<header><div class="bar"><strong>Amit Narwal , Premium Mark Exploration</strong><span style="color:var(--muted)">40 concepts • SVG craft • no PIL polygons</span></div></header>
 <main class="wrap">
 <h1>Pick your mark.</h1>
-<p class="lede">40 hand-crafted SVG Bézier concepts across three batches (01-10, 11-20, 21-40). Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) — browser-rendered, Bézier-built. 21-40 explores arch, aurora, monsoon, peacock, terracotta, cube, mandala, Zaha, vinyl, bastion, cranes, mirror, globe, chisel, anchor, nebula, plane, rope, Swiss line, and dot ritual.</p>
+<p class="lede">40 hand-crafted SVG Bézier concepts across three batches (01-10, 11-20, 21-40). Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) , browser-rendered, Bézier-built. 21-40 explores arch, aurora, monsoon, peacock, terracotta, cube, mandala, Zaha, vinyl, bastion, cranes, mirror, globe, chisel, anchor, nebula, plane, rope, Swiss line, and dot ritual.</p>
 <div class="grid">{cards}</div>
 <p style="color:var(--muted);margin-top:28px;font-size:.9rem">Tell me the numbers you like (e.g. “22 + 28 + 40”). I’ll refine those into a full favicon system (ICO + PNGs) and lock your chosen palette.</p>
 </main>

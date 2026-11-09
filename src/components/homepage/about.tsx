@@ -90,7 +90,7 @@ function StatNumber({
 export default function About() {
   return (
     <section id="about" aria-label="About section" className="bg-background">
-      <div className="mx-auto w-full max-w-350 px-6 py-14 lg:px-12 lg:py-20">
+      <div className="mx-auto w-full max-w-350 px-3 sm:px-6 py-14 lg:px-12 lg:py-20">
         <Reveal className="relative overflow-hidden rounded-[2rem] bg-[#0B0B0C] px-6 py-12 text-[#FFF6E0] dark:bg-[#131315] dark:ring-1 dark:ring-white/10 sm:px-10 lg:px-14 lg:py-16">
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
@@ -107,7 +107,7 @@ export default function About() {
                 About Me
               </h2>
               <p className="mt-5 text-sm text-white/60">
-                Amit Narwal — Full-stack &amp; AI Developer
+                Amit Narwal , Full-stack &amp; AI Developer
               </p>
             </div>
             <div className="lg:col-span-7">

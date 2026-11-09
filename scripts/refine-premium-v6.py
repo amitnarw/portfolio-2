@@ -1,4 +1,4 @@
-"""Refine premium-61..80 — second pass: fix legibility, geometry and craft.
+"""Refine premium-61..80 , second pass: fix legibility, geometry and craft.
 
 Rewrites only the SVGs; the 80-card gallery already points at these paths.
 """
@@ -28,7 +28,7 @@ def save(num, svg):
 
 # ---------------------------------------------------------------- 61
 P61 = wrap(
-    "Amit Narwal — The Infinite Kiln",
+    "Amit Narwal , The Infinite Kiln",
     '''
 <defs>
 <linearGradient id="k61" x1="0" y1="0" x2=".4" y2="1">
@@ -89,7 +89,7 @@ def p62():
 <circle cx="256" cy="262" r="11" fill="#081018" stroke="#F2E4B8" stroke-width="7"/>
 <circle cx="256" cy="382" r="6" fill="#D9B96A" opacity=".8"/>
 '''
-    return wrap("Amit Narwal — Narwhal Horn Compass", body, bg="#081018")
+    return wrap("Amit Narwal , Narwhal Horn Compass", body, bg="#081018")
 
 
 # ---------------------------------------------------------------- 63
@@ -129,7 +129,7 @@ def p63():
 <g fill="#C73E2E"><circle cx="120" cy="120" r="7"/><circle cx="392" cy="120" r="7"/><circle cx="120" cy="392" r="7"/><circle cx="392" cy="392" r="7"/></g>
 <rect x="112" y="112" width="288" height="288" fill="none" stroke="#E8A23B" stroke-width="3" opacity=".35"/>
 '''
-    return wrap("Amit Narwal — Madhubani Pulse", body, bg="#101B33")
+    return wrap("Amit Narwal , Madhubani Pulse", body, bg="#101B33")
 
 
 # ---------------------------------------------------------------- 64
@@ -163,12 +163,12 @@ def p64():
 <path d="M236 284 L256 226 L276 284 M244 264 L268 264" fill="none" stroke="#E8D9FF"
       stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
 '''
-    return wrap("Amit Narwal — Cell & Petal", body, bg="#171126")
+    return wrap("Amit Narwal , Cell & Petal", body, bg="#171126")
 
 
 # ---------------------------------------------------------------- 65
 P65 = wrap(
-    "Amit Narwal — The Keystone",
+    "Amit Narwal , The Keystone",
     '''
 <defs><linearGradient id="k65" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="#D6C7A4"/><stop offset="100%" stop-color="#AD9C7A"/></linearGradient></defs>
@@ -194,7 +194,7 @@ P65 = wrap(
 
 # ---------------------------------------------------------------- 66 (kept, tightened)
 P66 = wrap(
-    "Amit Narwal — Sea Mark",
+    "Amit Narwal , Sea Mark",
     '''
 <rect x="72" y="72" width="368" height="368" fill="none" stroke="#123047" stroke-width="6"/>
 <rect x="88" y="88" width="336" height="336" fill="none" stroke="#123047" stroke-width="2" opacity=".55"/>
@@ -247,12 +247,12 @@ def p67():
 <circle cx="404" cy="398" r="16" fill="none" stroke="#C6FF3D" stroke-width="3"/>
 <rect x="399" y="393" width="10" height="10" fill="#C6FF3D"/>
 '''
-    return wrap("Amit Narwal — Pulse Dots", body, bg="#101010")
+    return wrap("Amit Narwal , Pulse Dots", body, bg="#101010")
 
 
 # ---------------------------------------------------------------- 68
 P68 = wrap(
-    "Amit Narwal — Marble Grain",
+    "Amit Narwal , Marble Grain",
     '''
 <defs>
 <linearGradient id="k68s" x1="0" y1="0" x2="1" y2="1">
@@ -278,7 +278,7 @@ P68 = wrap(
 
 # ---------------------------------------------------------------- 69
 P69 = wrap(
-    "Amit Narwal — Brutal Reset",
+    "Amit Narwal , Brutal Reset",
     '''
 <rect x="116" y="140" width="210" height="252" fill="#1A1A1A"/>
 <rect x="116" y="140" width="210" height="20" fill="#FF5A1F"/>
@@ -296,7 +296,7 @@ P69 = wrap(
 
 # ---------------------------------------------------------------- 70 (kept, tightened)
 P70 = wrap(
-    "Amit Narwal — Thread & Needle",
+    "Amit Narwal , Thread & Needle",
     '''
 <path d="M366 100 L196 270" stroke="#1F3A5F" stroke-width="12" stroke-linecap="round"/>
 <path d="M196 270 L172 294" stroke="#1F3A5F" stroke-width="6" stroke-linecap="round"/>
@@ -315,7 +315,7 @@ P70 = wrap(
 
 # ---------------------------------------------------------------- 71 (kept)
 P71 = wrap(
-    "Amit Narwal — Eclipse Twins",
+    "Amit Narwal , Eclipse Twins",
     '''
 <defs><radialGradient id="k71" cx=".5" cy=".5" r=".5">
 <stop offset="0%" stop-color="#FFF3C4"/><stop offset="70%" stop-color="#FFD976"/><stop offset="100%" stop-color="#C9A86A"/>
@@ -332,7 +332,7 @@ P71 = wrap(
 
 # ---------------------------------------------------------------- 72
 P72 = wrap(
-    "Amit Narwal — Mason's Mark",
+    "Amit Narwal , Mason's Mark",
     '''
 <rect x="96" y="96" width="320" height="320" rx="14" fill="#9E9E98"/>
 <rect x="96" y="96" width="320" height="320" rx="14" fill="none" stroke="#77776F" stroke-width="3"/>
@@ -358,7 +358,7 @@ P72 = wrap(
 
 # ---------------------------------------------------------------- 73 (tightened)
 P73 = wrap(
-    "Amit Narwal — Harbor Light",
+    "Amit Narwal , Harbor Light",
     '''
 <path d="M236 210 L88 138 L88 282 Z" fill="#FFD976" opacity=".22"/>
 <path d="M236 210 L424 112 L424 308 Z" fill="#FFD976" opacity=".14"/>
@@ -378,7 +378,7 @@ P73 = wrap(
 
 # ---------------------------------------------------------------- 74
 P74 = wrap(
-    "Amit Narwal — Paper Fold",
+    "Amit Narwal , Paper Fold",
     '''
 <defs>
 <linearGradient id="k74a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F6F1E4"/><stop offset="100%" stop-color="#DFD7C4"/></linearGradient>
@@ -406,7 +406,7 @@ P74 = wrap(
 
 # ---------------------------------------------------------------- 75
 P75 = wrap(
-    "Amit Narwal — Inkwell",
+    "Amit Narwal , Inkwell",
     '''
 <path d="M150 296 C150 258 188 236 256 236 C324 236 362 258 362 296 L362 388 C362 424 320 442 256 442 C192 442 150 424 150 388 Z" fill="#F5F1E8"/>
 <path d="M150 296 C150 330 190 348 256 348 C322 348 362 330 362 296 C362 330 322 348 256 348 C190 348 150 330 150 296 Z" fill="#0E0E12"/>
@@ -461,12 +461,12 @@ def p76():
 <path d="M72 448 C102 432 132 464 162 448 C192 432 222 464 252 448 C282 432 312 464 342 448 C372 432 402 464 432 448"/>
 </g>
 '''
-    return wrap("Amit Narwal — Archipelago", body, bg="#0E2A33")
+    return wrap("Amit Narwal , Archipelago", body, bg="#0E2A33")
 
 
 # ---------------------------------------------------------------- 77 (kept)
 P77 = wrap(
-    "Amit Narwal — Monolith Echo",
+    "Amit Narwal , Monolith Echo",
     '''
 <defs><linearGradient id="k77" x1="0" y1="0" x2="1" y2="0">
 <stop offset="0%" stop-color="#F5F1E8"/><stop offset="100%" stop-color="#C9BFB0"/></linearGradient></defs>
@@ -502,12 +502,12 @@ def p78():
 <circle cx="256" cy="412" r="11" fill="#E63946"/>
 <circle cx="256" cy="412" r="4" fill="#0E0E12"/>
 '''
-    return wrap("Amit Narwal — Soundform", body, bg="#0E0E12")
+    return wrap("Amit Narwal , Soundform", body, bg="#0E0E12")
 
 
 # ---------------------------------------------------------------- 79 (kept)
 P79 = wrap(
-    "Amit Narwal — Q.E.D. Stamp",
+    "Amit Narwal , Q.E.D. Stamp",
     '''
 <circle cx="256" cy="256" r="176" fill="none" stroke="#C73E2E" stroke-width="8"/>
 <circle cx="256" cy="256" r="156" fill="none" stroke="#C73E2E" stroke-width="3"/>
@@ -525,7 +525,7 @@ P79 = wrap(
 
 # ---------------------------------------------------------------- 80
 P80 = wrap(
-    "Amit Narwal — Open Source",
+    "Amit Narwal , Open Source",
     '''
 <defs><linearGradient id="k80" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="#9CC0A6"/><stop offset="100%" stop-color="#5C8A6C"/></linearGradient></defs>

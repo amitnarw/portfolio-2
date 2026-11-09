@@ -6,7 +6,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * D — Staggered Proof List (Harsh Shah + Bellevoire).
+ * D , Staggered Proof List (Harsh Shah + Bellevoire).
  * Indented rows, project image at the seam, serif name + outcome.
  * Alternating offsets create asymmetry without clutter.
  */
@@ -43,7 +43,7 @@ export default function ProofStaggered() {
                 </Link>
                 <div className="lg:col-span-7 lg:pl-6">
                   <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                    {String(i + 1).padStart(2, "0")} — {cs.discipline}
+                    {String(i + 1).padStart(2, "0")} , {cs.discipline}
                   </p>
                   <h3 className="mt-3 font-serif text-[clamp(1.75rem,3vw,2.5rem)] italic leading-tight">
                     {cs.title}

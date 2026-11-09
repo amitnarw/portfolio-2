@@ -6,7 +6,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * H — Case-Study Rows.
+ * H , Case-Study Rows.
  * Alternating image rows; problem → built → result. Proof-led.
  */
 export default function CaseStudyRows() {

@@ -5,7 +5,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * L — Menu Ledger.
+ * L , Menu Ledger.
  * Centered restaurant-menu treatment with dotted leaders.
  */
 export default function MenuLedger() {

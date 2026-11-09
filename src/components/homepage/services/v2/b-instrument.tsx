@@ -11,14 +11,14 @@ import { CONTAINER, HEADER_LEAD } from "./container";
 import { cn } from "@/lib/utils";
 
 /**
- * B — Instrument Offerings.
+ * B , Instrument Offerings.
  * Three stacked full-width blocks. Each pairs the discipline with one
  * real case-study image, client name, outcome, and a "View case study"
  * link. Capabilities sit in a two-column grid beside the image.
  */
 export default function Instrument({ id }: { id: string }) {
   return (
-    <LabSection id={id} label="Services — Instrument style">
+    <LabSection id={id} label="Services , Instrument style">
       <div className={cn(CONTAINER, "py-16 lg:py-24")}>
         <SectionHeader lead={HEADER_LEAD} />
 

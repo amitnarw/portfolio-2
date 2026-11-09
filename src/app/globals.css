@@ -208,6 +208,19 @@
   animation: slide-in-right 0.8s ease-out forwards;
 }
 
+@keyframes slide-stream {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.animate-slide-stream {
+  animation: slide-stream 1.4s ease-in-out infinite;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

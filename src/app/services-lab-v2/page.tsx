@@ -16,7 +16,7 @@ const VARIANTS = [
     key: "A",
     name: "Area 17",
     description:
-      "Three columns side by side — area17.com/capabilities. Name, one sentence, six capabilities, proof anchored at the bottom.",
+      "Three columns side by side , area17.com/capabilities. Name, one sentence, six capabilities, proof anchored at the bottom.",
     Component: Area17,
     id: "services-a",
   },
@@ -24,7 +24,7 @@ const VARIANTS = [
     key: "B",
     name: "Instrument",
     description:
-      "Stacked offering blocks — instrument.com/services. Each discipline pairs a large case-study image with capabilities and a View case study link.",
+      "Stacked offering blocks , instrument.com/services. Each discipline pairs a large case-study image with capabilities and a View case study link.",
     Component: Instrument,
     id: "services-b",
   },
@@ -32,7 +32,7 @@ const VARIANTS = [
     key: "C",
     name: "Basement",
     description:
-      "Stacked, restrained — basement.studio. Name, one paragraph, four bullets, one inline proof link. Flattest, most air.",
+      "Stacked, restrained , basement.studio. Name, one paragraph, four bullets, one inline proof link. Flattest, most air.",
     Component: Basement,
     id: "services-c",
   },
@@ -47,10 +47,10 @@ export default function ServicesLabV2Page() {
         <div className="pb-8 pt-14 lg:pt-20">
           <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
             <span aria-hidden className="h-[2px] w-8 bg-primary" />
-            Design exploration — v2
+            Design exploration , v2
           </p>
           <h1 className="mt-5 font-serif text-[clamp(2.5rem,5vw,4.5rem)] italic leading-[1.02] tracking-tight">
-            Services section — 3 directions
+            Services section , 3 directions
           </h1>
           <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">
             Same content spine as v1: 3 disciplines (Product Engineering, AI
@@ -70,7 +70,7 @@ export default function ServicesLabV2Page() {
                 href={`#variant-${v.key}`}
                 className="rounded-full border border-foreground/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] transition-colors hover:border-primary hover:bg-primary/10"
               >
-                {v.key} — {v.name}
+                {v.key} , {v.name}
               </a>
             ))}
           </nav>
@@ -82,13 +82,13 @@ export default function ServicesLabV2Page() {
           key={v.key}
           id={`variant-${v.key}`}
           className="scroll-mt-20"
-          aria-label={`Variant ${v.key} — ${v.name}`}
+          aria-label={`Variant ${v.key} , ${v.name}`}
         >
           <div className={CONTAINER}>
             <div className="flex flex-wrap items-end justify-between gap-3 border-t border-foreground/10 pb-6 pt-12">
               <div>
                 <h2 className="font-serif text-2xl italic leading-none">
-                  {v.key} — {v.name}
+                  {v.key} , {v.name}
                 </h2>
                 <p className="mt-1.5 max-w-xl text-sm text-muted-foreground">
                   {v.description}
@@ -110,8 +110,8 @@ export default function ServicesLabV2Page() {
         <div className={CONTAINER}>
           <div className="border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
             <p>
-              Tell me the letter — or &ldquo;A with B&apos;s image
-              treatment&rdquo; — and I&apos;ll wire the winner into the
+              Tell me the letter , or &ldquo;A with B&apos;s image
+              treatment&rdquo; , and I&apos;ll wire the winner into the
               homepage.
             </p>
           </div>

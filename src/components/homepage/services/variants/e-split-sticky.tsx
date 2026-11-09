@@ -5,7 +5,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * E — Split Sticky Statement (Glean + Deadwater).
+ * E , Split Sticky Statement (Glean + Deadwater).
  * Sticky statement + CTA left; disciplines scroll right.
  * Sticky disabled on mobile where it would crush content.
  */
@@ -66,7 +66,7 @@ export default function SplitSticky() {
                     href={`/work/${d.proof.slug}`}
                     className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold underline decoration-primary decoration-2 underline-offset-4 transition-colors hover:text-orange-700 dark:hover:text-primary"
                   >
-                    Proof: {d.proof.title} — {d.proof.result}
+                    Proof: {d.proof.title} , {d.proof.result}
                     <ArrowUpRight className="h-4 w-4" aria-hidden />
                   </Link>
                 </article>

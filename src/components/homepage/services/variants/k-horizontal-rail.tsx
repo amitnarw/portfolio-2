@@ -8,7 +8,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * K — Horizontal Rail.
+ * K , Horizontal Rail.
  * Scroll-snap panels with visible arrows + counter. Keyboard reachable
  * because panels are regular DOM in focus order.
  */

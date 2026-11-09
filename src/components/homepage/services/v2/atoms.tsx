@@ -64,7 +64,7 @@ export function Eyebrow({ children }: { children: ReactNode }) {
   );
 }
 
-/** Shared section header — identical across A/B/C so only execution differs. */
+/** Shared section header , identical across A/B/C so only execution differs. */
 export function SectionHeader({ lead }: { lead: string }) {
   return (
     <Reveal>

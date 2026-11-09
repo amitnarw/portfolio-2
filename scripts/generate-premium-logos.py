@@ -19,9 +19,9 @@ def wrap(title, body, bg="#0B1026"):
 '''
 
 # ─────────────────────────────────────────────
-# 01 — The Infinite Thread: lemniscate forming an A
+# 01 , The Infinite Thread: lemniscate forming an A
 # Deep midnight #0A1220, champagne gradient, one continuous thread
-P01 = wrap("Amit Narwal — Infinite Thread A",
+P01 = wrap("Amit Narwal , Infinite Thread A",
 '''
 <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E9D8A6"/><stop offset="55%" stop-color="#C9A86A"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient>
 <linearGradient id="g1s" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0A1220"/><stop offset="100%" stop-color="#0A1220"/></linearGradient></defs>
@@ -35,9 +35,9 @@ P01 = wrap("Amit Narwal — Infinite Thread A",
 <path d="M256 322 C240 322 146 322 146 256 C146 191 215 168 256 256" fill="none" stroke="#E9D8A6" stroke-width="4" stroke-linecap="round" opacity=".55"/>
 ''', bg="#0A1220")
 
-# 02 — Tusk Spiral: double helix narwhal tusk, abstract disc
-# Ice teal, luminous, minimal — no letters, pure mark
-P02 = wrap("Amit Narwal — Tusk Spiral",
+# 02 , Tusk Spiral: double helix narwhal tusk, abstract disc
+# Ice teal, luminous, minimal , no letters, pure mark
+P02 = wrap("Amit Narwal , Tusk Spiral",
 '''
 <defs><radialGradient id="g2bg" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#0E2A3A"/><stop offset="100%" stop-color="#061019"/></radialGradient>
 <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A8E6E0"/><stop offset="100%" stop-color="#3A9EA8"/></linearGradient></defs>
@@ -54,8 +54,8 @@ P02 = wrap("Amit Narwal — Tusk Spiral",
 <circle cx="326" cy="78" r="10" fill="#A8E6E0"/>
 ''', bg="#061019")
 
-# 03 — Architectural AN: custom engineered pillars, bone + copper accent
-P03 = wrap("Amit Narwal — Architectural AN",
+# 03 , Architectural AN: custom engineered pillars, bone + copper accent
+P03 = wrap("Amit Narwal , Architectural AN",
 '''
 <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5F1E8"/><stop offset="100%" stop-color="#E7DFC8"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#1A1A1A"/>
@@ -72,8 +72,8 @@ P03 = wrap("Amit Narwal — Architectural AN",
 <circle cx="330" cy="300" r="7" fill="#1A1A1A"/>
 ''', bg="#1A1A1A")
 
-# 04 — Lotus Apex: three petals, centre petal = A
-P04 = wrap("Amit Narwal — Lotus Apex",
+# 04 , Lotus Apex: three petals, centre petal = A
+P04 = wrap("Amit Narwal , Lotus Apex",
 '''
 <defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B7C9A8"/><stop offset="100%" stop-color="#6B8A6B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#0F1F1A"/>
@@ -89,8 +89,8 @@ P04 = wrap("Amit Narwal — Lotus Apex",
 <path d="M156 368 Q256 408 356 368" fill="none" stroke="#B7C9A8" stroke-width="6" stroke-linecap="round"/>
 ''', bg="#0F1F1A")
 
-# 05 — Knot Enigma: endless knot + AI nodes
-P05 = wrap("Amit Narwal — Knot Enigma",
+# 05 , Knot Enigma: endless knot + AI nodes
+P05 = wrap("Amit Narwal , Knot Enigma",
 '''
 <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D4C3FC"/><stop offset="100%" stop-color="#7C6AA8"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#15102A"/>
@@ -107,11 +107,11 @@ P05 = wrap("Amit Narwal — Knot Enigma",
 <path d="M228 342 L256 258 L284 342 M240 314 L272 314" fill="none" stroke="#15102A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
 ''', bg="#15102A")
 
-# 06 — Origami Crane: faceted crane forming AN
-P06 = wrap("Amit Narwal — Origami Crane",
+# 06 , Origami Crane: faceted crane forming AN
+P06 = wrap("Amit Narwal , Origami Crane",
 '''
 <rect width="512" height="512" rx="88" fill="#F3EFE8"/>
-<!-- crane silhouette — faceted triangles -->
+<!-- crane silhouette , faceted triangles -->
 <!-- body -->
 <polygon points="112,352 256,208 400,352 256,392" fill="#2B2520"/>
 <!-- wing up -->
@@ -127,8 +127,8 @@ P06 = wrap("Amit Narwal — Origami Crane",
 <path d="M256 270 L282 200 L308 270 M266 242 L298 242" fill="none" stroke="#F3EFE8" stroke-width="10" stroke-linecap="round"/>
 ''', bg="#F3EFE8")
 
-# 07 — Orbital Stack: full-stack layers + orbit, violet field
-P07 = wrap("Amit Narwal — Orbital Stack",
+# 07 , Orbital Stack: full-stack layers + orbit, violet field
+P07 = wrap("Amit Narwal , Orbital Stack",
 '''
 <defs><linearGradient id="g7" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7C6AA8"/><stop offset="100%" stop-color="#D4C3FC"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#1B1430"/>
@@ -144,8 +144,8 @@ P07 = wrap("Amit Narwal — Orbital Stack",
 <circle cx="96" cy="178" r="12" fill="#D4C3FC"/><circle cx="416" cy="334" r="12" fill="#D4C3FC"/>
 ''', bg="#1B1430")
 
-# 08 — Seal Crest: laurel ring + AN in serif essence
-P08 = wrap("Amit Narwal — Seal Crest",
+# 08 , Seal Crest: laurel ring + AN in serif essence
+P08 = wrap("Amit Narwal , Seal Crest",
 '''
 <defs><linearGradient id="g8" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D9B96A"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#122115"/>
@@ -165,8 +165,8 @@ P08 = wrap("Amit Narwal — Seal Crest",
 <circle cx="256" cy="158" r="16" fill="url(#g8)"/>
 ''', bg="#122115")
 
-# 09 — Eclipse Negative: ultra-minimal disc + light sliver
-P09 = wrap("Amit Narwal — Eclipse Negative",
+# 09 , Eclipse Negative: ultra-minimal disc + light sliver
+P09 = wrap("Amit Narwal , Eclipse Negative",
 '''
 <rect width="512" height="512" rx="88" fill="#0A0A0A"/>
 <!-- gold disc -->
@@ -179,8 +179,8 @@ P09 = wrap("Amit Narwal — Eclipse Negative",
 <path d="M312 310 L338 214 L364 310 M322 272 L354 272" fill="none" stroke="#0A0A0A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
 ''', bg="#0A0A0A")
 
-# 10 — Serif Ligature AN: editorial, bone paper, single weight, tight pair loose tracking
-P10 = wrap("Amit Narwal — Serif Ligature",
+# 10 , Serif Ligature AN: editorial, bone paper, single weight, tight pair loose tracking
+P10 = wrap("Amit Narwal , Serif Ligature",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <defs><linearGradient id="g10" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A1A1A"/><stop offset="100%" stop-color="#3A3630"/></linearGradient></defs>
@@ -244,12 +244,12 @@ for slug, svg, title, desc, research in concepts:
       <h2>{title}</h2>
       <p>{desc}</p>
       <div class="research"><b>Research:</b> {research}</div>
-      <div class="pick"><button data-pick="{slug}">Use in tab</button><span>icon.svg — 512×512</span></div>
+      <div class="pick"><button data-pick="{slug}">Use in tab</button><span>icon.svg , 512×512</span></div>
     </article>
     '''
 
 gallery = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Amit Narwal — 10 Premium Logo Concepts</title>
+<title>Amit Narwal , 10 Premium Logo Concepts</title>
 <style>
 :root{{--bg:#0a0a0f;--fg:#f2f0ea;--muted:#9aa3b2;--gold:#ffd976;--card:#13131b;--border:rgba(255,255,255,.1)}}
 *{{box-sizing:border-box}}body{{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}}
@@ -268,10 +268,10 @@ h1{{font-family:Georgia,serif;font-style:italic;font-size:clamp(2.4rem,5vw,4rem)
 .pick button{{background:transparent;border:1px solid var(--border);color:var(--gold);border-radius:999px;padding:8px 14px;cursor:pointer}}
 .link{{position:fixed;left:16px;top:-60px;background:var(--gold);color:#000;padding:10px 14px;border-radius:8px;z-index:99}}
 </style></head><body>
-<header><div class="bar"><strong>Amit Narwal — Premium Mark Exploration</strong><span style="color:var(--muted)">10 concepts • SVG craft • no PIL polygons</span></div></header>
+<header><div class="bar"><strong>Amit Narwal , Premium Mark Exploration</strong><span style="color:var(--muted)">10 concepts • SVG craft • no PIL polygons</span></div></header>
 <main class="wrap">
 <h1>Pick your mark.</h1>
-<p class="lede">10 hand-crafted SVG Bézier concepts. Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) — browser-rendered, not raster polygons. No generic AN lettering; every direction is a different metaphor.</p>
+<p class="lede">10 hand-crafted SVG Bézier concepts. Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) , browser-rendered, not raster polygons. No generic AN lettering; every direction is a different metaphor.</p>
 <div class="grid">{cards}</div>
 <p style="color:var(--muted);margin-top:28px;font-size:.9rem">Tell me the numbers you like (e.g. “02 + 08 + 09”). I’ll refine those into a full favicon system (ICO + PNGs) and lock your chosen palette.</p>
 </main>

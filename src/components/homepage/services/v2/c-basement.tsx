@@ -10,13 +10,13 @@ import { CONTAINER, HEADER_LEAD } from "./container";
 import { cn } from "@/lib/utils";
 
 /**
- * C — Basement What We Do.
+ * C , Basement What We Do.
  * The flattest of the three. Name, one paragraph, four short bullets,
  * one inline proof link. Maximum air, minimum ink.
  */
 export default function Basement({ id }: { id: string }) {
   return (
-    <LabSection id={id} label="Services — Basement style">
+    <LabSection id={id} label="Services , Basement style">
       <div className={cn(CONTAINER, "py-16 lg:py-24")}>
         <SectionHeader lead={HEADER_LEAD} />
 
@@ -30,7 +30,7 @@ export default function Basement({ id }: { id: string }) {
                   </h3>
                   <p className="mt-3 max-w-xl text-[17px] leading-relaxed text-foreground/70">
                     {d.promise} From scope to launch, one senior pair of hands
-                    covers interface, logic, and deploy — no handoffs, no
+                    covers interface, logic, and deploy , no handoffs, no
                     guesswork in production.
                   </p>
                   <ul className="mt-8 grid gap-x-10 gap-y-3.5 sm:grid-cols-2">
@@ -55,7 +55,7 @@ export default function Basement({ id }: { id: string }) {
                         →
                       </span>
                     </Link>{" "}
-                    — {d.proof.result.toLowerCase()}.
+                    , {d.proof.result.toLowerCase()}.
                   </p>
                 </div>
                 <div className="hidden lg:col-span-5 lg:block" aria-hidden="true" />

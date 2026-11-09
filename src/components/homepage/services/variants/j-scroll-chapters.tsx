@@ -8,7 +8,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * J — Sticky Scroll Chapters.
+ * J , Sticky Scroll Chapters.
  * Sticky scrollspy index left; one discipline panel per scroll beat right.
  */
 export default function ScrollChapters() {
@@ -74,7 +74,7 @@ export default function ScrollChapters() {
                             active === i ? "bg-primary" : "bg-foreground/20",
                           )}
                         />
-                        {d.num} — {d.name}
+                        {d.num} , {d.name}
                       </button>
                     </li>
                   ))}
@@ -125,7 +125,7 @@ export default function ScrollChapters() {
                   href={`/work/${d.proof.slug}`}
                   className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold underline decoration-primary decoration-2 underline-offset-4 transition-colors hover:text-orange-700 dark:hover:text-primary"
                 >
-                  Proof: {d.proof.title} — {d.proof.result}
+                  Proof: {d.proof.title} , {d.proof.result}
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </Link>
               </article>

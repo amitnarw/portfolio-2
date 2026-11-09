@@ -8,7 +8,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * I — Accordion Stack.
+ * I , Accordion Stack.
  * Compact, expandable discipline rows. One open at a time.
  */
 export default function AccordionStack() {

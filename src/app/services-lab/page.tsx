@@ -119,16 +119,16 @@ export default function ServicesLabPage() {
             Design exploration
           </p>
           <h1 className="mt-5 font-serif text-[clamp(2.5rem,5vw,4.5rem)] italic leading-[1.02] tracking-tight">
-            Services section — 12 directions
+            Services section , 12 directions
           </h1>
           <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">
             All 12 share the same content spine: 3 disciplines (Product
             Engineering, AI Systems, Backend &amp; Cloud), each with 6
             capabilities and a real proof project. Design is the only variable.
-            Every variant is theme-aware — toggle dark mode from the top bar to
-            compare both tones. The homepage is untouched — the current bento
+            Every variant is theme-aware , toggle dark mode from the top bar to
+            compare both tones. The homepage is untouched , the current bento
             still lives at <code className="text-foreground">services.tsx</code>
-            . Scroll through, then tell me the letter you like — I&apos;ll wire
+            . Scroll through, then tell me the letter you like , I&apos;ll wire
             that one in and delete the rest.
           </p>
           <nav
@@ -153,7 +153,7 @@ export default function ServicesLabPage() {
           key={v.key}
           id={`variant-${v.key}`}
           className="scroll-mt-20"
-          aria-label={`Variant ${v.key} — ${v.name}`}
+          aria-label={`Variant ${v.key} , ${v.name}`}
         >
           <div className={CONTAINER}>
             <div className="flex flex-wrap items-end justify-between gap-3 border-t border-foreground/10 pb-6 pt-12">
@@ -186,8 +186,8 @@ export default function ServicesLabPage() {
         <div className={CONTAINER}>
           <div className="border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
             <p>
-              Not in the top 12? Tell me what to mix up — for example
-              &ldquo;F&apos;s offer with A&apos;s structure&rdquo; — and
+              Not in the top 12? Tell me what to mix up , for example
+              &ldquo;F&apos;s offer with A&apos;s structure&rdquo; , and
               I&apos;ll make a v2.
             </p>
           </div>

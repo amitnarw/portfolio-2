@@ -165,7 +165,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "web-mcp",
     image: "/web-mcp.jpg",
     imageAlt: "Web MCP driving a Chromium browser alongside a local server",
-    problem: "AI assistants could read the web but could not use it — clicks, forms, logins stayed manual.",
+    problem: "AI assistants could read the web but could not use it , clicks, forms, logins stayed manual.",
     built: "An open-source MCP server that drives a real Chromium browser on your machine.",
     result: "Ships on npm; one command configures the major AI clients.",
   },

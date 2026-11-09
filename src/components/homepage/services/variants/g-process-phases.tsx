@@ -4,7 +4,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * G — Process Phases.
+ * G , Process Phases.
  * Sells the method: 4 steps, each with a tangible deliverable.
  */
 export default function ProcessPhases() {

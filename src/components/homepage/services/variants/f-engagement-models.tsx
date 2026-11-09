@@ -4,7 +4,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * F — Engagement Models.
+ * F , Engagement Models.
  * Sells three ways to hire, not skill lists.
  */
 export default function EngagementModels() {

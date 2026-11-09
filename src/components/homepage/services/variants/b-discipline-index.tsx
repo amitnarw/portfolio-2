@@ -5,7 +5,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * B — Discipline Index / Poster (Last Studio + Debut).
+ * B , Discipline Index / Poster (Last Studio + Debut).
  * Giant Bebas rows with capability line. Hairlines only.
  */
 export default function DisciplineIndex() {

@@ -13,7 +13,7 @@ def wrap(title, body, bg="#0A0A0A"):
 {body}
 </svg>'''
 
-P11 = wrap("Amit Narwal — Auric Monolith",
+P11 = wrap("Amit Narwal , Auric Monolith",
 '''
 <defs><linearGradient id="g11" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5F1E8"/><stop offset="100%" stop-color="#D8CFB8"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#171512"/>
@@ -27,7 +27,7 @@ P11 = wrap("Amit Narwal — Auric Monolith",
 <rect x="160" y="432" width="192" height="14" fill="#A67C52"/>
 ''', bg="#171512")
 
-P12 = wrap("Amit Narwal — Signal Wave",
+P12 = wrap("Amit Narwal , Signal Wave",
 '''
 <defs><radialGradient id="g12bg" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="#0B3A4A"/><stop offset="100%" stop-color="#06202E"/></radialGradient></defs>
 <rect width="512" height="512" rx="88" fill="url(#g12bg)"/>
@@ -46,7 +46,7 @@ P12 = wrap("Amit Narwal — Signal Wave",
 <path d="M228 286 L338 168" stroke="#7ECFC4" stroke-width="9" stroke-linecap="round"/>
 ''', bg="#06202E")
 
-P13 = wrap("Amit Narwal — Proof Seal",
+P13 = wrap("Amit Narwal , Proof Seal",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F1E8"/>
 <!-- red vermillion square seal, slightly rotated -->
@@ -60,7 +60,7 @@ P13 = wrap("Amit Narwal — Proof Seal",
 </g>
 ''', bg="#F5F1E8")
 
-P14 = wrap("Amit Narwal — Orbital Lattice",
+P14 = wrap("Amit Narwal , Orbital Lattice",
 '''
 <defs><linearGradient id="g14" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D9B96A"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#131C3A"/>
@@ -77,10 +77,10 @@ P14 = wrap("Amit Narwal — Orbital Lattice",
 <path d="M238 280 L274 280" stroke="#131C3A" stroke-width="10" stroke-linecap="round"/>
 ''', bg="#131C3A")
 
-P15 = wrap("Amit Narwal — Ink Bloom",
+P15 = wrap("Amit Narwal , Ink Bloom",
 '''
 <rect width="512" height="512" rx="88" fill="#F5F7F2"/>
-<!-- brush ink petals — black, variable -->
+<!-- brush ink petals , black, variable -->
 <path d="M256 382 C248 302 240 210 256 108 C272 210 264 302 256 382" fill="#111111"/>
 <path d="M256 382 C196 318 168 254 150 176 C208 210 246 288 256 382" fill="#111111" opacity=".92"/>
 <path d="M256 382 C316 318 344 254 362 176 C304 210 266 288 256 382" fill="#111111" opacity=".92"/>
@@ -92,7 +92,7 @@ P15 = wrap("Amit Narwal — Ink Bloom",
 <path d="M210 404 L302 404" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
 ''', bg="#F5F7F2")
 
-P16 = wrap("Amit Narwal — Compass Cartographer",
+P16 = wrap("Amit Narwal , Compass Cartographer",
 '''
 <rect width="512" height="512" rx="88" fill="#E8DFC8"/>
 <defs><linearGradient id="g16" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A2B4A"/><stop offset="100%" stop-color="#0E1A30"/></linearGradient></defs>
@@ -108,7 +108,7 @@ P16 = wrap("Amit Narwal — Compass Cartographer",
 <path d="M256 96 L262 256 L250 256 Z" fill="#C73E2E"/>
 ''', bg="#E8DFC8")
 
-P17 = wrap("Amit Narwal — Glass Prism",
+P17 = wrap("Amit Narwal , Glass Prism",
 '''
 <defs><linearGradient id="g17" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFE9A8"/><stop offset="50%" stop-color="#FFD976"/><stop offset="100%" stop-color="#E8A23B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#EEF1F4"/>
@@ -125,7 +125,7 @@ P17 = wrap("Amit Narwal — Glass Prism",
 <path d="M200 316 L218 238 L236 316 M206 284 L230 284" fill="none" stroke="#1A1A1A" stroke-width="9" stroke-linecap="round"/>
 ''', bg="#EEF1F4")
 
-P18 = wrap("Amit Narwal — Feather & Node",
+P18 = wrap("Amit Narwal , Feather & Node",
 '''
 <rect width="512" height="512" rx="88" fill="#0E0E12"/>
 <!-- feather -->
@@ -141,7 +141,7 @@ P18 = wrap("Amit Narwal — Feather & Node",
 <circle cx="392" cy="84" r="14" fill="#C0C0C8"/>
 ''', bg="#0E0E12")
 
-P19 = wrap("Amit Narwal — Sundial",
+P19 = wrap("Amit Narwal , Sundial",
 '''
 <defs><linearGradient id="g19" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E9D8A6"/><stop offset="100%" stop-color="#8A6E3B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#D9C7A5"/>
@@ -161,7 +161,7 @@ P19 = wrap("Amit Narwal — Sundial",
 <path d="M240 286 L256 224 L272 286" fill="none" stroke="#1A1A1A" stroke-width="10" stroke-linecap="round"/>
 ''', bg="#D9C7A5")
 
-P20 = wrap("Amit Narwal — Folded Ribbon",
+P20 = wrap("Amit Narwal , Folded Ribbon",
 '''
 <defs><linearGradient id="g20" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FF6B35"/><stop offset="100%" stop-color="#E8A23B"/></linearGradient></defs>
 <rect width="512" height="512" rx="88" fill="#16161A"/>
@@ -169,7 +169,7 @@ P20 = wrap("Amit Narwal — Folded Ribbon",
 <path d="M112 372 L196 140 L280 372 L280 196 L364 372 L364 140" fill="none" stroke="url(#g20)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
 <!-- fold shadow -->
 <path d="M196 140 L280 372" stroke="#16161A" stroke-width="10" stroke-linecap="round" opacity=".55"/>
-<!-- period dot — the ownable full stop -->
+<!-- period dot , the ownable full stop -->
 <circle cx="404" cy="352" r="26" fill="#FF6B35"/>
 <circle cx="404" cy="352" r="12" fill="#16161A"/>
 <!-- hairline underline -->
@@ -177,15 +177,15 @@ P20 = wrap("Amit Narwal — Folded Ribbon",
 ''', bg="#16161A")
 
 concepts = [
-    ("premium-11", P11, "11 Auric Monolith", "Basalt slab with incised A — builder of lasting systems.", "Research: Swiss architectural monogram, bone/bronze museum premium, Müller-Brockmann grid, Ram monolith."),
-    ("premium-12", P12, "12 Signal Wave", "Echolocation arcs resolving into A — sensing AI.", "Research: Narwhal echolocation physics, concentric signal premium (Sonar), Gestalt resonance."),
-    ("premium-13", P13, "13 Proof Seal", "Vermillion Q.E.D. seal — verified & shipped.", "Research: Mathematical proof mark, editorial seal authority, red/black intellectual premium."),
+    ("premium-11", P11, "11 Auric Monolith", "Basalt slab with incised A , builder of lasting systems.", "Research: Swiss architectural monogram, bone/bronze museum premium, Müller-Brockmann grid, Ram monolith."),
+    ("premium-12", P12, "12 Signal Wave", "Echolocation arcs resolving into A , sensing AI.", "Research: Narwhal echolocation physics, concentric signal premium (Sonar), Gestalt resonance."),
+    ("premium-13", P13, "13 Proof Seal", "Vermillion Q.E.D. seal , verified & shipped.", "Research: Mathematical proof mark, editorial seal authority, red/black intellectual premium."),
     ("premium-14", P14, "14 Orbital Lattice", "Islamic 8-point lattice as neural mesh.", "Research: Girih lattice mathematics, Escher revival, finite rules → infinite, sacred geometry."),
-    ("premium-15", P15, "15 Ink Bloom", "Sumi-e ink lotus — code to flower.", "Research: Japanese ink discipline, lotus counted-petal system, brush Bézier variable width."),
+    ("premium-15", P15, "15 Ink Bloom", "Sumi-e ink lotus , code to flower.", "Research: Japanese ink discipline, lotus counted-petal system, brush Bézier variable width."),
     ("premium-16", P16, "16 Compass Cartographer", "16-point star with Delhi coords.", "Research: Kuyōmon nine-bodies star, kamon radial navigation, parchment cartographer heritage."),
     ("premium-17", P17, "17 Glass Prism", "Prism refracting beam into gold A.", "Research: Transparency/clarity as premium (Aesop, Teenage Eng), refraction as AI distillation."),
     ("premium-18", P18, "18 Feather & Node", "Editorial feather meets circuit node.", "Research: Writer-engineer duality, quill nostalgia (Six Pence), node = system AGI point."),
-    ("premium-19", P19, "19 Sundial", "Brass sundial — infinite time, on schedule.", "Research: Heritage craft (Jaeger), gnomon as structure, paper/brass luxury oxidation."),
+    ("premium-19", P19, "19 Sundial", "Brass sundial , infinite time, on schedule.", "Research: Heritage craft (Jaeger), gnomon as structure, paper/brass luxury oxidation."),
     ("premium-20", P20, "20 Folded Ribbon", "One ribbon through AN to a period dot.", "Research: YSL interlock discipline, single-thread continuity (Rand), dot as ownable signature."),
 ]
 
@@ -222,7 +222,7 @@ for slug, title, desc, research in all_items:
     '''
 
 gallery = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Amit Narwal — 20 Premium Logo Concepts</title>
+<title>Amit Narwal , 20 Premium Logo Concepts</title>
 <style>
 :root{{--bg:#0a0a0f;--fg:#f2f0ea;--muted:#9aa3b2;--gold:#ffd976;--card:#13131b;--border:rgba(255,255,255,.1)}}
 *{{box-sizing:border-box}}body{{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}}
@@ -240,10 +240,10 @@ h1{{font-family:Georgia,serif;font-style:italic;font-size:clamp(2.4rem,5vw,4rem)
 .pick{{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}}
 .pick button{{background:transparent;border:1px solid var(--border);color:var(--gold);border-radius:999px;padding:8px 14px;cursor:pointer}}
 </style></head><body>
-<header><div class="bar"><strong>Amit Narwal — Premium Mark Exploration</strong><span style="color:var(--muted)">20 concepts • SVG craft • no PIL polygons</span></div></header>
+<header><div class="bar"><strong>Amit Narwal , Premium Mark Exploration</strong><span style="color:var(--muted)">20 concepts • SVG craft • no PIL polygons</span></div></header>
 <main class="wrap">
 <h1>Pick your mark.</h1>
-<p class="lede">20 hand-crafted SVG Bézier concepts across two batches. Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) — browser-rendered, Bézier-built. The new batch 11-20 explores materials, sound, ink, navigation, glass, feather, time and ribbon — not repeats of lotus/knot/spiral.</p>
+<p class="lede">20 hand-crafted SVG Bézier concepts across two batches. Each built to the brief: stories for <i>infinite (Amit)</i>, <i>rare unicorn whale (Narwal)</i>, and <i>systems builder (full-stack + AI)</i>. Every concept ships as <code>icon.svg</code> (512×512) , browser-rendered, Bézier-built. The new batch 11-20 explores materials, sound, ink, navigation, glass, feather, time and ribbon , not repeats of lotus/knot/spiral.</p>
 <div class="grid">{cards}</div>
 <p style="color:var(--muted);margin-top:28px;font-size:.9rem">Tell me the numbers you like (e.g. “12 + 16 + 18”). I’ll refine those into a full favicon system (ICO + PNGs) and lock your chosen palette.</p>
 </main>

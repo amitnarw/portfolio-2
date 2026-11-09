@@ -1,4 +1,4 @@
-"""Generate premium-81..100 — two formal families:
+"""Generate premium-81..100 , two formal families:
    A. Pixelated (81-90)
    B. Poster Bebas (91-100)
 Also writes public/favicons/pixel-bebas-gallery.html
@@ -85,7 +85,7 @@ def p81():
             body.append(
                 f'<path d="M{x+gap/2+3} {y+gap} L{x+gap/2+3} {y+cell-gap-3}" stroke="#F0E4CC" stroke-width="2" opacity=".35"/>'
             )
-    return wrap("Amit Narwal — Mosaic Terra", "\n".join(body), bg="#1B3A6B")
+    return wrap("Amit Narwal , Mosaic Terra", "\n".join(body), bg="#1B3A6B")
 
 
 # ---------------------------------------------------------------- 82 dither
@@ -130,7 +130,7 @@ def p82():
                 f'<rect x="{ox+c*cell}" y="{oy+r*cell}" width="{cell-1}" height="{cell-1}" fill="{fill}"/>'
             )
     body.append('<rect x="36" y="36" width="440" height="440" fill="none" stroke="#15150F" stroke-width="3" opacity=".25"/>')
-    return wrap("Amit Narwal — Dither", "\n".join(body), bg="#F2EFE6")
+    return wrap("Amit Narwal , Dither", "\n".join(body), bg="#F2EFE6")
 
 
 # ---------------------------------------------------------------- 83 voxel
@@ -151,7 +151,7 @@ def p83():
         for c, ch in enumerate(row):
             if ch == "1":
                 body.append(cube(ox + c * cell, oy + r * cell))
-    return wrap("Amit Narwal — Voxel", "\n".join(body), bg="#0B1220")
+    return wrap("Amit Narwal , Voxel", "\n".join(body), bg="#0B1220")
 
 
 # ---------------------------------------------------------------- 84 cross-stitch
@@ -181,7 +181,7 @@ def p84():
                 f"</g>"
             )
     body.append('<path d="M120 96 C86 118 78 150 96 172" fill="none" stroke="#C26A4A" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>')
-    return wrap("Amit Narwal — Cross-Stitch", "\n".join(body), bg="#EFE7D4")
+    return wrap("Amit Narwal , Cross-Stitch", "\n".join(body), bg="#EFE7D4")
 
 
 # ---------------------------------------------------------------- 85 scanline
@@ -203,7 +203,7 @@ def p85():
             body.append(f'<rect x="{x0:.1f}" y="{y}" width="2" height="9" fill="#FF5A5A" opacity=".55"/>')
             body.append(f'<rect x="{x1-2:.1f}" y="{y}" width="2" height="9" fill="#5AA8FF" opacity=".55"/>')
     body.append('<rect x="24" y="24" width="464" height="464" rx="52" fill="none" stroke="#7CFF6B" stroke-width="3" opacity=".18"/>')
-    return wrap("Amit Narwal — Scanline", "\n".join(body), bg="#050A05")
+    return wrap("Amit Narwal , Scanline", "\n".join(body), bg="#050A05")
 
 
 # ---------------------------------------------------------------- 86 barcode
@@ -222,9 +222,9 @@ def p86():
     # punched A
     a_path, baseline, cap = bebas_pair("A", font_px=300, overlap=0.0, x_center=250)
     body.append(f'<path d="{a_path[0]}" fill="#F5F1E8" stroke="#101820" stroke-width="4"/>')
-    body.append('<text x="96" y="94" font-family="monospace" font-size="18" letter-spacing="4" fill="#101820">AN—86</text>')
+    body.append('<text x="96" y="94" font-family="monospace" font-size="18" letter-spacing="4" fill="#101820">AN,86</text>')
     body.append('<text x="392" y="440" text-anchor="end" font-family="monospace" font-size="18" letter-spacing="4" fill="#101820">SCAN / SHIP</text>')
-    return wrap("Amit Narwal — Barcode Pixel", "\n".join(body), bg="#F5F1E8")
+    return wrap("Amit Narwal , Barcode Pixel", "\n".join(body), bg="#F5F1E8")
 
 
 # ---------------------------------------------------------------- 87 serif pixel
@@ -250,7 +250,7 @@ def p87():
             body.append(
                 f'<rect x="{c*cell+3}" y="{r*cell+3}" width="{cell-6}" height="{cell-6}" rx="4" fill="{fill}"/>'
             )
-    return wrap("Amit Narwal — Serif Pixel", "\n".join(body), bg="#14110D")
+    return wrap("Amit Narwal , Serif Pixel", "\n".join(body), bg="#14110D")
 
 
 # ---------------------------------------------------------------- 88 8-bit sprite
@@ -290,7 +290,7 @@ def p88():
         if bottom:
             body.append(f'<rect x="{x}" y="{y+cell-7}" width="{cell}" height="7" fill="#A83A1E"/>')
     body.append(f'<rect x="{ox-40}" y="{oy-40}" width="{10*cell+80}" height="{12*cell+80}" rx="14" fill="none" stroke="#E8613C" stroke-width="4" opacity=".35"/>')
-    return wrap("Amit Narwal — 8-Bit Sprite", "\n".join(body), bg="#111321")
+    return wrap("Amit Narwal , 8-Bit Sprite", "\n".join(body), bg="#111321")
 
 
 # ---------------------------------------------------------------- 89 tile fleur
@@ -332,7 +332,7 @@ def p89():
             body.append(f'<rect x="{x+2}" y="{y+2}" width="{cell-4}" height="{cell-4}" rx="2" fill="{fill}"/>')
     for gx, gy in ((26, 26), (486, 26), (26, 486), (486, 486)):
         body.append(f'<circle cx="{gx}" cy="{gy}" r="6" fill="#D9B96A"/>')
-    return wrap("Amit Narwal — Tile Fleur", "\n".join(body), bg="#14213D")
+    return wrap("Amit Narwal , Tile Fleur", "\n".join(body), bg="#14213D")
 
 
 # ---------------------------------------------------------------- 90 mono pixel
@@ -353,7 +353,7 @@ def p90():
                 body.append(f'<rect x="{ox2+col*cell}" y="{oy+row*cell}" width="{cell-4}" height="{cell-4}" fill="#0A0A0A"/>')
     body.append('<rect x="72" y="72" width="368" height="368" fill="none" stroke="#0A0A0A" stroke-width="4"/>')
     body.append('<rect x="84" y="84" width="344" height="344" fill="none" stroke="#0A0A0A" stroke-width="1" opacity=".35"/>')
-    return wrap("Amit Narwal — Mono Pixel", "\n".join(body), bg="#FFFFFF")
+    return wrap("Amit Narwal , Mono Pixel", "\n".join(body), bg="#FFFFFF")
 
 
 # ---------------------------------------------------------------- 91 roundel v2
@@ -364,7 +364,7 @@ def p91():
 <circle cx="256" cy="256" r="172" fill="none" stroke="#0A0A0A" stroke-width="10" opacity=".12"/>
 <path d="{a}" fill="#F5F1E8"/><path d="{n}" fill="#F5F1E8"/>
 '''
-    return wrap("Amit Narwal — Roundel Vermillion", body, bg="#0A0A0A")
+    return wrap("Amit Narwal , Roundel Vermillion", body, bg="#0A0A0A")
 
 
 # ---------------------------------------------------------------- 92 roundel ink
@@ -376,7 +376,7 @@ def p92():
 <path d="{a}" fill="#141414"/><path d="{n}" fill="#141414"/>
 <circle cx="256" cy="410" r="7" fill="#C8321F"/>
 '''
-    return wrap("Amit Narwal — Roundel Ink", body, bg="#0A0A0A")
+    return wrap("Amit Narwal , Roundel Ink", body, bg="#0A0A0A")
 
 
 # ---------------------------------------------------------------- 93 split roundel
@@ -393,7 +393,7 @@ def p93():
 <g clip-path="url(#right)"><path d="{a}" fill="#141414"/><path d="{n}" fill="#141414"/></g>
 <path d="M256 84 L256 428" stroke="#141414" stroke-width="6" opacity=".9"/>
 '''
-    return wrap("Amit Narwal — Split Roundel", body, bg="#0A0A0A")
+    return wrap("Amit Narwal , Split Roundel", body, bg="#0A0A0A")
 
 
 # ---------------------------------------------------------------- 94 swiss grid
@@ -413,9 +413,9 @@ def p94():
 <rect x="96" y="204" width="42" height="42" fill="#C8321F"/>
 <path d="{a_d}" fill="#141414"/><path d="{n_d}" fill="#141414"/>
 <text x="96" y="466" font-family="Arial, sans-serif" font-size="17" letter-spacing="5" fill="#141414">SWISS / POSTER</text>
-<text x="416" y="466" text-anchor="end" font-family="Arial, sans-serif" font-size="17" letter-spacing="5" fill="#141414">AN—94</text>
+<text x="416" y="466" text-anchor="end" font-family="Arial, sans-serif" font-size="17" letter-spacing="5" fill="#141414">AN,94</text>
 '''
-    return wrap("Amit Narwal — Swiss Grid", body, bg="#F2EFE6")
+    return wrap("Amit Narwal , Swiss Grid", body, bg="#F2EFE6")
 
 
 # ---------------------------------------------------------------- 95 poster italic
@@ -428,7 +428,7 @@ def p95():
 <rect x="120" y="398" width="150" height="6" fill="#141414" opacity=".55"/>
 </g>
 '''
-    return wrap("Amit Narwal — Poster Italic", body, bg="#F5F1E8")
+    return wrap("Amit Narwal , Poster Italic", body, bg="#F5F1E8")
 
 
 # ---------------------------------------------------------------- 96 outline roundel
@@ -441,7 +441,7 @@ def p96():
 <path d="{n}" fill="none" stroke="#F5F1E8" stroke-width="7" stroke-linejoin="round"/>
 <circle cx="256" cy="408" r="6" fill="#D9B96A"/>
 '''
-    return wrap("Amit Narwal — Outline Roundel", body, bg="#0A0A0A")
+    return wrap("Amit Narwal , Outline Roundel", body, bg="#0A0A0A")
 
 
 # ---------------------------------------------------------------- 97 duotone
@@ -458,7 +458,7 @@ def p97():
 <g clip-path="url(#bot97)"><path d="{a}" fill="#D4623C"/><path d="{n}" fill="#D4623C"/></g>
 <path d="M84 300 L428 300" stroke="#F0E8D8" stroke-width="3" opacity=".5"/>
 '''
-    return wrap("Amit Narwal — Duotone", body, bg="#0E3B43")
+    return wrap("Amit Narwal , Duotone", body, bg="#0E3B43")
 
 
 # ---------------------------------------------------------------- 98 stencil
@@ -475,7 +475,7 @@ def p98():
 <path d="M96 408 L416 408"/>
 </g>
 '''
-    return wrap("Amit Narwal — Stencil", body, bg="#F2EFE6")
+    return wrap("Amit Narwal , Stencil", body, bg="#F2EFE6")
 
 
 # ---------------------------------------------------------------- 99 vertical
@@ -491,7 +491,7 @@ def p99():
 <rect x="178" y="386" width="156" height="8" fill="#C8321F"/>
 <text x="256" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#141414">AMIT NARWAL</text>
 '''
-    return wrap("Amit Narwal — Vertical Poster", body, bg="#0A0A0A")
+    return wrap("Amit Narwal , Vertical Poster", body, bg="#0A0A0A")
 
 
 # ---------------------------------------------------------------- 100 checkered
@@ -506,8 +506,8 @@ def p100():
     body.append('<rect x="0" y="64" width="512" height="64" fill="none" stroke="#141414" stroke-width="4"/>')
     body.append(f'<path d="{a}" fill="#C8321F"/><path d="{n}" fill="#C8321F"/>')
     body.append('<path d="M96 430 L416 430" stroke="#141414" stroke-width="4"/>')
-    body.append('<text x="256" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="6" fill="#141414">POSTER / AN—100</text>')
-    return wrap("Amit Narwal — Checkered Poster", "\n".join(body), bg="#F5F1E8")
+    body.append('<text x="256" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="6" fill="#141414">POSTER / AN,100</text>')
+    return wrap("Amit Narwal , Checkered Poster", "\n".join(body), bg="#F5F1E8")
 
 
 # ---------------------------------------------------------------- write

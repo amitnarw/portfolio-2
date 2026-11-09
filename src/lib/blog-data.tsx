@@ -60,7 +60,7 @@ export const blogArticles: BlogPost[] = [
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
           For years, the bottleneck in React Server Components wasn't the server
-          logic—it was the serialization. In Next.js 15, the \"Flight\" payload
+          logic,it was the serialization. In Next.js 15, the \"Flight\" payload
           was parsed using a `JSON.parse` reviver. This reviver forced the V8
           engine to cross the **C++ to JavaScript boundary** for every single
           key in your data object.
@@ -85,7 +85,7 @@ export const blogArticles: BlogPost[] = [
           Windsurf, etc.) can read directly.
         </p>
         <p className="mb-8 leading-relaxed text-muted-foreground text-lg">
-          This eliminates \"halludebugging\"—the hours wasted when an AI
+          This eliminates \"halludebugging\",the hours wasted when an AI
           assistant hallucinates a version of an API that doesn't exist. Your AI
           assistant now knows exactly what version of the server-actions
           protocol you are running, down to the byte.
@@ -111,7 +111,7 @@ export const blogArticles: BlogPost[] = [
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             State-of-the-art (SOTA) in 2026 is no longer defined by parameter
-            count, but by <strong>Reasoning Density</strong>—output quality per
+            count, but by <strong>Reasoning Density</strong>,output quality per
             token processed.
           </p>
           <div className="overflow-x-auto">
@@ -349,7 +349,7 @@ export const blogArticles: BlogPost[] = [
           the leading column `a` is not in the predicate.
         </p>
         <p className="mb-8 leading-relaxed text-muted-foreground text-lg">
-          This allows for \"Thick Indexes\"—you can cover more query patterns
+          This allows for \"Thick Indexes\",you can cover more query patterns
           with fewer total indexes, drastically reducing **Write Amplification**
           and vacuum pressure.
         </p>
@@ -427,7 +427,7 @@ export const blogArticles: BlogPost[] = [
           BullMQ is superior to custom Redis-list implementations because it
           uses **Lua scripts** for every operation. When you move a job from
           `waiting` to `active`, it's an atomic transaction. Even if your worker
-          crashes mid-move, the job isn't lost—it stays in Redis until the
+          crashes mid-move, the job isn't lost,it stays in Redis until the
           `lockDuration` expires, and then it's automatically retried.
         </p>
 
@@ -552,8 +552,8 @@ export const blogArticles: BlogPost[] = [
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
           The malicious payload was designed to exfiltrate **Environmental
-          Variables**—specifically AI API keys (OpenAI, Anthropic) and AWS
-          credentials—to a remote command-and-control (C2) server.
+          Variables**,specifically AI API keys (OpenAI, Anthropic) and AWS
+          credentials,to a remote command-and-control (C2) server.
         </p>
       </>
     ),
@@ -592,7 +592,7 @@ export const blogArticles: BlogPost[] = [
     content: (
       <>
         <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
-          A premium design isn't just about \"looking good\"—it's about building
+          A premium design isn't just about \"looking good\",it's about building
           trust through micro-interactions and accessibility.
         </p>
       </>

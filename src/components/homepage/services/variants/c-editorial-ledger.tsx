@@ -5,7 +5,7 @@ import { CONTAINER, Eyebrow, Reveal, Shell } from "../atoms";
 import { cn } from "@/lib/utils";
 
 /**
- * C — Editorial Ledger (PostGeneric + Holland Design).
+ * C , Editorial Ledger (PostGeneric + Holland Design).
  * One mixed serif/sans statement, then serif rows with outcome right.
  */
 export default function EditorialLedger() {
@@ -15,7 +15,7 @@ export default function EditorialLedger() {
         <Reveal className="max-w-3xl">
           <Eyebrow>Services</Eyebrow>
           <p className="mt-6 font-serif text-[clamp(2rem,4vw,3.5rem)] italic leading-[1.05] tracking-tight">
-            I build the whole product —{" "}
+            I build the whole product ,{" "}
             <span className="not-italic">the interface, the AI,</span>{" "}
             <span className="not-italic">and the infrastructure under it.</span>
           </p>

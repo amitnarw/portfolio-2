@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal — Folded Ribbon">
-<title>Amit Narwal — Folded Ribbon</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Amit Narwal , Folded Ribbon">
+<title>Amit Narwal , Folded Ribbon</title>
 <rect width="512" height="512" rx="88" fill="#16161A"/>
 
 <defs><linearGradient id="g20" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FF6B35"/><stop offset="100%" stop-color="#E8A23B"/></linearGradient></defs>
@@ -9,7 +9,7 @@
 <path d="M112 372 L196 140 L280 372 L280 196 L364 372 L364 140" fill="none" stroke="url(#g20)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
 <!-- fold shadow -->
 <path d="M196 140 L280 372" stroke="#16161A" stroke-width="10" stroke-linecap="round" opacity=".55"/>
-<!-- period dot — the ownable full stop -->
+<!-- period dot , the ownable full stop -->
 <circle cx="404" cy="352" r="26" fill="#FF6B35"/>
 <circle cx="404" cy="352" r="12" fill="#16161A"/>
 <!-- hairline underline -->
