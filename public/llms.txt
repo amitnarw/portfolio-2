@@ -20,6 +20,17 @@
 - https://amitnarwal.com/work/portfolio-website , this portfolio site
 - https://amitnarwal.com/work/cbr-painters-australia , website for a painting company
 
+## Technical Articles
+
+- https://amitnarwal.com/blog/how-to-build-mcp-server-browser-automation , How to Build an MCP Server for Browser Automation
+- https://amitnarwal.com/blog/ai-coding-agents-better-frontends , How I Get AI Coding Agents to Build Better Frontends
+- https://amitnarwal.com/blog/make-ai-agents-understand-codebase , How to Make AI Agents Understand Your Existing Codebase
+- https://amitnarwal.com/blog/nextjs-16-2-performance-agent-ready , Next.js 16: Turbopack Maturity, Server Action Security, and AI-Ready Architectures
+- https://amitnarwal.com/blog/litellm-supply-chain-attack-teampcp , Technical Analysis: The LiteLLM Supply Chain Attack & CI/CD Hardening
+- https://amitnarwal.com/blog/modernizing-nextjs-seo-geo , Next.js for Modern Search: Technical SEO, JSON-LD Schemas, and AEO Readiness
+- https://amitnarwal.com/blog/redis-bullmq-job-queues-guide , Redis + BullMQ: Architecting Bulletproof Distributed Job Queues
+- https://amitnarwal.com/blog/postgresql-performance-optimization-2026 , PostgreSQL Performance: AIO Internals, B-Tree Skip Scans, and UUIDv7 Indexing
+
 ## External profiles
 
 - GitHub: https://github.com/amitnarw

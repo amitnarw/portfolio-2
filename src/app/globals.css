@@ -497,3 +497,66 @@
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration) linear infinite;
 }
+
+html,
+body {
+  filter: none !important;
+  transform: none;
+}
+
+@keyframes pageSlideUp {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.page-slide-up {
+  animation: pageSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+}
+
+@keyframes gradMove {
+  0% {
+    background-position: 10% 0;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0;
+  }
+}
+
+.h-word,
+.h-word-light {
+  background: linear-gradient(90deg, #030712, #f59e0b, #64748b, #030712);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradMove 5s infinite;
+  display: inline;
+}
+
+:is(.dark, [data-theme="dark"]) .h-word,
+:is(.dark, [data-theme="dark"]) .h-word-light,
+.dark .h-word,
+.dark .h-word-light {
+  background: linear-gradient(90deg, #ffffff, #a5abad, #ffd976, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradMove 5s infinite;
+  display: inline;
+}
+
+/* Spring easing for project cards like sohub */
+.ease-spring {
+  transition-timing-function: cubic-bezier(0.22, 0.68, 0, 1.5);
+}

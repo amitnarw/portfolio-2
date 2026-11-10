@@ -13,17 +13,19 @@ import { PremiumButton1 } from "@/components/shared/premium-button-1";
 const siteUrl = "https://amitnarwal.com";
 
 const relatedWorkByBlog: Record<string, string> = {
+  "how-to-build-mcp-server-browser-automation": "web-mcp",
+  "ai-coding-agents-better-frontends": "portfolio-website",
+  "make-ai-agents-understand-codebase": "web-mcp",
   "nextjs-16-2-performance-agent-ready": "portfolio-website",
-  "latest-ai-models-ranking-2026": "exaldia-ai-seo-tools",
-  "nextjs-vulnerabilities-security-guide-2026": "web-mcp",
-  "postgresql-performance-optimization-2026": "cbr-painters-australia",
-  "postgresql-replication-high-availability": "cbr-painters-australia",
-  "modernizing-nextjs-seo-geo": "exaldia-ai-seo-tools",
   "litellm-supply-chain-attack-teampcp": "web-mcp",
-  "agentic-ai-workflows-2025": "web-mcp",
-  "ui-ux-best-practices-2025": "portfolio-website",
-  "building-scalable-apis-nodejs": "intesters",
+  "modernizing-nextjs-seo-geo": "exaldia-ai-seo-tools",
+  "redis-bullmq-job-queues-guide": "intesters",
+  "postgresql-performance-optimization-2026": "intesters",
 };
+
+export function generateStaticParams() {
+  return blogArticles.map((article) => ({ slug: article.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -293,12 +295,10 @@ export default async function BlogPostPage({
             <div>
               <h3 className="text-2xl font-bold mb-2">About Amit Narwal</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Amit Narwal is a highly sought-after{" "}
-                <strong>Freelance Full Stack & AI Developer</strong>{" "}
-                specializing in enterprise-grade Next.js architectures, scalable
-                APIs, and tailored Machine Learning integrations. Based on core
-                engineering principles, he empowers businesses to dominate their
-                digital landscape.
+                Amit Narwal is a <strong>Full-Stack & AI Engineer</strong> building
+                production web applications, distributed queue architectures, and
+                open-source agent tooling like <strong>Web MCP</strong>. He specializes in
+                Next.js, high-performance backends, and practical AI workflow automation.
               </p>
               <Link
                 href="/#services"

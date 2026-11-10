@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="homepage-root" className="min-h-screen bg-background text-foreground transition-none">
         <Hero />
         <SkillsMarquee />
         <About />

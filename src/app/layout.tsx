@@ -1,5 +1,6 @@
 import { Poppins, Instrument_Serif, Bebas_Neue } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -201,24 +202,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              personSchema,
-              websiteSchema,
-              professionalServiceSchema,
-            ]),
-          }}
-        />
-      </head>
-      <body
-        className={`${poppins.variable} ${instrumentSerif.variable} ${bebasNeue.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className="scroll-smooth">
+        <head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                personSchema,
+                websiteSchema,
+                professionalServiceSchema,
+              ]),
+            }}
+          />
+        </head>
+        <body
+          className={`${poppins.variable} ${instrumentSerif.variable} ${bebasNeue.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
